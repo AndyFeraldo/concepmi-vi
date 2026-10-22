@@ -352,26 +352,60 @@ section{ padding: 5.5rem 0; position: relative; }
 .legend span{ display:inline-flex; align-items:center; gap: .4rem; }
 .legend i{ width: 12px; height: 12px; border-radius: 4px; background: var(--c); }
 
-/* ---------- Ponencias ---------- */
-.speakers{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-@media (max-width: 980px){ .speakers{ grid-template-columns: 1fr 1fr; } }
-@media (max-width: 640px){ .speakers{ grid-template-columns: 1fr; } }
-.speaker{
+/* ---------- Ponencias (filas destacadas, alternadas) ---------- */
+.talks{ display:grid; gap: 2.25rem; position: relative; }
+.talk{
   --c: var(--celeste);
-  cursor: pointer; text-align:left; padding: 0; overflow:hidden;
-  background: rgba(23,13,86,.72); border: 2px solid color-mix(in srgb, var(--c) 70%, transparent); border-radius: var(--r-lg);
-  display:flex; flex-direction:column; transition: transform .2s, box-shadow .2s;
+  position: relative; display:grid; grid-template-columns: 260px 1fr; gap: 2.25rem; align-items:center;
+  padding: 2rem 2.25rem; border-radius: 30px; overflow: hidden;
+  background: linear-gradient(120deg, color-mix(in srgb, var(--c) 22%, rgba(23,13,86,.92)), rgba(23,13,86,.88) 60%);
+  border: 2px solid color-mix(in srgb, var(--c) 65%, transparent);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--c) 22%, transparent);
 }
-.speaker:hover{ transform: translateY(-4px); box-shadow: 0 0 34px color-mix(in srgb, var(--c) 45%, transparent); }
-.speaker .top{ background: color-mix(in srgb, var(--c) 85%, #2a0e7a); color:#fff; padding: .9rem 1.2rem; }
-.speaker .top small{ font-weight: 800; font-size: .74rem; opacity:.9; display:block; }
-.speaker .top b{ font-weight: 900; font-size: 1.15rem; line-height:1.2; text-transform: uppercase; display:block; }
-.speaker .top em{ font-style: normal; font-weight: 600; font-size: .82rem; opacity:.9; }
-.speaker .body{ padding: 1.2rem; display:grid; grid-template-columns: 116px 1fr; gap: 1rem; align-items:center; }
-.speaker .body .photo{ width: 116px; height: 116px; }
-.speaker .name{ font-weight: 800; font-size: 1rem; line-height:1.25; margin:0; }
-.speaker .role{ color: var(--niebla); font-size: .82rem; margin: .2rem 0 .5rem; line-height: 1.35; }
-.speaker .meta{ padding: 0 1.2rem 1.2rem; display:flex; flex-wrap: wrap; gap:.4rem; margin-top:auto; }
+.talk:nth-child(even){ grid-template-columns: 1fr 260px; background: linear-gradient(240deg, color-mix(in srgb, var(--c) 22%, rgba(23,13,86,.92)), rgba(23,13,86,.88) 60%); }
+.talk:nth-child(even) .talk-photo{ order: 2; }
+.talk .roman{
+  position:absolute; right: 1.5rem; top: -1.2rem; font-family: var(--neon); font-size: 9rem; line-height:1;
+  color: transparent; -webkit-text-stroke: 2px color-mix(in srgb, var(--c) 45%, transparent); pointer-events:none; user-select:none;
+}
+.talk-photo{ position: relative; width: 260px; aspect-ratio: 1; justify-self:center; }
+.talk-photo::before{
+  content:""; position:absolute; inset: -10px; border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--c), transparent 40%, var(--c) 60%, transparent 85%, var(--c));
+  animation: spin 9s linear infinite; opacity: .85;
+}
+.talk-photo .photo{ position: relative; width: 100%; height: 100%; border-width: 5px; border-color: rgba(23,13,86,.95); font-size: 3.2rem; }
+.talk-photo .eje-tag{
+  position:absolute; bottom: 4px; left: 50%; transform: translateX(-50%); white-space: nowrap;
+  background: var(--c); color: var(--noche); font-weight: 900; font-size: .78rem; padding: .35rem .9rem; border-radius: 999px; text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+}
+@keyframes spin{ to{ transform: rotate(360deg); } }
+.talk-body{ position: relative; }
+.talk-when{ display:flex; flex-wrap: wrap; gap: .45rem; margin-bottom: .8rem; }
+.talk-when span{ font-size: .78rem; font-weight: 800; padding: .3rem .7rem; border-radius: 999px; background: rgba(255,255,255,.1); }
+.talk-when span:first-child{ background: var(--c); color: var(--noche); }
+.talk h3{ margin: 0; font-family: var(--neon); font-weight: 400; text-transform: uppercase; line-height: 1.05;
+  font-size: clamp(1.5rem, 3vw, 2.2rem); color: color-mix(in srgb, var(--c) 45%, #fff); text-shadow: 0 0 16px color-mix(in srgb, var(--c) 70%, transparent); }
+.talk .lema{ margin: .35rem 0 1rem; font-weight: 700; color: var(--niebla); font-size: .9rem; letter-spacing: .03em; }
+.talk .who{ font-size: 1.25rem; font-weight: 900; margin: 0; line-height: 1.2; }
+.talk .who-role{ margin: .2rem 0 .8rem; color: #fff; opacity: .85; font-weight: 600; font-size: .92rem; }
+.talk .bio{ margin: 0 0 1rem; color: var(--niebla); font-size: .95rem; max-width: 62ch; }
+.talk .hl{ display:flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.2rem; }
+.talk .hl span{ display:inline-flex; align-items:center; gap:.35rem; font-size: .8rem; font-weight: 700; padding: .35rem .7rem; border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); background: color-mix(in srgb, var(--c) 12%, transparent); }
+.talk .hl svg{ width: 15px; height: 15px; color: var(--c); }
+.talk-actions{ display:flex; gap: .6rem; flex-wrap: wrap; }
+.btn-line{ border-color: var(--c); color:#fff; background: transparent; }
+.btn-line:hover{ background: color-mix(in srgb, var(--c) 25%, transparent); }
+@media (max-width: 860px){
+  .talk, .talk:nth-child(even){ grid-template-columns: 1fr; padding: 1.75rem 1.25rem; text-align: center; gap: 1.5rem; }
+  .talk:nth-child(even) .talk-photo{ order: 0; }
+  .talk-photo{ width: 200px; }
+  .talk-when, .talk .hl, .talk-actions{ justify-content: center; }
+  .talk .bio{ margin-inline: auto; }
+  .talk .roman, .talk:nth-child(even) .roman{ font-size: 6rem; right: .75rem; left: auto; }
+}
 
 /* Slot de foto (avatar) */
 .photo{
@@ -441,21 +475,42 @@ section{ padding: 5.5rem 0; position: relative; }
 .incl li svg{ width: 18px; height: 18px; color: var(--verde); flex:none; margin-top: 3px; }
 .price-cta{ display:flex; gap:.8rem; flex-wrap: wrap; justify-content:center; margin-top: 2.5rem; }
 
-/* ---------- Sponsors ---------- */
-.sponsors{ display:grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.1rem; }
-.sponsor{
-  cursor:pointer; background: #fff; color: var(--morado); border: 0; border-radius: var(--r-md);
-  aspect-ratio: 3/2; display:grid; place-items:center; padding: 1.3rem; text-align:center;
-  transition: transform .2s, box-shadow .2s; position: relative;
+/* ---------- Sponsors (carrusel infinito) ---------- */
+.marquee{
+  position: relative; overflow: hidden; padding: 1.25rem 0 1.75rem;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
-.sponsor:hover{ transform: translateY(-3px); box-shadow: 0 14px 30px rgba(10,0,50,.5); }
-.sponsor img{ max-height: 96px; max-width: 100%; width:auto; object-fit: contain; }
-.sponsor .ph-name{ font-weight: 800; font-size: 1.05rem; line-height:1.2; }
-.sponsor .badge{ position:absolute; bottom: .55rem; left: 50%; transform: translateX(-50%); font-size: .66rem; font-weight: 800; color: #6b5ca8; white-space: nowrap; }
-.sponsor.add{ text-decoration:none; background: transparent; color: #fff; border: 2px dashed rgba(255,255,255,.45); }
-.sponsor.add:hover{ border-color: var(--celeste); }
-.sponsor.add b{ display:block; font-weight: 800; }
-.sponsor.add small{ color: var(--niebla); font-size: .82rem; }
+.marquee-track{ display:flex; gap: 1.25rem; width: max-content; animation: marquee var(--dur, 32s) linear infinite; }
+.marquee:hover .marquee-track, .marquee:focus-within .marquee-track{ animation-play-state: paused; }
+@keyframes marquee{ to{ transform: translateX(calc(-50% - .625rem)); } }
+.brand-card{
+  --c: var(--celeste);
+  flex: none; width: 250px; text-decoration: none; color: #fff; border-radius: 22px; overflow: hidden;
+  background: rgba(23,13,86,.8); border: 2px solid color-mix(in srgb, var(--c) 55%, transparent);
+  display:flex; flex-direction: column; transition: transform .25s ease, box-shadow .25s ease, border-color .25s;
+}
+.brand-card:nth-child(3n+2){ --c: var(--naranja); } .brand-card:nth-child(3n){ --c: var(--lila); }
+.brand-card:hover{ transform: translateY(-6px) rotate(-1deg); border-color: var(--c); box-shadow: 0 16px 40px color-mix(in srgb, var(--c) 45%, transparent); }
+.brand-card .logo{ background:#fff; height: 150px; display:grid; place-items:center; padding: 1rem; }
+.brand-card .logo img{ max-height: 118px; max-width: 100%; width:auto; object-fit: contain; transition: transform .3s; }
+.brand-card:hover .logo img{ transform: scale(1.06); }
+.brand-card .info{ padding: .9rem 1rem 1rem; display:grid; gap: .2rem; }
+.brand-card b{ font-weight: 900; font-size: 1rem; line-height: 1.2; }
+.brand-card small{ color: var(--niebla); font-size: .74rem; font-weight: 600; }
+.brand-card .go{ display:inline-flex; align-items:center; gap:.4rem; margin-top: .45rem; font-size: .8rem; font-weight: 800; color: var(--c); }
+.brand-card .go svg{ width: 16px; height: 16px; }
+.sponsor-cta{
+  margin-top: 1.5rem; display:flex; align-items:center; justify-content:space-between; gap: 1rem; flex-wrap: wrap;
+  border: 2px dashed rgba(255,255,255,.4); border-radius: 22px; padding: 1.2rem 1.5rem;
+}
+.sponsor-cta b{ display:block; font-weight: 900; font-size: 1.1rem; }
+.sponsor-cta span{ color: var(--niebla); font-size: .9rem; }
+@media (prefers-reduced-motion: reduce){
+  .marquee{ -webkit-mask-image:none; mask-image:none; }
+  .marquee-track{ flex-wrap: wrap; justify-content:center; width: auto; }
+  .marquee-track [aria-hidden="true"]{ display:none; }
+}
 
 /* ---------- Beneficios ---------- */
 .benefits{ display:grid; grid-template-columns: repeat(4, 1fr); gap: .9rem; }
@@ -560,7 +615,20 @@ dialog.modal::backdrop{ background: rgba(8,2,35,.72); backdrop-filter: blur(4px)
 .ph-mascot{ width: 80%; aspect-ratio: 1; border-radius: 50%; border: 2px dashed rgba(255,255,255,.45); background: rgba(255,255,255,.05); }
 .ph-mascot span{ font-size: 4.5rem; line-height:1; display:block; }
 
+/* Aparición suave al hacer scroll (solo si el JS está activo) */
+.js .reveal{ opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.js .reveal.in{ opacity: 1; transform: none; }
+
+/* Plantillas del concurso de proyectos (modal) */
+.tpl{ margin-top: 1.1rem; border: 2px solid color-mix(in srgb, var(--c) 60%, transparent); border-radius: 16px; padding: 1rem 1.1rem; background: rgba(255,255,255,.05); }
+.tpl h3{ margin-top: 0 !important; }
+.tpl ol{ margin: .3rem 0 .6rem; padding-left: 1.2rem; color: var(--niebla); font-size: .92rem; display:grid; gap:.3rem; }
+.tpl ol a{ color: #fff; font-weight: 700; text-decoration-color: color-mix(in srgb, var(--c) 70%, transparent); }
+.tpl .warn{ display:flex; gap:.6rem; align-items:flex-start; background: rgba(255,194,61,.12); color: #FFE2A6; border-radius: 12px; padding: .7rem .85rem; font-size: .86rem; font-weight: 600; margin: 0; }
+.tpl .warn svg{ width: 20px; height: 20px; flex: none; color: var(--ambar); margin-top: 1px; }
+
 @media (prefers-reduced-motion: reduce){
+  .js .reveal{ opacity: 1; transform: none; }
   *, *::before, *::after{ animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 </style>
@@ -585,6 +653,7 @@ dialog.modal::backdrop{ background: rgba(8,2,35,.72); backdrop-filter: blur(4px)
       <a href="#sponsors">Sponsors</a>
       <a href="#equipo">Equipo</a>
       <a href="#contacto">Contacto</a>
+      <a data-brochure href="#">Brochure</a>
       <a class="btn btn-buy" data-buy href="#">Comprar entrada</a>
     </nav>
     <a class="btn btn-buy btn-sm btn-buy-top" data-buy href="#">Comprar entrada</a>
@@ -624,6 +693,10 @@ dialog.modal::backdrop{ background: rgba(8,2,35,.72); backdrop-filter: blur(4px)
           <a class="btn btn-buy" data-buy href="#">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9V6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3a3 3 0 0 0 0 6v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-3a3 3 0 0 0 0-6z"/><path d="M14 5v14" stroke-dasharray="2 2"/></svg>
             Comprar entrada
+          </a>
+          <a class="btn btn-ghost" data-brochure href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-5a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h6z"/></svg>
+            Ver brochure
           </a>
           <a class="btn btn-ghost" href="#concursos">Ver concursos</a>
         </div>
@@ -737,7 +810,7 @@ dialog.modal::backdrop{ background: rgba(8,2,35,.72); backdrop-filter: blur(4px)
       <h2 class="sec-title">Charlas principales</h2>
       <p class="sec-lead">Una charla por cada eje temático, en el Auditorio Principal y abiertas a todo el público.</p>
     </div>
-    <div class="speakers" id="gridPonencias"></div>
+    <div class="talks" id="gridPonencias"></div>
   </div>
 </section>
 
@@ -762,6 +835,7 @@ dialog.modal::backdrop{ background: rgba(8,2,35,.72); backdrop-filter: blur(4px)
     <div class="pricing" id="pricing"></div>
     <div class="price-cta">
       <a class="btn btn-buy" data-buy href="#">Comprar entrada</a>
+      <a class="btn btn-ghost" data-brochure href="#">Ver brochure</a>
       <a class="btn btn-ghost" href="#contacto">Consultar por delegación</a>
     </div>
   </div>
@@ -774,7 +848,8 @@ dialog.modal::backdrop{ background: rgba(8,2,35,.72); backdrop-filter: blur(4px)
       <h2 class="sec-title">Marcas aliadas</h2>
       <p class="sec-lead">Organizaciones que hacen posible CONCEPMI VI.</p>
     </div>
-    <div class="sponsors" id="gridSponsors"></div>
+    <div class="marquee" id="marquee"><div class="marquee-track" id="gridSponsors"></div></div>
+    <div class="sponsor-cta"><div><b>¿Tu marca quiere ser parte de CONCEPMI VI?</b><span>Conecta con estudiantes de gestión de proyectos de todo el país.</span></div><a class="btn btn-cyan btn-sm" href="#contacto">Quiero ser sponsor</a></div>
   </div>
 </section>
 
@@ -883,6 +958,8 @@ const SITE = {
   formulario: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=eo3ZAaEibk2z4xW8l2AG1FMiu3X-1a1AvAIho03ud7BUM1oxTThLWk5OSlg1MFpQT01FTU5JMTdCSi4u",
   grupoWhatsapp: "https://chat.whatsapp.com/BSEBleqTDo89ZstVYIflms",
   qrWhatsapp: "public/images/qr-grupo-whatsapp.png", // se regenera con: node herramientas/qr.js <enlace>
+  brochure: "https://canva.link/85h885oyg5i1i4v",
+  subirEntregables: null, // ← enlace del formulario para subir los 5 entregables (Google Forms / Microsoft Forms)
   inicio: "2026-11-24T08:30:00-05:00",
 
   // Logos e imágenes oficiales
@@ -913,7 +990,17 @@ const CONCURSOS = [
     formato:"Pitch ejecutivo y sustentación del proyecto de emprendimiento ante el jurado calificador.",
     entregable:"Pitch deck y resumen ejecutivo del Acta de Constitución con plan de viabilidad.",
     criterios:["Alineación con las buenas prácticas PMI y generación de valor","Viabilidad técnica, operativa y financiera","Impacto, innovación y claridad expositiva"],
-    bases:"public/bases/concurso-proyectos.pdf" },
+    bases:"public/bases/concurso-proyectos.pdf",
+    plantillas:{
+      zip:"public/plantillas/plantillas-entregables-concurso-proyectos.zip",
+      archivos:[
+        ["Entregable 1 · Business Case y fit de mercado","public/plantillas/entregable-1-business-case-y-fit-de-mercado.docx"],
+        ["Entregable 2 · Definición de alcance","public/plantillas/entregable-2-definicion-de-alcance.docx"],
+        ["Entregable 3 · Plan de riesgos e incertidumbre","public/plantillas/entregable-3-plan-de-riesgos-e-incertidumbre.docx"],
+        ["Entregable 4 · Plan financiero","public/plantillas/entregable-4-plan-financiero.xlsx"],
+        ["Entregable 5 · Video pitch y resumen del MVP","public/plantillas/entregable-5-video-pitch-resumen-mvp.docx"]
+      ]
+    } },
   { n:3, color:"naranja", nombre:"IATHON", kicker:"Mini hackathon de IA", titulo:"IATHON", sub:"", icono:"chip", imagen:null,
     desc:"Aplica la inteligencia artificial para resolver un reto real con impacto.",
     equipo:4, puntos:70, dia:"Día 1 · 5:00 p. m.",
@@ -989,18 +1076,24 @@ const AGENDA = [
 
 /* ---------- Charlas principales ---------- */
 const PONENCIAS = [
-  { n:"I", color:"lila", eje:"Gestión de proyectos", lema:"Método · Valor · Resultados", dia:"Día 1 · 24 nov", hora:"10:15 – 11:30 a. m.",
-    ponente:"Ing. Alexis Rodríguez", cargo:"Consultor senior en dirección de proyectos y liderazgo", foto:"public/images/ponentes/alexis-rodriguez.jpg", confirmado:true,
-    bio:"Ingeniero Civil (UNI) y MBA Cum Laude por Centrum PUCP. PMP®, certificación VDC de Stanford, máster en Liderazgo por EADA (España), perito CIP y adjudicador JRD, con más de 27 años de experiencia.",
+  { n:"I", color:"lila", eje:"Gestión de proyectos", lema:"Método · Valor · Resultados", dia:"Día 1 · Mar 24 nov", hora:"10:15 – 11:30 a. m.",
+    ponente:"Ing. Alexis Rodríguez Cabanillas", cargo:"Gerente general de Rodrizh Consulting · PMP®, MBA", foto:"public/images/ponentes/alexis-rodriguez.jpg", confirmado:true,
+    linkedin:"https://www.linkedin.com/in/alexis-rodriguez-cabanillas-46b17463",
+    bio:"Ingeniero civil, PMP® y MBA por la PUCP, con Máster en Liderazgo por EADA Business School y certificación en Virtual Design and Construction (VDC) de Stanford. Fundador y gerente general de Rodrizh Consulting, experto en proyectos de construcción y minería, perito de obras públicas y privadas, adjudicador JRD y asesor en DABs. Ex director del CARD del CIP CD Lima, árbitro, profesor y capacitador en liderazgo, cultura organizacional y habilidades blandas.",
+    logros:["PMP® · MBA PUCP","VDC · Stanford","Perito y adjudicador JRD"],
     temas:["Ágil / híbrido","Gestión del valor","Tendencias PMBOK® 8va ed."] },
-  { n:"II", color:"celeste", eje:"Networking y liderazgo", lema:"Conecta · Inspira · Potencia", dia:"Día 2 · 26 nov", hora:"2:30 – 3:30 p. m.",
-    ponente:"Giovanni Escribens", cargo:"Especialista en liderazgo y networking", foto:"public/images/ponentes/giovanni-escribens.jpg", confirmado:true,
-    bio:"Muy pronto compartiremos la trayectoria del ponente.",
-    temas:["Redes de alto valor","Liderazgo transformacional","Marca personal y alianzas"] },
-  { n:"III", color:"naranja", eje:"IA y herramientas tecnológicas", lema:"Automatiza · Analiza · Lidera", dia:"Día 2 · 26 nov", hora:"6:00 – 7:00 p. m.",
-    ponente:"Aldo Mallma", cargo:"Especialista en IA aplicada a proyectos", foto:"public/images/ponentes/aldo-mallma.jpg", confirmado:true,
-    bio:"Muy pronto compartiremos la trayectoria del ponente.",
-    temas:["IA generativa","Automatización de procesos","Datos y análisis predictivo"] }
+  { n:"II", color:"celeste", eje:"Networking y liderazgo", lema:"Conecta · Inspira · Potencia", dia:"Día 2 · Jue 26 nov", hora:"2:30 – 3:30 p. m.",
+    ponente:"Giovannie Escribens Ruiz", cargo:"Gerente de Gestión Humana en Laive · Director de APERHU", foto:"public/images/ponentes/giovannie-escribens.jpg", confirmado:true,
+    linkedin:"https://www.linkedin.com/in/giovannie-escribens",
+    bio:"Economista por la Universidad de Lima y MBA por la Universidad del Pacífico, con más de 22 años liderando la gestión humana en organizaciones como Laive, Gloria, Quimpac, Orica, el BCP y la SUNAT. Es director de la Asociación Peruana de Recursos Humanos (APERHU), docente de posgrado en la Universidad del Pacífico y la Universidad de Lima, y conductor del podcast La Conversación Incómoda. Reconocido como TOP 1 Perú HR Influencer ChangeMakers (2024 y 2025) y con el Premio Change Builder 2026.",
+    logros:["TOP 1 HR Influencer Perú","+22 años en RR. HH.","Podcast La Conversación Incómoda"],
+    temas:["Redes de alto valor","Liderazgo auténtico","Empleabilidad y marca personal"] },
+  { n:"III", color:"naranja", eje:"IA y herramientas tecnológicas", lema:"Automatiza · Analiza · Lidera", dia:"Día 2 · Jue 26 nov", hora:"6:00 – 7:00 p. m.",
+    ponente:"Aldo Mallma", cargo:"Líder regional de Producto & Marketing · Promotor de IA", foto:"public/images/ponentes/aldo-mallma.jpg", confirmado:true,
+    linkedin:"https://www.linkedin.com/in/aldomallma",
+    bio:"Ingeniero de sistemas por la UNI y Máster en Marketing Summa Cum Laude por EU Business School (Múnich), con más de 12 años de experiencia en 7 mercados de Latinoamérica. En Telefónica Hispam gestionó un portafolio regional de 1 000 millones de euros, lideró un tren ágil SAFe de 50 personas y obtuvo el Gold Project Award 2023. Hoy impulsa la transformación digital con inteligencia artificial como consultor en experiencia del cliente y fundador de AMG Strategic Investments.",
+    logros:["Gold Project Award 2023","Portafolio de €1B en 7 países","Líder de tren ágil SAFe"],
+    temas:["IA generativa","Automatización de procesos","Producto y transformación ágil"] }
 ];
 
 /* ---------- Talleres ---------- */
@@ -1020,7 +1113,7 @@ const TALLERES = [
   { n:"IV", color:"#FD443F", titulo:"Power skills & pitch ejecutivo", sub:"Comunicación de impacto y negociación para liderar equipos",
     pilar:"Networking y liderazgo", tipo:"Taller de habilidades directivas y expresión", lugar:"Aula Taller / Auditorio Secundario",
     aprende:"Desarrollar las habilidades del Triángulo del Talento del PMI: comunicación asertiva, conversaciones difíciles, pitch ejecutivo y networking efectivo.",
-    tallerista:"Ing. Alexis Rodríguez", cargo:"Consultor senior en dirección de proyectos", foto:"public/images/talleristas/taller-4.jpg", confirmado:true }
+    tallerista:"Ing. Alexis Rodríguez", cargo:"Gerente general de Rodrizh Consulting · PMP®", foto:"public/images/ponentes/alexis-rodriguez.jpg", confirmado:true }
 ];
 
 /* ---------- Precios ---------- */
@@ -1039,11 +1132,11 @@ const PRECIOS = {
 
 /* ---------- Sponsors (logo: ruta al archivo PNG/SVG) ---------- */
 const SPONSORS = [
-  { nombre:"Certificate Project Control", tipo:"Sponsor académico", logo:"public/images/sponsors/certificate-project-control.png", web:"https://pcertificate.com", desc:"Formación y consultoría en dirección de proyectos, BIM e inteligencia artificial, con especializaciones e insignias digitales." },
-  { nombre:"Data Science Perú", tipo:"Sponsor académico", logo:"public/images/sponsors/data-science-peru.png", web:null, desc:"Comunidad de difusión de inteligencia artificial, analítica avanzada y formación en ciencia de datos." },
-  { nombre:"Datux Perú", tipo:"Sponsor académico", logo:"public/images/sponsors/datux-peru.png", web:null, desc:"Especialistas en analítica de datos, business intelligence y formación tecnológica." },
-  { nombre:"Gestiónate", tipo:"Sponsor académico", logo:"public/images/sponsors/gestionate.png", web:null, desc:"Capacitación continua y preparación para certificaciones internacionales en gestión de proyectos." },
-  { nombre:"Inspírate Creator", tipo:"Sponsor académico", logo:"public/images/sponsors/inspirate-creator.png", web:null, desc:"Organización de impulso al talento creativo, habilidades digitales y creación de contenido educativo." }
+  { nombre:"Certificate Project Control", tipo:"Sponsor académico", logo:"public/images/sponsors/certificate-project-control.png", instagram:"https://www.instagram.com/certificate_project_control/" },
+  { nombre:"Data Science Perú", tipo:"Sponsor académico", logo:"public/images/sponsors/data-science-peru.png", instagram:"https://www.instagram.com/datasciencepe/" },
+  { nombre:"Datux Perú", tipo:"Sponsor académico", logo:"public/images/sponsors/datux-peru.png", instagram:"https://www.instagram.com/datuxperu/" },
+  { nombre:"Gestiónate Group", tipo:"Sponsor académico", logo:"public/images/sponsors/gestionate.png", instagram:"https://www.instagram.com/gestionate.group/" },
+  { nombre:"Inspírate Creator", tipo:"Sponsor académico", logo:"public/images/sponsors/inspirate-creator.png", instagram:"https://www.instagram.com/inspiratecreator_empleabilidad/" }
 ];
 
 /* ---------- Equipo por área ----------
@@ -1056,56 +1149,56 @@ const EQUIPO = [
     { nombre:"Andy Fernández", cargo:"Director de proyecto", foto:"public/images/equipo/direccion/01.jpg", linkedin:null }
   ]},
   { area:"PMO", desc:"Planifica, da seguimiento y controla el proyecto del congreso.", miembros:[
-    { nombre:"Nombre Apellido", cargo:"Jefe(a) de PMO", foto:"public/images/equipo/pmo/01.jpg", linkedin:null }
+    { nombre:"Alanis Chambergo", foto:"public/images/equipo/pmo/01.jpg", lider:true, linkedin:null }
   ]},
   { area:"Marketing", desc:"Comunicación, redes sociales y diseño de la marca CONCEPMI.", miembros:[
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/marketing/01.jpg", lider:true, linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/marketing/02.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/marketing/03.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/marketing/04.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/marketing/05.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/marketing/06.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/marketing/07.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/marketing/08.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/marketing/09.jpg", linkedin:null }
+    { nombre:"Matías Spiner", foto:"public/images/equipo/marketing/01.jpg", lider:true, linkedin:null },
+    { nombre:"Claudia Mozo", foto:"public/images/equipo/marketing/02.jpg", linkedin:null },
+    { nombre:"Alesia Janampa", foto:"public/images/equipo/marketing/03.jpg", linkedin:null },
+    { nombre:"Nicole Domingo", foto:"public/images/equipo/marketing/04.jpg", linkedin:null },
+    { nombre:"Sandra León", foto:"public/images/equipo/marketing/05.jpg", linkedin:null },
+    { nombre:"Mariela Torre", foto:"public/images/equipo/marketing/06.jpg", linkedin:null },
+    { nombre:"Jack Celestino", foto:"public/images/equipo/marketing/07.jpg", linkedin:null },
+    { nombre:"Gustavo Espinosa", foto:"public/images/equipo/marketing/08.jpg", linkedin:null },
+    { nombre:"Patricia Cóndor", foto:"public/images/equipo/marketing/09.jpg", linkedin:null }
   ]},
   { area:"Relaciones públicas", desc:"Alianzas con sponsors, ponentes y universidades.", miembros:[
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/rrpp/01.jpg", lider:true, linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/rrpp/02.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/rrpp/03.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/rrpp/04.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/rrpp/05.jpg", linkedin:null }
+    { nombre:"Cristian Mariño", foto:"public/images/equipo/rrpp/01.jpg", lider:true, linkedin:null },
+    { nombre:"Ariadna Damián", foto:"public/images/equipo/rrpp/02.jpg", linkedin:null },
+    { nombre:"Santiago Cruces", foto:"public/images/equipo/rrpp/03.jpg", linkedin:null },
+    { nombre:"Salomón Gárate", foto:"public/images/equipo/rrpp/04.jpg", linkedin:null },
+    { nombre:"Helen Patiño", foto:"public/images/equipo/rrpp/05.jpg", linkedin:null },
+    { nombre:"Patricia Gutiérrez", foto:"public/images/equipo/rrpp/06.jpg", linkedin:null }
   ]},
   { area:"Logística", desc:"Sede, materiales, catering y todo lo que pasa el día del evento.", miembros:[
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/logistica/01.jpg", lider:true, linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/logistica/02.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/logistica/03.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/logistica/04.jpg", linkedin:null }
+    { nombre:"Mario Alonso Pacheco", foto:"public/images/equipo/logistica/01.jpg", lider:true, linkedin:null },
+    { nombre:"María Fernanda Flores", foto:"public/images/equipo/logistica/02.jpg", linkedin:null },
+    { nombre:"Pilar Chambi", foto:"public/images/equipo/logistica/03.jpg", linkedin:null },
+    { nombre:"Carlos Juárez", foto:"public/images/equipo/logistica/04.jpg", linkedin:null }
   ]},
   { area:"Ventas", desc:"Inscripciones, entradas y atención a delegaciones.", miembros:[
-    { nombre:"Valeria Ubaldo", foto:"public/images/equipo/ventas/01.jpg", linkedin:null },
-    { nombre:"Carolina Cjuiro", foto:"public/images/equipo/ventas/02.jpg", linkedin:null },
-    { nombre:"Franco Sánchez", foto:"public/images/equipo/ventas/03.jpg", linkedin:null },
-    { nombre:"Angely Contreras", foto:"public/images/equipo/ventas/04.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/ventas/05.jpg", lider:true, linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/ventas/06.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/ventas/07.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/ventas/08.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/ventas/09.jpg", linkedin:null }
+    { nombre:"Guido Quispe", foto:"public/images/equipo/ventas/01.jpg", lider:true, linkedin:null },
+    { nombre:"Angely Contreras", foto:"public/images/equipo/ventas/02.jpg", linkedin:null },
+    { nombre:"Carolina Nicole Cjuiro de la Cruz", foto:"public/images/equipo/ventas/03.jpg", linkedin:null },
+    { nombre:"Alessandra Valeria Ubaldo", foto:"public/images/equipo/ventas/04.jpg", linkedin:null },
+    { nombre:"Franco Sánchez", foto:"public/images/equipo/ventas/05.jpg", linkedin:null },
+    { nombre:"José Fabián Segura", foto:"public/images/equipo/ventas/06.jpg", linkedin:null },
+    { nombre:"Dorca Crisólogo", foto:"public/images/equipo/ventas/07.jpg", linkedin:null },
+    { nombre:"Percy Flores", foto:"public/images/equipo/ventas/08.jpg", linkedin:null }
   ]},
   { area:"TI", desc:"Tecnología de información: plataformas, página web y soporte digital del congreso.", miembros:[
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/ti/01.jpg", lider:true, linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/ti/02.jpg", linkedin:null },
-    { nombre:"Nombre Apellido", foto:"public/images/equipo/ti/03.jpg", linkedin:null }
+    { nombre:"Carlos Huachayanqui", foto:"public/images/equipo/ti/01.jpg", lider:true, linkedin:null },
+    { nombre:"Paolo Reza", foto:"public/images/equipo/ti/02.jpg", linkedin:null },
+    { nombre:"Luisa Chang", foto:"public/images/equipo/ti/03.jpg", linkedin:null }
   ]}
 ];
 
 /* ---------- Contacto ---------- */
 const VENTAS = [
-  { nombre:"Valeria Ubaldo", tel:"942 152 505", foto:"public/images/equipo/ventas/01.jpg" },
-  { nombre:"Carolina Cjuiro", tel:"982 174 187", foto:"public/images/equipo/ventas/02.jpg" },
-  { nombre:"Franco Sánchez", tel:"952 616 806", foto:"public/images/equipo/ventas/03.jpg" },
-  { nombre:"Angely Contreras", tel:"922 246 586", foto:"public/images/equipo/ventas/04.jpg" }
+  { nombre:"Valeria Ubaldo", tel:"942 152 505", foto:"public/images/equipo/ventas/04.jpg" },
+  { nombre:"Carolina Cjuiro", tel:"982 174 187", foto:"public/images/equipo/ventas/03.jpg" },
+  { nombre:"Franco Sánchez", tel:"952 616 806", foto:"public/images/equipo/ventas/05.jpg" },
+  { nombre:"Angely Contreras", tel:"922 246 586", foto:"public/images/equipo/ventas/02.jpg" }
 ];
 const FAQ = [
   ["¿Cuándo y dónde es el congreso?","El martes 24 y el jueves 26 de noviembre de 2026 en la Universidad Nacional Mayor de San Marcos (UNMSM): Auditorio Principal, aulas colaborativas, laboratorios y Cancha de Calentamiento."],
@@ -1148,6 +1241,10 @@ const ICON = {
   gift:'<rect x="3" y="8" width="18" height="5"/><path d="M5 13v8h14v-8M12 8v13M12 8S10 3 7.5 4.5 9 8 12 8zm0 0s2-5 4.5-3.5S15 8 12 8z"/>',
   award:'<circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 21l5-3 5 3-1.5-7"/>',
   sparkle:'<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/>',
+  instagram:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/>',
+  linkedin:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/>',
+  upload:'<path d="M12 21V9M7 14l5-5 5 5M4 3h16"/>',
+  arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
   coffee:'<path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3"/>',
   wa:'<path d="M20.5 3.5A11 11 0 0 0 3.6 17.1L2 22l5-1.6A11 11 0 0 0 20.5 3.5zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5 0a6.6 6.6 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.7 2.7 0 0 0-.9 2.1 4.8 4.8 0 0 0 1 2.5 10.6 10.6 0 0 0 4.1 3.6c1.5.7 2.1.7 2.9.6a2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c0-.1-.2-.2-.4-.3z" fill="currentColor" stroke="none"/>'
 };
@@ -1175,6 +1272,7 @@ $("[data-mascot]").innerHTML = imgOr(SITE.mascota, "Wolfito, mascota oficial de 
 
 /* Enlaces de compra */
 document.querySelectorAll("[data-buy]").forEach(a=>{ a.href = SITE.formulario; a.target="_blank"; a.rel="noopener"; });
+document.querySelectorAll("[data-brochure]").forEach(a=>{ a.href = SITE.brochure; a.target="_blank"; a.rel="noopener"; });
 const wa = $("#waGroupBtn");
 if(SITE.grupoWhatsapp){
   wa.href = SITE.grupoWhatsapp; wa.target="_blank"; wa.rel="noopener";
@@ -1233,6 +1331,10 @@ function checkBases(){
     a.outerHTML = `<button class="btn" disabled>${svg("download")}Bases próximamente</button>`;
   });
 }
+const tplBtns = t => `<a class="btn btn-cyan" href="${esc(t.zip)}" download>${svg("download")}Descargar plantillas entregables</a>` +
+  (SITE.subirEntregables
+    ? `<a class="btn btn-ghost" href="${esc(SITE.subirEntregables)}" target="_blank" rel="noopener">${svg("upload")}Subir entregables</a>`
+    : `<button class="btn" disabled>${svg("upload")}Subida de entregables próximamente</button>`);
 const buyBtn = `<a class="btn btn-ghost" href="${esc(SITE.formulario)}" target="_blank" rel="noopener">Inscribir a mi delegación</a>`;
 const facts = arr => `<div class="m-facts">${arr.map(([k,v])=>`<div><b>${esc(k)}</b><span>${esc(v)}</span></div>`).join("")}</div>`;
 
@@ -1263,8 +1365,11 @@ gC.addEventListener("click", e=>{
       ${facts([["Equipo",`${c.equipo} integrantes`],["Puntaje máximo",`${c.puntos} pts`],["Cuándo",c.dia]])}
       <h3>Formato</h3><p>${esc(c.formato)}</p>
       <h3>Entregable</h3><p>${esc(c.entregable)}</p>
-      <h3>Qué evalúa el jurado</h3><ul>${c.criterios.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`,
-    actions: basesBtn(c.bases) + buyBtn
+      <h3>Qué evalúa el jurado</h3><ul>${c.criterios.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+      ${c.plantillas ? `<div class="tpl"><h3>Entregables obligatorios del 1 al 5</h3>
+        <ol>${c.plantillas.archivos.map(([t,u])=>`<li><a href="${esc(u)}" download>${esc(t)}</a></li>`).join("")}</ol>
+        <p class="warn">${svg("alert")}<span>Las 5 plantillas son obligatorias para la fase virtual. Si falta alguna, el equipo pierde puntaje y puede no alcanzar el puntaje necesario de esa fase.</span></p></div>` : ""}`,
+    actions: basesBtn(c.bases) + (c.plantillas ? tplBtns(c.plantillas) : "") + buyBtn
   });
   checkBases();
 });
@@ -1331,21 +1436,34 @@ gK.addEventListener("click", e=>{
 /* ---------- Ponencias ---------- */
 const statusTag = ok => ok ? `<span class="status ok">Confirmado</span>` : `<span class="status wait">Por confirmar</span>`;
 const gP = $("#gridPonencias");
-gP.innerHTML = PONENCIAS.map((p,i)=>`<button class="speaker" style="--c:${COLORS[p.color]}" data-i="${i}">
-  <div class="top"><small>Charla principal ${p.n} · ${esc(p.dia)}</small><b>${esc(p.eje)}</b><em>${esc(p.lema)}</em></div>
-  <div class="body">${photo(p.foto, p.ponente)}<div><p class="name">${esc(p.ponente)}</p><p class="role">${esc(p.cargo)}</p>${statusTag(p.confirmado)}</div></div>
-  <div class="meta"><span class="chip">${esc(p.hora)}</span>${p.temas.map(t=>`<span class="chip">${esc(t)}</span>`).join("")}</div>
-</button>`).join("");
+gP.innerHTML = PONENCIAS.map((p,i)=>`<article class="talk reveal" style="--c:${COLORS[p.color]}">
+  <span class="roman" aria-hidden="true">${p.n}</span>
+  <div class="talk-photo">${photo(p.foto, p.ponente)}<span class="eje-tag">Eje ${i+1}</span></div>
+  <div class="talk-body">
+    <div class="talk-when"><span>Charla principal ${p.n}</span><span>${esc(p.dia)}</span><span>${esc(p.hora)}</span><span>Auditorio Principal</span></div>
+    <h3>${esc(p.eje)}</h3>
+    <p class="lema">${esc(p.lema)}</p>
+    <p class="who">${esc(p.ponente)}</p>
+    <p class="who-role">${esc(p.cargo)}</p>
+    <p class="bio">${esc(p.bio)}</p>
+    <div class="hl">${p.logros.map(t=>`<span>${svg("award")}${esc(t)}</span>`).join("")}</div>
+    <div class="talk-actions">
+      <button class="btn btn-buy btn-sm" data-i="${i}">Ver temas de la charla</button>
+      ${p.linkedin ? `<a class="btn btn-line btn-sm" href="${esc(p.linkedin)}" target="_blank" rel="noopener">${svg("linkedin")}LinkedIn</a>` : ""}
+    </div>
+  </div>
+</article>`).join("");
 gP.addEventListener("click", e=>{
-  const b = e.target.closest(".speaker"); if(!b) return;
+  const b = e.target.closest("button[data-i]"); if(!b) return;
   const p = PONENCIAS[b.dataset.i];
   openModal({
     color:p.color, title:p.eje, sub:`Charla principal ${p.n} · ${p.lema}`,
     body:`<div class="m-speaker" style="--c:${COLORS[p.color]}">${photo(p.foto, p.ponente, "lg")}<div><p style="margin:0;color:#fff;font-weight:800;font-size:1.15rem">${esc(p.ponente)}</p><p style="margin:.2rem 0 .5rem">${esc(p.cargo)}</p>${statusTag(p.confirmado)}</div></div>
       ${facts([["Fecha",p.dia],["Hora",p.hora],["Lugar","Auditorio Principal"]])}
-      <h3>Sobre el ponente</h3><p>${esc(p.bio)}</p>
-      <h3>Temas</h3><ul>${p.temas.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`,
-    actions: `<a class="btn btn-buy" href="${esc(SITE.formulario)}" target="_blank" rel="noopener">Comprar entrada</a>`
+      <h3>Temas</h3><ul>${p.temas.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>
+      <h3>Sobre el ponente</h3><p>${esc(p.bio)}</p>`,
+    actions: `<a class="btn btn-buy" href="${esc(SITE.formulario)}" target="_blank" rel="noopener">Comprar entrada</a>` +
+      (p.linkedin ? `<a class="btn btn-ghost" href="${esc(p.linkedin)}" target="_blank" rel="noopener">${svg("linkedin")}Ver LinkedIn</a>` : "")
   });
 });
 
@@ -1399,19 +1517,14 @@ gT.addEventListener("click", e=>{
 
 /* ---------- Sponsors ---------- */
 const gS = $("#gridSponsors");
-gS.innerHTML = SPONSORS.map((s,i)=>`<button class="sponsor" data-i="${i}" aria-label="${esc(s.nombre)}">
-  ${imgOr(s.logo, s.nombre, `<span class="ph-name">${esc(s.nombre)}</span>`)}
-  <span class="badge">${esc(s.tipo)}</span>
-</button>`).join("") + `<a class="sponsor add" href="#contacto"><span><b>Tu marca aquí</b><small>Sé sponsor de CONCEPMI VI</small></span></a>`;
-gS.addEventListener("click", e=>{
-  const b = e.target.closest("button.sponsor"); if(!b) return;
-  const s = SPONSORS[b.dataset.i];
-  openModal({
-    color:"celeste", title:s.nombre, sub:s.tipo,
-    body:`${s.logo ? `<div style="background:#fff;border-radius:16px;padding:1.2rem;display:grid;place-items:center;margin-bottom:1rem">${imgOr(s.logo, s.nombre, "")}</div>` : ""}<p class="lead" style="font-weight:500">${esc(s.desc)}</p>`,
-    actions: s.web ? `<a class="btn btn-cyan" href="${esc(s.web)}" target="_blank" rel="noopener">Visitar sitio web</a>` : ""
-  });
-});
+const handle = url => "@" + url.replace(/\/+$/,"").split("/").pop();
+const brandCard = (s, clone) => `<a class="brand-card" href="${esc(s.instagram)}" target="_blank" rel="noopener" ${clone ? 'aria-hidden="true" tabindex="-1"' : `aria-label="${esc(s.nombre)} en Instagram"`}>
+  <div class="logo">${imgOr(s.logo, clone ? "" : s.nombre, `<span class="ph-name">${esc(s.nombre)}</span>`)}</div>
+  <div class="info"><b>${esc(s.nombre)}</b><small>${esc(s.tipo)} · ${esc(handle(s.instagram))}</small><span class="go">${svg("instagram")}Clic aquí para ver sus redes</span></div>
+</a>`;
+/* El carrusel repite la lista para que el desplazamiento sea continuo */
+gS.innerHTML = SPONSORS.map(s=>brandCard(s,false)).join("") + SPONSORS.map(s=>brandCard(s,true)).join("");
+gS.style.setProperty("--dur", `${SPONSORS.length * 6}s`);
 
 /* ---------- Beneficios ---------- */
 $("#gridBeneficios").innerHTML = [
@@ -1448,6 +1561,16 @@ $("#gridBeneficios").innerHTML = [
 $("#sellers").innerHTML = VENTAS.map((v,i)=>`<a class="seller c${i+1}" href="https://wa.me/51${v.tel.replace(/\s/g,"")}" target="_blank" rel="noopener" aria-label="Escribir a ${esc(v.nombre)} por WhatsApp">
   ${photo(v.foto, v.nombre)}<div><b>${esc(v.nombre)}</b><span>${svg("wa")}${esc(v.tel)}</span></div></a>`).join("");
 $("#faq").innerHTML = FAQ.map(([q,a],i)=>`<details ${i===0?"open":""}><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("");
+/* ---------- Aparición al hacer scroll ---------- */
+(function(){
+  const els = document.querySelectorAll(".sec-head, .neon, .ws, .eje, .copa-total, .price-block, .incl, .member, .benefit, .seller, .faq details, .sponsor-cta, .reveal");
+  if(!("IntersectionObserver" in window)) return;
+  document.documentElement.classList.add("js");
+  const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin:"0px 0px -8% 0px" });
+  els.forEach((el,i)=>{ el.classList.add("reveal"); el.style.transitionDelay = `${(i%4)*60}ms`; io.observe(el); });
+  /* Los miembros del equipo se vuelven a dibujar al cambiar de pestaña: se muestran de inmediato */
+  $("#teamTabs").addEventListener("click", ()=> requestAnimationFrame(()=> document.querySelectorAll("#members .member").forEach(m=>m.classList.add("in"))));
+})();
 $("#socials").innerHTML = SITE.redes.map(r=>`<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.nombre)}</a></li>`).join("");
 </script>
 </body>
