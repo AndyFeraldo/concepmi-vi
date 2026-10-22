@@ -586,8 +586,8 @@ table.tabla{ width: 100%; border-collapse: collapse; font-size: .88rem; min-widt
 .gala__cab .chip{ margin-left: auto; font-size: .95em; padding: .5em 1.1em; }
 .gala__cuerpo{ display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.6em; min-height: 0; }
 .podio{ display: grid; grid-template-columns: 1fr 1.15fr 1fr; align-items: end; gap: 1.2em; padding-top: 1em; min-height: 0; }
-.podio__lugar{ display: grid; justify-items: center; gap: .7em; text-align: center; opacity: .12; filter: blur(3px) grayscale(1); transition: opacity .8s, filter .8s, transform .8s; transform: translateY(1.5em); }
-.podio__lugar.visible{ opacity: 1; filter: none; transform: none; }
+.podio__lugar{ display: grid; justify-items: center; gap: .7em; text-align: center; opacity: 0; visibility: hidden; filter: blur(3px); transition: opacity .8s, filter .8s, transform .8s, visibility 0s .8s; transform: translateY(1.5em); }
+.podio__lugar.visible{ opacity: 1; visibility: visible; filter: none; transform: none; transition: opacity .8s, filter .8s, transform .8s, visibility 0s; }
 .podio__nombre{ font-family: var(--neon); font-size: 2em; line-height: 1.05; word-break: break-word; }
 .podio__pts{ font-family: var(--neon); font-size: 1.6em; color: var(--oro); }
 .podio__pts small{ font-family: var(--font); font-size: .5em; color: var(--tenue); margin-left: .3em; }
