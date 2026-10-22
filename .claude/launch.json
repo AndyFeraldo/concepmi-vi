@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "concepmi", "runtimeExecutable": "node", "runtimeArgs": ["herramientas/servidor.js"], "port": 5173 }
+  ]
+}

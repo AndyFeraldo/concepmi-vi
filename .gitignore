@@ -1,0 +1,18 @@
+# Dependencias de las herramientas
+node_modules/
+
+# Material de origen (fotos y logos crudos, bases originales, plantillas): se procesa hacia concepmi-vi/public/
+/BASES DE CONCURSOS ACADEMICOS Y CULTURALES/
+/PLANTILLAS DE CONCURSO DE PROYECTOS/
+/PONENTES/
+/TALLERISTAS/
+/EQUIPO/
+/LOGO DE MARCAS/
+/*.png
+/*.jfif
+/*.jpg
+/*.zip
+/*.txt
+/index.html
+~$*
+.claude/settings.local.json
