@@ -1,0 +1,53 @@
+CONCEPMI VI 2026 · Dónde va cada archivo
+=========================================
+
+public/images/concepmi-vi-logo.png      Logo del evento (PNG con fondo transparente)
+public/images/wolfito-concepmi.png      Wolfito (PNG con fondo transparente)
+public/images/pmi-lima-student-club.png Logo del Student Club (footer)
+
+public/bases/                           Bases en PDF (el botón "Descargar bases" las usa)
+  concurso-conocimientos.pdf
+  concurso-proyectos.pdf
+  iathon.pdf
+  amateur-1-acta.pdf
+  amateur-2-riesgos.pdf
+  gran-gymkana.pdf
+  concurso-barras.pdf
+  talent-show.pdf
+
+public/images/ponentes/                 Fotos de las charlas principales
+  alexis-rodriguez.jpg
+  giovanni-escribens.jpg
+  aldo-mallma.jpg
+
+public/images/talleristas/              taller-1.jpg … taller-4.jpg
+
+public/images/sponsors/                 Logos (PNG, idealmente fondo transparente)
+  certificate-project-control.png
+  data-science-peru.png
+  datux-peru.png
+  gestionate.png
+  inspirate-creator.png
+
+public/images/equipo/<área>/            01.jpg, 02.jpg, 03.jpg… en el mismo orden de la lista
+  direccion/  pmo/  marketing/  rrpp/  logistica/  ventas/  ti/
+                                        En cada área, 01.jpg es el/la líder (lider:true en index.html).
+
+Los nombres de las personas se editan en index.html, bloque "EQUIPO".
+Fotos recomendadas: cuadradas, mínimo 400x400 px, la cara centrada.
+Si un archivo no existe todavía, la página muestra las iniciales o "Bases próximamente".
+
+Imágenes generadas (no editar a mano)
+-------------------------------------
+public/images/og-image.jpg   Vista previa al compartir el link (1200x630) → herramientas/social.js
+public/images/favicon.png    Ícono de la pestaña (cabeza de Wolfito)
+
+Herramientas (carpeta ../herramientas, NO se publica)
+-----------------------------------------------------
+node herramientas/servidor.js                                  Previsualizar en http://localhost:5173
+node herramientas/procesar.js foto <entrada> <salida.jpg> [x,y,lado]   Foto cuadrada 600x600 comprimida
+node herramientas/procesar.js logo <entrada> <salida.png>              Logo recortado, máx. 600x300
+node herramientas/logos.js                                     Regenera logo CONCEPMI, logo del club y Wolfito
+node herramientas/social.js                                    Regenera og-image.jpg y favicon.png
+node herramientas/qr.js <enlace>                               Regenera el QR del grupo de WhatsApp
+Para publicar se sube SOLO la carpeta concepmi-vi/.
