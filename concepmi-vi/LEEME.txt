@@ -16,9 +16,16 @@ public/bases/                           Bases en PDF (el botón "Descargar bases
   talent-show.pdf
 
 public/images/ponentes/                 Fotos de las charlas principales
-  alexis-rodriguez.jpg
-  giovanni-escribens.jpg
+  alexis-rodriguez.jpg   (también se usa en el Taller IV)
+  giovannie-escribens.jpg
   aldo-mallma.jpg
+
+public/plantillas/                      Plantillas de los 5 entregables del Concurso de Proyectos
+  plantillas-entregables-concurso-proyectos.zip  (las 5 juntas; el botón "Descargar plantillas entregables" usa este zip)
+  entregable-1 … entregable-5            (descarga individual dentro del modal)
+
+Enlaces en index.html (bloque SITE): brochure, grupoWhatsapp y subirEntregables
+(subirEntregables = enlace del formulario de subida; mientras sea null el botón dice "próximamente")
 
 public/images/talleristas/              taller-1.jpg … taller-4.jpg
 
@@ -31,7 +38,7 @@ public/images/sponsors/                 Logos (PNG, idealmente fondo transparent
 
 public/images/equipo/<área>/            01.jpg, 02.jpg, 03.jpg… en el mismo orden de la lista
   direccion/  pmo/  marketing/  rrpp/  logistica/  ventas/  ti/
-                                        En cada área, 01.jpg es el/la líder (lider:true en index.html).
+                                        En cada área, 01.jpg es el/la líder (lider:true en index.html) y luego los voluntarios en el orden de la lista.
 
 Los nombres de las personas se editan en index.html, bloque "EQUIPO".
 Fotos recomendadas: cuadradas, mínimo 400x400 px, la cara centrada.
