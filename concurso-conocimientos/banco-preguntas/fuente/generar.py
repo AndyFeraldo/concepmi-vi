@@ -79,8 +79,8 @@ def escribir_sql(preguntas):
                                        sql_txt(o["A"]), sql_txt(o["B"]), sql_txt(o["C"]), sql_txt(o["D"]),
                                        sql_txt(p["correcta"]), sql_txt(p["explicacion"])]) + ")")
     sql = f"""-- Banco de preguntas · Concurso de Conocimientos · VI CONCEPMI
--- Pegar completo en Supabase > SQL Editor > Run. Se puede ejecutar varias veces:
--- reemplaza las preguntas existentes con el mismo id.
+-- Pegar completo en Supabase > SQL Editor > Run (después de supabase/esquema.sql).
+-- Se puede ejecutar varias veces: reemplaza las preguntas existentes con el mismo id.
 
 create table if not exists public.preguntas (
   id           integer primary key,
@@ -97,9 +97,9 @@ create table if not exists public.preguntas (
   activa       boolean not null default true
 );
 
+-- Privada: nadie lee las preguntas directamente (la respuesta correcta no sale de la base).
 alter table public.preguntas enable row level security;
-drop policy if exists "preguntas_lectura" on public.preguntas;
-create policy "preguntas_lectura" on public.preguntas for select using (true);
+revoke all on public.preguntas from anon, authenticated;
 
 insert into public.preguntas
   (id, dominio, tema, dificultad, enunciado, opcion_a, opcion_b, opcion_c, opcion_d, correcta, explicacion)
