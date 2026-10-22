@@ -51,3 +51,12 @@ node herramientas/logos.js                                     Regenera logo CON
 node herramientas/social.js                                    Regenera og-image.jpg y favicon.png
 node herramientas/qr.js <enlace>                               Regenera el QR del grupo de WhatsApp
 Para publicar se sube SOLO la carpeta concepmi-vi/.
+
+Publicación (GitHub Pages)
+--------------------------
+Sitio:        https://andyferaldo.github.io/concepmi-vi/
+Repositorio:  https://github.com/AndyFeraldo/concepmi-vi
+Para publicar cambios (desde la carpeta PAGINA WEB):
+  git add -A && git commit -m "Describe el cambio" && git push
+  git subtree push --prefix concepmi-vi origin gh-pages
+La página se actualiza en 1–2 minutos.
