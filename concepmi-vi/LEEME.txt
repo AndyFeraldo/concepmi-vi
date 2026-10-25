@@ -65,5 +65,9 @@ Sitio:        https://andyferaldo.github.io/concepmi-vi/
 Repositorio:  https://github.com/AndyFeraldo/concepmi-vi
 Para publicar cambios (desde la carpeta PAGINA WEB):
   git add -A && git commit -m "Describe el cambio" && git push
-  git subtree push --prefix concepmi-vi origin gh-pages
+  bash herramientas/publicar.sh "Describe el cambio"
+(publicar.sh copia concepmi-vi/ encima de gh-pages sin borrar lo que ya esté publicado)
 La página se actualiza en 1–2 minutos.
+
+Equipo organizador: oculto mientras faltan fotos. Para mostrarlo, en index.html cambia mostrarEquipo: false → true.
+concurso-conocimientos/: sistema en vivo del Concurso de Conocimientos (creado en otra sesión).
