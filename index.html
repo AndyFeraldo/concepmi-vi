@@ -619,6 +619,15 @@ dialog.modal::backdrop{ background: rgba(8,2,35,.72); backdrop-filter: blur(4px)
 .js .reveal{ opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
 .js .reveal.in{ opacity: 1; transform: none; }
 
+/* Rúbrica del Talent Show (modal) */
+.m-body .formula{ display:inline-block; background: color-mix(in srgb, var(--c) 22%, transparent); border: 1px solid color-mix(in srgb, var(--c) 60%, transparent); color:#fff; font-weight: 800; border-radius: 10px; padding: .5rem .8rem; margin-bottom: .5rem; }
+.rubric{ width:100%; border-collapse: collapse; font-size: .9rem; margin: .4rem 0 .6rem; }
+.rubric th{ text-align:left; font-size: .75rem; color: var(--niebla); font-weight: 700; padding: .45rem .6rem; border-bottom: 2px solid color-mix(in srgb, var(--c) 60%, transparent); }
+.rubric td{ padding: .5rem .6rem; border-bottom: 1px solid rgba(255,255,255,.1); color: var(--niebla); }
+.rubric td:last-child, .rubric th:last-child{ text-align:right; white-space: nowrap; }
+.rubric td b{ color:#fff; }
+.rubric tbody tr:first-child td{ color:#fff; font-weight: 700; }
+
 /* Plantillas del concurso de proyectos (modal) */
 .tpl{ margin-top: 1.1rem; border: 2px solid color-mix(in srgb, var(--c) 60%, transparent); border-radius: 16px; padding: 1rem 1.1rem; background: rgba(255,255,255,.05); }
 .tpl h3{ margin-top: 0 !important; }
@@ -960,6 +969,8 @@ const SITE = {
   qrWhatsapp: "public/images/qr-grupo-whatsapp.png", // se regenera con: node herramientas/qr.js <enlace>
   brochure: "https://canva.link/85h885oyg5i1i4v",
   subirEntregables: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=eo3ZAaEibk2z4xW8l2AG1FMiu3X-1a1AvAIho03ud7BUMlVOVk1ZRkdQRVNNSlZSS1JWWlVEWDVYWS4u", // formulario de entrega de los 5 entregables
+  subirVideo: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=eo3ZAaEibk2z4xW8l2AG1FMiu3X-1a1AvAIho03ud7BUMlVOVk1ZRkdQRVNNSlZSS1JWWlVEWDVYWS4u", // formulario para enviar el video del Talent Show
+  mostrarEquipo: false, // ← cambia a true cuando estén las fotos del equipo organizador
   inicio: "2026-11-24T08:30:00-05:00",
 
   // Logos e imágenes oficiales
@@ -1037,9 +1048,32 @@ const CULTURALES = [
     actividades:["Show de 3 minutos por delegación","Participación de la mascota de la delegación","Cánticos, coreografía y distintivos"],
     bases:"public/bases/concurso-barras.pdf" },
   { n:3, color:"lila", kicker:"Canto · baile · música · actuación", titulo:"Talent Show", sub:"Virtual", icono:"star", imagen:null,
-    desc:"Demuestra tu talento. Más viral en TikTok + Instagram = más puntaje.",
-    puntos:50, lugar:"TikTok e Instagram", dia:"Resultados: Día 2",
-    actividades:["Video vertical con el talento de tu delegación","Publicación etiquetando las cuentas oficiales","Puntaje según alcance e interacción"],
+    desc:"Video vertical de 30 a 90 segundos con el talento de tu delegación. Más likes en TikTok + Instagram = más puntaje.",
+    puntos:50, lugar:"TikTok e Instagram del Student Club", dia:"Envío hasta el dom 15 nov",
+    actividades:[
+      "Paso 1 · Envía tu video hasta el domingo 15 de noviembre, 11:59 p. m., con la cuenta de Instagram/TikTok de tu delegación",
+      "Paso 2 · El 16 y 17 de noviembre el Student Club publica todos los videos en sus cuentas oficiales de TikTok e Instagram",
+      "Paso 3 · Del 17 al 25 de noviembre comparte el enlace oficial y suma likes con tu comunidad",
+      "Paso 4 · Cierre de votación: miércoles 25 de noviembre, 12:00 m. Resultados el jueves 26 al inicio de la Gymkana"
+    ],
+    detalle:{
+      formato:[
+        "Formato vertical 9:16 (TikTok e Instagram Reels)",
+        "Alta definición 1080 × 1920 px a 30 o 60 fps, con audio claro y buena iluminación",
+        "Duración de 30 a 90 segundos",
+        "Disciplina libre: baile, canto o música, actuación o sketch, doblaje, trends o performance con la mascota",
+        "Debe verse el nombre, colores, logo o polo de tu universidad o delegación"
+      ],
+      formula:"Puntaje de votación = likes en TikTok + likes en Instagram",
+      notaFormula:"Solo cuentan los likes de las publicaciones oficiales del PMI Lima Perú Chapter Student Club. Comentarios, compartidos y reproducciones sirven para desempatar.",
+      tabla:[["1.° puesto","TOP 1 absoluto",50],["2.° puesto","TOP 2 en likes",40],["3.° puesto","TOP 3 en likes",30],["4.° puesto","TOP 4 en likes",22],["5.° puesto","TOP 5 en likes",15],["6.° en adelante","Enviaron su video a tiempo",10],["No presentó","Sin video al 15 de noviembre",0]],
+      premios:"Placa de reconocimiento para la delegación TOP 1 y publicación especial en redes del Student Club para el TOP 1, 2 y 3.",
+      sanciones:[
+        "Bots, granjas o likes pagados: descalificación automática",
+        "Prohibido el contenido vulgar, explícito, violento o discriminatorio",
+        "Usa música de las bibliotecas de TikTok e Instagram para evitar silenciamientos por copyright"
+      ]
+    },
     bases:"public/bases/talent-show.pdf" }
 ];
 
@@ -1272,6 +1306,10 @@ $("[data-mascot]").innerHTML = imgOr(SITE.mascota, "Wolfito, mascota oficial de 
 /* Enlaces de compra */
 document.querySelectorAll("[data-buy]").forEach(a=>{ a.href = SITE.formulario; a.target="_blank"; a.rel="noopener"; });
 document.querySelectorAll("[data-brochure]").forEach(a=>{ a.href = SITE.brochure; a.target="_blank"; a.rel="noopener"; });
+if(!SITE.mostrarEquipo){
+  $("#equipo").hidden = true;
+  document.querySelectorAll('a[href="#equipo"]').forEach(a=> (a.closest("li") || a).remove());
+}
 const wa = $("#waGroupBtn");
 if(SITE.grupoWhatsapp){
   wa.href = SITE.grupoWhatsapp; wa.target="_blank"; wa.rel="noopener";
@@ -1334,6 +1372,12 @@ const tplBtns = t => `<a class="btn btn-cyan" href="${esc(t.zip)}" download>${sv
   (SITE.subirEntregables
     ? `<a class="btn btn-ghost" href="${esc(SITE.subirEntregables)}" target="_blank" rel="noopener">${svg("upload")}Subir entregables</a>`
     : `<button class="btn" disabled>${svg("upload")}Subida de entregables próximamente</button>`);
+const talentDetalle = d => `<h3>Requisitos del video</h3><ul>${d.formato.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+  <h3>Cómo se califica</h3><p class="formula">${esc(d.formula)}</p><p>${esc(d.notaFormula)}</p>
+  <table class="rubric"><thead><tr><th>Posición</th><th>Criterio</th><th>Puntos</th></tr></thead><tbody>
+  ${d.tabla.map(([p,c,n])=>`<tr><td>${esc(p)}</td><td>${esc(c)}</td><td><b>${n} pts</b></td></tr>`).join("")}</tbody></table>
+  <h3>Premios</h3><p>${esc(d.premios)}</p>
+  <h3>Sanciones</h3><ul>${d.sanciones.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
 const buyBtn = `<a class="btn btn-ghost" href="${esc(SITE.formulario)}" target="_blank" rel="noopener">Inscribir a mi delegación</a>`;
 const facts = arr => `<div class="m-facts">${arr.map(([k,v])=>`<div><b>${esc(k)}</b><span>${esc(v)}</span></div>`).join("")}</div>`;
 
@@ -1385,8 +1429,9 @@ gK.addEventListener("click", e=>{
     body:`<p class="lead">${esc(c.desc)}</p>
       ${facts([["Puntaje máximo",`${c.puntos} pts`],["Lugar",c.lugar],["Cuándo",c.dia]])}
       <h3>${c.n===1 ? "Los 5 miniconcursos" : "Cómo participar"}</h3>
-      <ul>${c.actividades.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`,
-    actions: basesBtn(c.bases)
+      <ul>${c.actividades.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+      ${c.detalle ? talentDetalle(c.detalle) : ""}`,
+    actions: basesBtn(c.bases) + (c.detalle && SITE.subirVideo ? `<a class="btn btn-cyan" href="${esc(SITE.subirVideo)}" target="_blank" rel="noopener">${svg("upload")}Subir video</a>` : "")
   });
   checkBases();
 });
