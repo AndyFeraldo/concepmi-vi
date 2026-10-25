@@ -16,3 +16,4 @@ node_modules/
 /index.html
 ~$*
 .claude/settings.local.json
+/equipo ventas/
