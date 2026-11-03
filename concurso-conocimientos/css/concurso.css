@@ -638,3 +638,10 @@ table.tabla{ width: 100%; border-collapse: collapse; font-size: .88rem; min-widt
 /* Nombres de delegaciones siempre en mayúsculas */
 .equipo__nombre > span, .equipo-mon__nombre, .podio__nombre, .fila-gala .nom, .final-card__cab b, .ganador h2 em, .r-card b, .banner-ronda h3 em{ text-transform: uppercase; }
 .fila-gala .nom small{ text-transform: none; }
+
+/* Desplegable de delegaciones (vinculado al Panel Maestro) */
+select.entrada{ cursor:pointer; appearance:none; -webkit-appearance:none; padding-right:2.4em;
+  background-image:linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:calc(100% - 18px) 55%, calc(100% - 12px) 55%; background-size:6px 6px, 6px 6px; background-repeat:no-repeat; }
+select.entrada option{ background:#170D56; color:#fff; }
+select.entrada option:disabled{ color:#8a84a3; }
