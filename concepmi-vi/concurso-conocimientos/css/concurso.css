@@ -645,3 +645,7 @@ select.entrada{ cursor:pointer; appearance:none; -webkit-appearance:none; paddin
   background-position:calc(100% - 18px) 55%, calc(100% - 12px) 55%; background-size:6px 6px, 6px 6px; background-repeat:no-repeat; }
 select.entrada option{ background:#170D56; color:#fff; }
 select.entrada option:disabled{ color:#8a84a3; }
+/* Marca de exportación al Panel Maestro (historial de enfrentamientos) */
+.export{ display:inline-block; margin-top:4px; font-size:.7rem; font-weight:700; padding:.15em .6em; border-radius:99px; border:1px solid rgba(250,178,25,.5); color:#FFD98A; }
+.export--ok{ border-color:rgba(59,224,143,.55); color:#8FF2C0; background:rgba(59,224,143,.1); }
+.export svg{ width:1em; height:1em; vertical-align:-2px; }

@@ -409,6 +409,17 @@ export function montar(raiz) {
     cont.querySelectorAll("[data-def]").forEach((b) => b.addEventListener("click", (ev) => accion(ev.currentTarget, () => llamar("mod_definir_ganador", { p_pin: pin(), p_lado: b.dataset.def }))));
   }
 
+  // Marca visual: qué enfrentamientos ya se exportaron a la Copa CONCEPMI desde el Panel Maestro
+  let EXPORTADOS = new Map();
+  async function cargarExportados() {
+    try { const l = await backend.rpc("jur_conoc_exportados"); EXPORTADOS = new Map((l || []).map((x) => [x.id, x.exportado])); pintarTablas(); } catch { /* sin marca, no pasa nada */ }
+  }
+  const marcaExport = (id) => {
+    const t = EXPORTADOS.get(id);
+    return t ? `<br><span class="export export--ok" title="Exportado el ${new Date(t).toLocaleString("es-PE")}">${ICONOS.check} Exportado al Panel Maestro</span>`
+      : `<br><span class="export">Pendiente de exportar</span>`;
+  };
+
   function pintarTablas() {
     const tabla = calcularTabla(enfs);
     const medallas = ["🥇", "🥈", "🥉"];
@@ -430,7 +441,7 @@ export function montar(raiz) {
         <td class="num">${x.rondas_a} – ${x.rondas_b}</td>
         <td class="num">${x.correctas_a} – ${x.correctas_b}</td>
         <td class="num" style="color:var(--oro)">${x.puntaje_a} – ${x.puntaje_b}</td>
-        <td>🏆 <b>${esc(x.ganador === "A" ? x.nombre_a : x.nombre_b)}</b></td>
+        <td>🏆 <b>${esc(x.ganador === "A" ? x.nombre_a : x.nombre_b)}</b>${marcaExport(x.id)}</td>
         <td><button class="btn btn--sm btn--fantasma" title="Borrar este enfrentamiento" data-borrar-uno="${x.id}">${ICONOS.basura}</button></td>
       </tr>`).join("") : `<tr><td colspan="8" class="tabla-vacia">Sin enfrentamientos registrados.</td></tr>`;
     raiz.querySelectorAll("[data-borrar-uno]").forEach((b) => b.addEventListener("click", async () => {
@@ -465,8 +476,10 @@ export function montar(raiz) {
   });
   const dejarEnf = alEnfrentamientos((lista) => { enfs = lista; pintarDatalist(); pintarTablas(); pintar(); });
   cargarDelegaciones();
+  cargarExportados();
+  const relojExport = setInterval(cargarExportados, 20000);
   pintarPantallas();
   cargarBanco();
 
-  return () => { clearInterval(reloj); dejarEstado(); dejarEnf(); dejarConexion(); };
+  return () => { clearInterval(reloj); clearInterval(relojExport); dejarEstado(); dejarEnf(); dejarConexion(); };
 }
