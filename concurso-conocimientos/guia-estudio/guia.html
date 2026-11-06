@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Guía de estudio · Concurso de Conocimientos · VI CONCEPMI 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Russo+One&display=swap" rel="stylesheet" />
+<style>
+@page { size: A4; margin: 0; }
+:root{
+  --noche:#170D56; --indigo:#24107A; --morado:#4A17B5; --violeta:#6E2BE6; --lila:#A98BFF;
+  --celeste:#1FCBEA; --naranja:#FF6A1F; --coral:#FD443F; --verde:#2BBF7A; --ambar:#F5A623;
+  --tinta:#1E1640; --gris:#5E5880; --fondo:#F6F3FF; --linea:#E3DCF7;
+  --d1:#6E2BE6; --d2:#FF6A1F; --d3:#14A9C8; --d4:#2BBF7A;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ font-family:"Poppins",sans-serif; color:var(--tinta); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+.pagina{ width:210mm; height:297mm; position:relative; overflow:hidden; page-break-after:always; background:#fff; }
+.pagina:last-child{ page-break-after:auto; }
+h1,h2,h3,.neon{ font-family:"Russo One",sans-serif; font-weight:400; }
+
+/* ---------- Encabezado de páginas internas ---------- */
+.cab{ height:30mm; background:linear-gradient(120deg,var(--noche) 0%,var(--morado) 70%,var(--violeta) 100%); position:relative; padding:0 14mm; display:flex; align-items:center; gap:5mm; color:#fff; overflow:hidden; }
+.cab::before{ content:""; position:absolute; inset:0; background:linear-gradient(115deg,transparent 0 55%,rgba(255,255,255,.08) 55% 57%,transparent 57% 75%,rgba(255,255,255,.05) 75% 76.5%,transparent 76.5%); }
+.cab .num{ font-family:"Russo One"; font-size:11mm; width:15mm; height:15mm; border-radius:4mm; display:grid; place-items:center; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.3); position:relative; }
+.cab h2{ font-size:8.5mm; line-height:1; position:relative; }
+.cab p{ font-size:3.4mm; color:#CFC2FF; margin-top:1.5mm; position:relative; }
+.cab img{ height:5mm; margin-left:auto; position:relative; opacity:.95; }
+.cuerpo{ padding:9mm 14mm 0; }
+.pie{ position:absolute; left:14mm; right:14mm; bottom:7mm; display:flex; justify-content:space-between; align-items:center; font-size:2.7mm; color:var(--gris); border-top:1px solid var(--linea); padding-top:2.5mm; }
+.pie b{ color:var(--morado); }
+.franja{ position:absolute; bottom:0; left:0; right:0; height:2mm; background:linear-gradient(90deg,var(--noche) 0 25%,var(--coral) 25% 50%,var(--celeste) 50% 75%,var(--naranja) 75%); }
+.lead{ font-size:4mm; line-height:1.5; margin-bottom:6mm; }
+.lead b{ color:var(--morado); }
+.titulo-sec{ display:flex; align-items:center; gap:2.5mm; font-family:"Russo One"; font-size:4.6mm; color:var(--noche); margin:6mm 0 3mm; }
+.titulo-sec::before{ content:""; width:3mm; height:3mm; border-radius:1mm; background:var(--violeta); }
+
+/* ---------- Portada ---------- */
+.portada{ background:radial-gradient(ellipse 80% 60% at 80% 15%,rgba(130,60,255,.6),transparent 70%),radial-gradient(ellipse 70% 60% at 0% 100%,rgba(80,20,190,.7),transparent 70%),linear-gradient(160deg,#1B0B66 0%,#2A0F8F 50%,#140A4E 100%); color:#fff; }
+.portada::before{ content:""; position:absolute; inset:0; background:linear-gradient(115deg,transparent 0 38%,rgba(255,255,255,.06) 38% 39.5%,transparent 39.5% 62%,rgba(255,255,255,.04) 62% 64%,transparent 64%); }
+.portada .logo{ position:absolute; top:22mm; left:16mm; width:105mm; }
+.portada .kicker{ position:absolute; top:44mm; left:16mm; font-size:3.6mm; letter-spacing:.35em; font-weight:700; color:var(--celeste); text-transform:uppercase; }
+.portada h1{ position:absolute; top:62mm; left:16mm; font-size:19mm; line-height:.95; background:linear-gradient(180deg,#fff 40%,#CDBDFF); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.portada .sub{ position:absolute; top:108mm; left:16mm; width:95mm; font-size:4.4mm; line-height:1.5; color:#E3DFED; }
+.portada .sub b{ color:#fff; }
+.portada .chips{ position:absolute; top:142mm; left:16mm; display:flex; flex-direction:column; gap:3mm; }
+.portada .chip{ display:inline-flex; align-items:center; gap:2.5mm; padding:2.2mm 4.5mm; border-radius:99px; font-size:3.4mm; font-weight:700; border:1px solid rgba(255,255,255,.3); background:rgba(255,255,255,.08); width:max-content; }
+.portada .chip i{ width:2.4mm; height:2.4mm; border-radius:50%; display:inline-block; }
+.portada .wolfito{ position:absolute; right:-6mm; bottom:24mm; height:150mm; filter:drop-shadow(0 6mm 8mm rgba(0,0,0,.45)); }
+.portada .base{ position:absolute; left:0; right:0; bottom:0; height:24mm; background:rgba(10,5,40,.55); display:flex; align-items:center; padding:0 16mm; gap:6mm; border-top:1px solid rgba(255,255,255,.12); }
+.portada .base img{ height:11mm; }
+.portada .base span{ font-size:3.2mm; color:#CFC2FF; }
+.portada .base b{ color:#fff; }
+
+/* ---------- Componentes ---------- */
+.tiles{ display:grid; grid-template-columns:repeat(4,1fr); gap:3.5mm; }
+.tile{ border-radius:4mm; padding:5mm 3mm 4mm; text-align:center; color:#fff; position:relative; overflow:hidden; }
+.tile b{ display:block; font-family:"Russo One"; font-size:11mm; line-height:1; }
+.tile span{ display:block; font-size:3.1mm; font-weight:600; margin-top:2mm; line-height:1.3; }
+.t1{ background:linear-gradient(140deg,#6E2BE6,#4A17B5); } .t2{ background:linear-gradient(140deg,#1FCBEA,#1290B0); }
+.t3{ background:linear-gradient(140deg,#FF6A1F,#E0461A); } .t4{ background:linear-gradient(140deg,#2BBF7A,#17935A); }
+
+.caja{ border-radius:4mm; padding:4.5mm 5mm; background:var(--fondo); border:1px solid var(--linea); }
+.caja h3{ font-size:4mm; color:var(--noche); margin-bottom:2mm; }
+.caja p, .caja li{ font-size:3.3mm; line-height:1.5; }
+.caja ul{ padding-left:4.5mm; }
+.caja li+li{ margin-top:1mm; }
+.dos{ display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+.tres{ display:grid; grid-template-columns:repeat(3,1fr); gap:3.5mm; }
+
+.puntos{ display:grid; grid-template-columns:1fr 1fr; gap:3.5mm; }
+.punto{ display:flex; gap:3mm; align-items:flex-start; background:#fff; border:1px solid var(--linea); border-radius:3.5mm; padding:3.5mm; }
+.punto .ic{ flex:none; width:9mm; height:9mm; border-radius:2.5mm; display:grid; place-items:center; color:#fff; font-family:"Russo One"; font-size:4mm; }
+.punto > div > b{ font-size:3.4mm; display:block; color:var(--noche); }
+.punto p b{ color:var(--tinta); }
+.punto p{ font-size:3.05mm; line-height:1.45; color:var(--gris); margin-top:.5mm; }
+
+.aviso{ display:flex; gap:3mm; align-items:center; border-radius:3.5mm; padding:3.5mm 4.5mm; background:#FFF4E5; border:1px solid #FFD9A8; font-size:3.2mm; line-height:1.45; margin-top:5mm; }
+.aviso .ic{ font-size:6mm; }
+.aviso b{ color:#B5550D; }
+
+/* Dominios */
+.dominio{ border-radius:4mm; border:1px solid var(--linea); overflow:hidden; margin-bottom:3.8mm; background:#fff; }
+.dominio .top{ display:flex; align-items:center; gap:3.5mm; padding:3mm 4.5mm; color:#fff; }
+.dominio .top .r{ font-family:"Russo One"; font-size:6mm; width:10mm; height:10mm; border-radius:2.5mm; display:grid; place-items:center; background:rgba(255,255,255,.2); }
+.dominio .top h3{ font-size:4.2mm; line-height:1.15; }
+.dominio .top small{ display:block; font-family:"Poppins"; font-size:2.9mm; opacity:.9; font-weight:500; }
+.dominio .top .pct{ margin-left:auto; text-align:right; }
+.dominio .top .pct b{ font-family:"Russo One"; font-size:8mm; line-height:1; display:block; }
+.dominio .top .pct span{ font-size:2.6mm; }
+.dominio .chips{ padding:3mm 4.5mm 3.5mm; display:flex; flex-wrap:wrap; gap:1.8mm; }
+.dominio .chips span{ font-size:2.85mm; font-weight:600; padding:1.1mm 2.8mm; border-radius:99px; background:var(--c-suave); color:var(--c-osc); }
+.d1 .top{ background:linear-gradient(120deg,#4A17B5,#6E2BE6); } .d1{ --c-suave:#EFE7FF; --c-osc:#4A17B5; }
+.d2 .top{ background:linear-gradient(120deg,#E0461A,#FF6A1F); } .d2{ --c-suave:#FFEDE3; --c-osc:#B83A0E; }
+.d3 .top{ background:linear-gradient(120deg,#1290B0,#1FCBEA); } .d3{ --c-suave:#E1F7FC; --c-osc:#0E6F88; }
+.d4 .top{ background:linear-gradient(120deg,#17935A,#2BBF7A); } .d4{ --c-suave:#E3F8EE; --c-osc:#11734A; }
+.barra-peso{ display:flex; height:7mm; border-radius:99px; overflow:hidden; margin:2mm 0 5mm; font-size:2.9mm; font-weight:700; color:#fff; }
+.barra-peso div{ display:grid; place-items:center; }
+
+/* Plan */
+.linea-tiempo{ position:relative; margin:2mm 0 0 4mm; padding-left:9mm; border-left:1.2mm solid var(--linea); }
+.paso{ position:relative; margin-bottom:5mm; }
+.paso::before{ content:attr(data-n); position:absolute; left:-15.2mm; top:-.5mm; width:10mm; height:10mm; border-radius:50%; background:var(--c); color:#fff; display:grid; place-items:center; font-family:"Russo One"; font-size:3.4mm; box-shadow:0 0 0 1.2mm #fff; }
+.paso small{ font-size:2.8mm; font-weight:700; letter-spacing:.12em; color:var(--c); text-transform:uppercase; }
+.paso b{ display:block; font-size:3.8mm; color:var(--noche); margin:.5mm 0; }
+.paso p{ font-size:3.15mm; line-height:1.45; color:var(--gris); }
+.reparto{ display:grid; grid-template-columns:repeat(4,1fr); gap:3mm; }
+.persona{ border-radius:3.5mm; padding:3.5mm; text-align:center; border:1.5px solid var(--c); background:#fff; }
+.persona .av{ width:10mm; height:10mm; margin:0 auto 2mm; border-radius:50%; background:var(--c); color:#fff; display:grid; place-items:center; font-family:"Russo One"; font-size:4mm; }
+.persona b{ display:block; font-size:3.2mm; color:var(--noche); }
+.persona span{ font-size:2.8mm; color:var(--gris); }
+
+/* Fórmulas */
+.formulas{ display:grid; grid-template-columns:1fr 1fr; gap:3.5mm; }
+.formula{ border-radius:4mm; border:1px solid var(--linea); background:#fff; padding:4mm; position:relative; overflow:hidden; }
+.formula::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:1.6mm; background:var(--c); }
+.formula h3{ font-size:3.7mm; color:var(--noche); margin-bottom:2mm; }
+.ecu{ font-family:"Russo One"; font-size:4.6mm; color:var(--c); background:var(--fondo); border-radius:2.5mm; padding:2mm 3mm; margin:1.5mm 0; text-align:center; letter-spacing:.02em; }
+.ecu small{ font-size:3.4mm; }
+.formula p{ font-size:2.95mm; line-height:1.45; color:var(--gris); }
+.formula p b{ color:var(--tinta); }
+.frac{ display:inline-flex; flex-direction:column; vertical-align:middle; text-align:center; font-size:.8em; line-height:1.15; margin:0 .6mm; }
+.frac span:first-child{ border-bottom:.5mm solid currentColor; padding:0 1mm; }
+.semaforo{ display:flex; gap:2mm; margin-top:2mm; }
+.semaforo span{ flex:1; text-align:center; font-size:2.8mm; font-weight:700; border-radius:2mm; padding:1.2mm; }
+.bien{ background:#E3F8EE; color:#11734A; } .mal{ background:#FFE6E5; color:#B3261E; }
+
+/* Pares */
+.pares{ display:grid; grid-template-columns:1fr 1fr; gap:3mm; }
+.par{ display:grid; grid-template-columns:1fr auto 1fr; align-items:stretch; border-radius:3.5mm; border:1px solid var(--linea); overflow:hidden; background:#fff; }
+.par div{ padding:2.8mm 3mm; font-size:2.85mm; line-height:1.4; color:var(--gris); }
+.par div b{ display:block; font-size:3.15mm; color:var(--noche); margin-bottom:.6mm; }
+.par .vs{ display:grid; place-items:center; padding:0 1.8mm; background:var(--fondo); font-family:"Russo One"; font-size:2.8mm; color:var(--violeta); }
+
+/* Estrategia */
+.pasos-dia{ display:grid; gap:3mm; }
+.pd{ display:grid; grid-template-columns:14mm 1fr; gap:3.5mm; align-items:center; background:#fff; border:1px solid var(--linea); border-radius:3.5mm; padding:3mm 4mm 3mm 3mm; }
+.pd .n{ width:14mm; height:14mm; border-radius:3.5mm; display:grid; place-items:center; font-family:"Russo One"; font-size:6mm; color:#fff; background:var(--c); }
+.pd b{ font-size:3.6mm; color:var(--noche); }
+.pd p{ font-size:3.1mm; line-height:1.45; color:var(--gris); }
+.reloj{ display:flex; align-items:center; gap:5mm; border-radius:4mm; padding:5mm 6mm; color:#fff; background:linear-gradient(120deg,var(--noche),var(--morado)); margin-bottom:5mm; }
+.reloj .big{ font-family:"Russo One"; font-size:15mm; line-height:1; color:var(--celeste); }
+.reloj p{ font-size:3.4mm; line-height:1.5; color:#E3DFED; }
+.reloj p b{ color:#fff; }
+
+/* FAQ */
+.faq{ display:grid; grid-template-columns:1fr 1fr; gap:3.2mm; }
+.q{ border-radius:3.5mm; background:#fff; border:1px solid var(--linea); padding:3.3mm 3.8mm; }
+.q b{ display:flex; gap:2mm; font-size:3.25mm; color:var(--noche); line-height:1.3; }
+.q b::before{ content:"?"; flex:none; width:5mm; height:5mm; border-radius:50%; background:var(--violeta); color:#fff; display:grid; place-items:center; font-family:"Russo One"; font-size:3mm; }
+.q p{ font-size:2.95mm; line-height:1.45; color:var(--gris); margin:1.2mm 0 0 7mm; }
+
+/* Recursos */
+.recursos{ display:grid; gap:3mm; }
+.rec{ display:grid; grid-template-columns:11mm 1fr auto; gap:3.5mm; align-items:center; background:#fff; border:1px solid var(--linea); border-radius:3.5mm; padding:3mm 4mm 3mm 3mm; }
+.rec .ic{ width:11mm; height:11mm; border-radius:3mm; display:grid; place-items:center; font-size:5.5mm; background:var(--fondo); }
+.rec b{ font-size:3.4mm; color:var(--noche); }
+.rec p{ font-size:2.95mm; color:var(--gris); line-height:1.4; }
+.rec .etq{ font-size:2.6mm; font-weight:700; padding:1mm 2.6mm; border-radius:99px; white-space:nowrap; }
+.gratis{ background:#E3F8EE; color:#11734A; } .oficial{ background:#EFE7FF; color:#4A17B5; }
+.final{ margin-top:5mm; border-radius:5mm; overflow:hidden; position:relative; height:44mm; color:#fff; background:linear-gradient(120deg,#1B0B66,#4A17B5 60%,#6E2BE6); padding:8mm; }
+.final::before{ content:""; position:absolute; inset:0; background:linear-gradient(115deg,transparent 0 45%,rgba(255,255,255,.07) 45% 47%,transparent 47%); }
+.final h3{ font-size:8mm; line-height:1.05; position:relative; width:110mm; }
+.final p{ font-size:3.5mm; color:#E3DFED; margin-top:3mm; position:relative; width:110mm; line-height:1.5; }
+.final img{ position:absolute; right:6mm; bottom:-12mm; height:60mm; }
+</style>
+</head>
+<body>
+
+<!-- ================= PORTADA ================= -->
+<section class="pagina portada">
+  <img class="logo" src="concepmi-vi-logo.png" alt="CONCEPMI" />
+  <div class="kicker">VI CONCEPMI 2026 · Guía de estudio</div>
+  <h1>Concurso de<br>Conocimientos</h1>
+  <p class="sub">Todo lo que necesitas para prepararte en <b>pocas páginas</b>: cómo se juega, qué estudiar, las fórmulas clave y los trucos para ganar.</p>
+  <div class="chips">
+    <span class="chip"><i style="background:#A98BFF"></i>Preguntas tipo examen CAPM® del PMI</span>
+    <span class="chip"><i style="background:#1FCBEA"></i>5 preguntas · 60 segundos por ronda</span>
+    <span class="chip"><i style="background:#FF6A1F"></i>Gana quien gane 2 de 3 rondas</span>
+  </div>
+  <img class="wolfito" src="wolfito-concepmi.png" alt="" />
+  <div class="base">
+    <img src="pmi-lima-student-club.png" alt="PMI Lima Student Club" />
+    <span>Organiza <b>PMI Lima, Perú Chapter · Student Club</b><br>Bibliografía basada en las bases oficiales del concurso</span>
+  </div>
+</section>
+
+<!-- ================= 1. CÓMO SE JUEGA ================= -->
+<section class="pagina">
+  <header class="cab"><div class="num">1</div><div><h2>¿Cómo se juega?</h2><p>El concurso en un minuto</p></div><img src="concepmi-vi-logo.png" alt="" /></header>
+  <div class="cuerpo">
+    <p class="lead">Dos delegaciones se enfrentan en <b>3 rondas</b>. En cada ronda responden <b>5 preguntas</b> en <b>60 segundos</b>. Gana el enfrentamiento quien gane <b>más rondas</b>.</p>
+    <div class="tiles">
+      <div class="tile t1"><b>3</b><span>rondas por<br>enfrentamiento</span></div>
+      <div class="tile t2"><b>5</b><span>preguntas<br>por ronda</span></div>
+      <div class="tile t3"><b>60 s</b><span>para responder<br>las 5</span></div>
+      <div class="tile t4"><b>+1</b><span>punto por cada<br>respuesta correcta</span></div>
+    </div>
+
+    <div class="titulo-sec">¿Quién gana?</div>
+    <div class="puntos">
+      <div class="punto"><div class="ic" style="background:#6E2BE6">R</div><div><b>La ronda</b><p>Quien tenga más respuestas correctas. Si empatan, gana quien <b>envió primero</b>.</p></div></div>
+      <div class="punto"><div class="ic" style="background:#FF6A1F">E</div><div><b>El enfrentamiento</b><p>Quien gane más rondas: 2 de 3 es suficiente.</p></div></div>
+      <div class="punto"><div class="ic" style="background:#F5A623">20</div><div><b>Bono por victoria</b><p>El ganador suma <b>20 puntos</b> + sus respuestas correctas.</p></div></div>
+      <div class="punto"><div class="ic" style="background:#1FCBEA">10</div><div><b>Bono por participación</b><p>El otro equipo suma <b>10 puntos</b> + sus respuestas correctas.</p></div></div>
+    </div>
+
+    <div class="titulo-sec">Ejemplo rápido</div>
+    <div class="caja">
+      <p><b>UNI vs. ESAN</b> · Ronda 1: 5–4 (gana UNI) · Ronda 2: 3–4 (gana ESAN) · Ronda 3: 3–2 (gana UNI)</p>
+      <ul style="margin-top:2mm">
+        <li><b>UNI</b> ganó 2 de 3 rondas → 20 + (5 + 3 + 3) = <b>31 puntos</b></li>
+        <li><b>ESAN</b> → 10 + (4 + 4 + 2) = <b>20 puntos</b></li>
+      </ul>
+    </div>
+
+    <div class="titulo-sec">Datos importantes</div>
+    <div class="tres">
+      <div class="caja"><h3>2 enfrentamientos</h3><p>Cada delegación juega 2 enfrentamientos por sorteo. La tabla general suma ambos.</p></div>
+      <div class="caja"><h3>Mismas preguntas</h3><p>Las 2 delegaciones reciben las mismas 5 preguntas. Nunca se repiten en el concurso.</p></div>
+      <div class="caja"><h3>Sin ayudas</h3><p>Prohibido usar celular, apuntes o libros durante las rondas: es causal de eliminación.</p></div>
+    </div>
+  </div>
+  <div class="pie"><span><b>VI CONCEPMI 2026</b> · Concurso de Conocimientos</span><span>Guía de estudio · 1</span></div><div class="franja"></div>
+</section>
+
+<!-- ================= 2. QUÉ ESTUDIAR ================= -->
+<section class="pagina">
+  <header class="cab"><div class="num">2</div><div><h2>¿Qué estudiar?</h2><p>Los 4 dominios del examen CAPM® y su peso</p></div><img src="concepmi-vi-logo.png" alt="" /></header>
+  <div class="cuerpo">
+    <p class="lead" style="margin-bottom:2mm">El banco tiene unas <b>180 preguntas</b> repartidas como el examen real. Si tienes poco tiempo, empieza por los dominios más grandes.</p>
+    <div class="barra-peso">
+      <div style="width:36%;background:var(--d1)">I · 36 %</div>
+      <div style="width:27%;background:var(--d4)">IV · 27 %</div>
+      <div style="width:20%;background:var(--d3)">III · 20 %</div>
+      <div style="width:17%;background:var(--d2)">II · 17 %</div>
+    </div>
+
+    <div class="dominio d1">
+      <div class="top"><div class="r">I</div><div><h3>Fundamentos de la dirección de proyectos</h3><small>El más importante: más de 1 de cada 3 preguntas</small></div><div class="pct"><b>36%</b><span>~65 preguntas</span></div></div>
+      <div class="chips"><span>Proyecto, programa, portafolio y operaciones</span><span>Tipos de PMO</span><span>Ciclos de vida: predictivo, iterativo, incremental, híbrido</span><span>Acta de constitución</span><span>12 principios y 8 dominios del PMBOK 7</span><span>FAE vs. APO</span><span>Estructuras organizacionales</span><span>Roles: director, patrocinador y equipo</span><span>Liderazgo, poder y motivación</span><span>Etapas de Tuckman y conflictos</span><span>Interesados y comunicaciones</span><span>Riesgos, incidentes, supuestos y restricciones</span><span>Calidad y herramientas (Ishikawa, Pareto, 5 porqués)</span><span>Control de cambios y cierre</span><span>Código de Ética del PMI</span></div>
+    </div>
+
+    <div class="dominio d4">
+      <div class="top"><div class="r">IV</div><div><h3>Análisis de negocios</h3><small>El segundo más grande: requisitos y valor del producto</small></div><div class="pct"><b>27%</b><span>~48 preguntas</span></div></div>
+      <div class="chips"><span>Rol del analista de negocios</span><span>Caso de negocio y beneficios</span><span>Análisis de brechas, FODA, PESTLE</span><span>Tipos de requisitos</span><span>Técnicas de elicitación</span><span>MoSCoW y modelo de Kano</span><span>Diagramas: contexto, casos de uso, AS-IS / TO-BE</span><span>Tablas de decisión</span><span>Matriz de trazabilidad</span><span>VAN, TIR, recuperación, costo de oportunidad</span><span>Hoja de ruta del producto</span><span>Indicadores SMART</span></div>
+    </div>
+
+  </div>
+  <div class="pie"><span><b>VI CONCEPMI 2026</b> · Concurso de Conocimientos</span><span>Guía de estudio · 2</span></div><div class="franja"></div>
+</section>
+
+<!-- ================= 2b. QUÉ ESTUDIAR (cont.) ================= -->
+<section class="pagina">
+  <header class="cab"><div class="num">2</div><div><h2>¿Qué estudiar?</h2><p>Continuación: ágil y predictivo</p></div><img src="concepmi-vi-logo.png" alt="" /></header>
+  <div class="cuerpo">
+    <div class="dominio d3">
+      <div class="top"><div class="r">III</div><div><h3>Marcos y metodologías ágiles</h3><small>Scrum, Kanban, XP y SAFe®</small></div><div class="pct"><b>20%</b><span>~36 preguntas</span></div></div>
+      <div class="chips"><span>Manifiesto Ágil: 4 valores y 12 principios</span><span>Roles, eventos y artefactos de Scrum</span><span>Definición de Terminado</span><span>Kanban y límites WIP</span><span>Historias de usuario e INVEST</span><span>Criterios de aceptación</span><span>Puntos de historia y velocidad</span><span>Burndown, burnup y flujo acumulado</span><span>MVP, spike y timeboxing</span><span>Scrum de Scrums</span></div>
+    </div>
+
+    <div class="dominio d2">
+      <div class="top"><div class="r">II</div><div><h3>Metodologías predictivas</h3><small>Planificación tradicional y control</small></div><div class="pct"><b>17%</b><span>~31 preguntas</span></div></div>
+      <div class="chips"><span>EDT/WBS y paquetes de trabajo</span><span>Línea base del alcance</span><span>Ruta crítica y holgura</span><span>Dependencias, adelantos y retrasos</span><span>Crashing vs. fast tracking</span><span>Estimación análoga, paramétrica, ascendente y PERT</span><span>Valor ganado</span><span>Reservas y presupuesto</span><span>Tipos de contrato</span></div>
+    </div>
+    <div class="dos" style="margin-top:2mm">
+      <div class="caja"><h3>Cómo usar esta lista</h3><p>Cada etiqueta es un tema. Márquenla cuando puedan explicarla en una frase sin mirar. Si al final quedan pocas sin marcar, ¡están listos!</p></div>
+      <div class="caja"><h3>Lo que más sale</h3><p>Fundamentos y Análisis de negocios suman casi <b>2 de cada 3 preguntas</b>. Si el tiempo apremia, asegúrenlos primero.</p></div>
+    </div>
+    <div class="final" style="margin-top:8mm;height:62mm">
+      <h3>Consejo de Wolfito</h3>
+      <p>No memoricen definiciones palabra por palabra: entiendan <b style="color:#fff">para qué sirve</b> cada concepto y <b style="color:#fff">cuándo se usa</b>. Así podrán responder cualquier pregunta, aunque esté redactada distinto.</p>
+      <img src="wolfito-concepmi.png" alt="" style="height:76mm;bottom:-16mm" />
+    </div>
+  </div>
+  <div class="pie"><span><b>VI CONCEPMI 2026</b> · Concurso de Conocimientos</span><span>Guía de estudio · 3</span></div><div class="franja"></div>
+</section>
+
+<!-- ================= 3. PLAN ================= -->
+<section class="pagina">
+  <header class="cab"><div class="num">3</div><div><h2>Plan de estudio en 14 días</h2><p>45 minutos al día y el equipo bien repartido</p></div><img src="concepmi-vi-logo.png" alt="" /></header>
+  <div class="cuerpo">
+    <div class="titulo-sec" style="margin-top:0">Repártanse los dominios</div>
+    <div class="reparto">
+      <div class="persona" style="--c:#6E2BE6"><div class="av">1</div><b>Dominio I</b><span>Fundamentos (el más pesado)</span></div>
+      <div class="persona" style="--c:#2BBF7A"><div class="av">2</div><b>Dominio IV</b><span>Análisis de negocios</span></div>
+      <div class="persona" style="--c:#1FCBEA"><div class="av">3</div><b>Dominio III</b><span>Ágil</span></div>
+      <div class="persona" style="--c:#FF6A1F"><div class="av">4</div><b>Dominio II</b><span>Predictivo y fórmulas</span></div>
+    </div>
+    <p style="font-size:3.1mm;color:var(--gris);margin-top:2.5mm">¿Son 2? Uno toma <b>I + II</b> y el otro <b>III + IV</b>. Cada uno es el experto de su parte, pero todos deben conocer lo básico de todo: responden juntos.</p>
+
+    <div class="titulo-sec">La ruta</div>
+    <div class="linea-tiempo">
+      <div class="paso" data-n="1-3" style="--c:#6E2BE6"><small>Días 1 a 3 · Leer</small><b>Cada uno estudia su dominio</b><p>Arma una hoja resumen de una sola página con los conceptos y definiciones clave.</p></div>
+      <div class="paso" data-n="4-6" style="--c:#FF6A1F"><small>Días 4 a 6 · Fórmulas</small><b>Dominar la página de fórmulas</b><p>Resuélvanlas sin mirar hasta hacerlo en menos de 10 segundos cada una.</p></div>
+      <div class="paso" data-n="7-9" style="--c:#1FCBEA"><small>Días 7 a 9 · Enseñar</small><b>Cada uno explica su resumen al equipo</b><p>15 minutos por persona. Enseñar es la forma más rápida de fijar lo aprendido.</p></div>
+      <div class="paso" data-n="10-12" style="--c:#2BBF7A"><small>Días 10 a 12 · Practicar</small><b>Simulacros con cronómetro</b><p>Preguntas tipo CAPM en bloques de 5 y 60 segundos, igual que en el concurso.</p></div>
+      <div class="paso" data-n="13-14" style="--c:#F5A623"><small>Días 13 y 14 · Repasar</small><b>Solo los errores y lo que más cuesta</b><p>Repasen los pares que se confunden (sección 5) y descansen bien la noche anterior.</p></div>
+    </div>
+
+    <div class="dos" style="margin-top:2mm">
+      <div class="caja"><h3>Tarjetas de memoria</h3><p>Pregunta por un lado y respuesta por el otro. Son ideales para Scrum, tipos de requisitos y técnicas de elicitación.</p></div>
+      <div class="caja"><h3>Explica con tus palabras</h3><p>Si no puedes explicar un concepto en una frase sencilla, aún no lo dominas. Vuelve a leerlo.</p></div>
+    </div>
+  </div>
+  <div class="pie"><span><b>VI CONCEPMI 2026</b> · Concurso de Conocimientos</span><span>Guía de estudio · 4</span></div><div class="franja"></div>
+</section>
+
+<!-- ================= 4. FÓRMULAS ================= -->
+<section class="pagina">
+  <header class="cab"><div class="num">4</div><div><h2>Chuleta de fórmulas</h2><p>Pocas, fáciles y salen seguro</p></div><img src="concepmi-vi-logo.png" alt="" /></header>
+  <div class="cuerpo">
+    <p class="lead" style="margin-bottom:4mm">En el concurso hay unos <b>12 segundos por pregunta</b> y no se permite calculadora: practiquen hasta resolverlas mentalmente.</p>
+    <div class="formulas">
+      <div class="formula" style="--c:#6E2BE6;grid-column:span 2">
+        <h3>Valor ganado · todas empiezan con EV</h3>
+        <p><b>EV</b> = lo que vale el trabajo hecho · <b>PV</b> = lo planificado · <b>AC</b> = lo gastado · <b>BAC</b> = presupuesto total</p>
+        <div class="tres" style="gap:2.5mm;margin-top:1.5mm">
+          <div><div class="ecu">CV = EV − AC</div><div class="ecu">CPI = <span class="frac"><span>EV</span><span>AC</span></span></div><p>Costo</p></div>
+          <div><div class="ecu">SV = EV − PV</div><div class="ecu">SPI = <span class="frac"><span>EV</span><span>PV</span></span></div><p>Cronograma</p></div>
+          <div><div class="ecu">EAC = <span class="frac"><span>BAC</span><span>CPI</span></span></div><div class="ecu">VAC = BAC − EAC</div><p>Pronóstico al final</p></div>
+        </div>
+        <div class="semaforo"><span class="mal">Negativo o menor que 1 = MAL</span><span class="bien">Positivo o mayor que 1 = BIEN</span></div>
+        <p style="margin-top:2mm">CV o CPI malos = <b>por encima del presupuesto</b>. SV o SPI malos = <b>retrasado</b>.</p>
+      </div>
+      <div class="formula" style="--c:#FF6A1F">
+        <h3>Estimación PERT (tres valores)</h3>
+        <div class="ecu">E = <span class="frac"><span>O + 4M + P</span><span>6</span></span></div>
+        <p><b>O</b> = optimista · <b>M</b> = más probable · <b>P</b> = pesimista. La más probable pesa 4 veces.</p>
+      </div>
+      <div class="formula" style="--c:#1FCBEA">
+        <h3>Canales de comunicación</h3>
+        <div class="ecu">Canales = <span class="frac"><span>n (n − 1)</span><span>2</span></span></div>
+        <p><b>n</b> = número de personas. Si preguntan cuántos canales <b>se agregan</b>, resta el antes del después.</p>
+      </div>
+      <div class="formula" style="--c:#2BBF7A">
+        <h3>Ruta crítica</h3>
+        <p>Es la secuencia <b>más larga</b> y fija la duración mínima del proyecto. Sus actividades tienen <b>holgura 0</b>.</p>
+        <div class="ecu" style="font-size:3.6mm">Holgura = ruta crítica − tu ruta</div>
+        <p>Un <b>hito</b> dura 0.</p>
+      </div>
+      <div class="formula" style="--c:#F5A623">
+        <h3>Valor monetario esperado</h3>
+        <div class="ecu">VME = Probabilidad × Impacto</div>
+        <p>En un árbol de decisión: suma el VME de las ramas y <b>resta el costo</b> de la opción. Gana el mayor valor neto.</p>
+      </div>
+      <div class="formula" style="--c:#FD443F">
+        <h3>Elegir proyectos</h3>
+        <div class="ecu" style="font-size:3.6mm">Recuperación = <span class="frac"><span>Inversión</span><span>Flujo anual</span></span></div>
+        <p><b>VAN</b> y <b>TIR</b>: elige el mayor · <b>Recuperación</b>: elige el menor.<br><b>Costo de oportunidad</b> = lo que vale la mejor opción que dejaste.</p>
+      </div>
+      <div class="formula" style="--c:#4A17B5">
+        <h3>Ágil en números</h3>
+        <div class="ecu" style="font-size:3.6mm">Sprints = <span class="frac"><span>Puntos pendientes</span><span>Velocidad</span></span></div>
+        <p>Sprint: máximo <b>1 mes</b> · Daily: <b>15 min</b> · Manifiesto: <b>4 valores y 12 principios</b>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pie"><span><b>VI CONCEPMI 2026</b> · Concurso de Conocimientos</span><span>Guía de estudio · 5</span></div><div class="franja"></div>
+</section>
+
+<!-- ================= 5. PARES Y TRUCOS ================= -->
+<section class="pagina">
+  <header class="cab"><div class="num">5</div><div><h2>Pares que se confunden</h2><p>El CAPM suele preguntar justo la diferencia</p></div><img src="concepmi-vi-logo.png" alt="" /></header>
+  <div class="cuerpo">
+    <div class="pares">
+      <div class="par"><div><b>Riesgo</b>Algo incierto que podría pasar.</div><div class="vs">VS</div><div><b>Incidente</b>Algo que ya pasó.</div></div>
+      <div class="par"><div><b>Programa</b>Proyectos relacionados, por beneficios en conjunto.</div><div class="vs">VS</div><div><b>Portafolio</b>Todo junto, por la estrategia.</div></div>
+      <div class="par"><div><b>FAE</b>Condiciones que no controlas (leyes, mercado).</div><div class="vs">VS</div><div><b>APO</b>Lo que la empresa ya tiene (plantillas, lecciones).</div></div>
+      <div class="par"><div><b>Validar el alcance</b>El cliente acepta el entregable.</div><div class="vs">VS</div><div><b>Controlar la calidad</b>El equipo revisa que esté bien.</div></div>
+      <div class="par"><div><b>Crashing</b>Más recursos: sube el costo.</div><div class="vs">VS</div><div><b>Fast tracking</b>Tareas en paralelo: sube el riesgo.</div></div>
+      <div class="par"><div><b>Supuesto</b>Algo que se cree cierto sin pruebas.</div><div class="vs">VS</div><div><b>Restricción</b>Un límite que no se puede cambiar.</div></div>
+      <div class="par"><div><b>Calidad</b>Cumplir los requisitos, sin defectos.</div><div class="vs">VS</div><div><b>Grado</b>Cuántas funciones o características tiene.</div></div>
+      <div class="par"><div><b>Burndown</b>Muestra el trabajo que falta.</div><div class="vs">VS</div><div><b>Burnup</b>Muestra lo hecho y el alcance total.</div></div>
+      <div class="par"><div><b>Product Owner</b>Decide el qué: prioriza el backlog.</div><div class="vs">VS</div><div><b>Scrum Master</b>Facilita y quita impedimentos.</div></div>
+      <div class="par"><div><b>Requisito funcional</b>Lo que el sistema hace.</div><div class="vs">VS</div><div><b>No funcional</b>Cómo lo hace: rapidez, seguridad.</div></div>
+      <div class="par"><div><b>Push</b>Se envía (correo, informe).</div><div class="vs">VS</div><div><b>Pull</b>El otro lo consulta (intranet).</div></div>
+      <div class="par"><div><b>Lead time</b>Desde que se pide hasta que se entrega.</div><div class="vs">VS</div><div><b>Cycle time</b>Desde que empieza el trabajo.</div></div>
+    </div>
+
+    <div class="titulo-sec">Preguntas de situación: piensa como el PMI</div>
+    <div class="dos">
+      <div class="caja" style="background:#E3F8EE;border-color:#BDEBD3"><h3 style="color:#11734A">Casi siempre es correcto</h3><ul><li>Analizar o evaluar el impacto antes de actuar</li><li>Seguir el proceso formal (por ejemplo, control de cambios)</li><li>Revisar el plan o el registro de riesgos</li><li>Comunicar y colaborar con los interesados</li></ul></div>
+      <div class="caja" style="background:#FFE6E5;border-color:#F7C4C1"><h3 style="color:#B3261E">Casi nunca es correcto</h3><ul><li>Actuar de inmediato sin evaluar</li><li>Escalar todo al patrocinador de entrada</li><li>Ignorar el problema o esperar a que se arregle solo</li><li>Hacer cambios a escondidas o romper la ética</li></ul></div>
+    </div>
+  </div>
+  <div class="pie"><span><b>VI CONCEPMI 2026</b> · Concurso de Conocimientos</span><span>Guía de estudio · 6</span></div><div class="franja"></div>
+</section>
+
+<!-- ================= 6. DÍA DEL CONCURSO ================= -->
+<section class="pagina">
+  <header class="cab"><div class="num">6</div><div><h2>El día del concurso</h2><p>Estrategia para 5 preguntas en 60 segundos</p></div><img src="concepmi-vi-logo.png" alt="" /></header>
+  <div class="cuerpo">
+    <div class="reloj"><div class="big">60 s</div><p><b>La clave es no quedarse atascado.</b> Primero las fáciles, luego las difíciles. Son unos 12 segundos por pregunta.</p></div>
+    <div class="pasos-dia">
+      <div class="pd" style="--c:#6E2BE6"><div class="n">1</div><div><b>Organícense antes</b><p>Decidan quién maneja el mouse y quién lee. Cada uno mira las preguntas de su dominio.</p></div></div>
+      <div class="pd" style="--c:#1FCBEA"><div class="n">2</div><div><b>Primera pasada: unos 30 segundos</b><p>Marquen todas las que sepan al instante.</p></div></div>
+      <div class="pd" style="--c:#FF6A1F"><div class="n">3</div><div><b>Segunda pasada: las dudosas</b><p>Descarten las alternativas absurdas. Casi siempre quedan solo dos.</p></div></div>
+      <div class="pd" style="--c:#2BBF7A"><div class="n">4</div><div><b>Nunca dejen preguntas en blanco</b><p>Una pregunta sin marcar vale 0: siempre conviene elegir una alternativa.</p></div></div>
+      <div class="pd" style="--c:#F5A623"><div class="n">5</div><div><b>Envíen en cuanto tengan las 5</b><p>Si empatan en correctas, gana quien envió primero. Pero una correcta más vale más que unos segundos.</p></div></div>
+      <div class="pd" style="--c:#FD443F"><div class="n">6</div><div><b>Si se acaba el tiempo, no pasa nada</b><p>El sistema envía solo lo que tengan marcado.</p></div></div>
+      <div class="pd" style="--c:#4A17B5"><div class="n">7</div><div><b>Cada ronda es nueva</b><p>Si una salió mal, olvídenla: con ganar 2 de 3 rondas ganan el enfrentamiento.</p></div></div>
+    </div>
+    <div class="aviso"><span class="ic">🪪</span><div><b>No olviden:</b> DNI de todos los integrantes, vestimenta formal o semiformal y llegar a tiempo. Si un equipo no se presenta, pierde por walkover: 0 puntos.</div></div>
+  </div>
+  <div class="pie"><span><b>VI CONCEPMI 2026</b> · Concurso de Conocimientos</span><span>Guía de estudio · 7</span></div><div class="franja"></div>
+</section>
+
+<!-- ================= 7. FAQ ================= -->
+<section class="pagina">
+  <header class="cab"><div class="num">7</div><div><h2>Preguntas frecuentes</h2><p>Lo que más nos preguntan</p></div><img src="concepmi-vi-logo.png" alt="" /></header>
+  <div class="cuerpo">
+    <div class="faq">
+      <div class="q"><b>¿Cuántos integrantes por equipo?</b><p>Hasta 4 inscritos y mínimo 2 para competir. Un solo equipo por delegación.</p></div>
+      <div class="q"><b>¿Hasta cuándo puedo inscribirme?</b><p>Hasta las 23:59 del viernes 20 de noviembre, con el formulario oficial que llena el líder del equipo.</p></div>
+      <div class="q"><b>¿Cuándo y dónde es?</b><p>Es presencial, el segundo día del evento, de 15:45 a 17:45, en el auditorio principal.</p></div>
+      <div class="q"><b>¿Qué debo llevar?</b><p>Tu DNI. Vestimenta formal o semiformal: nada de shorts, sandalias ni polos sin mangas.</p></div>
+      <div class="q"><b>¿Puedo usar celular, calculadora o apuntes?</b><p>No. Está prohibida cualquier ayuda física o digital durante las rondas, y es causal de eliminación.</p></div>
+      <div class="q"><b>¿Las preguntas son como el examen CAPM?</b><p>Sí: el mismo estilo, situaciones y conceptos con 4 alternativas. Están en español.</p></div>
+      <div class="q"><b>¿Ambos equipos tienen las mismas preguntas?</b><p>Sí, las mismas 5 por ronda. No se repiten en todo el concurso: memorizar no sirve, hay que entender.</p></div>
+      <div class="q"><b>¿Cómo se responde?</b><p>En una laptop por equipo: marcan una alternativa por pregunta y pulsan «Enviar respuestas». Luego no se puede cambiar.</p></div>
+      <div class="q"><b>¿Qué pasa si empatamos en una ronda?</b><p>Gana la ronda el equipo que envió sus respuestas primero.</p></div>
+      <div class="q"><b>¿Y si empatamos en la tabla general?</b><p>Primero cuentan las respuestas correctas totales, luego los enfrentamientos ganados y, al final, una pregunta de muerte súbita de 30 s.</p></div>
+      <div class="q"><b>¿Qué pasa si no llegamos a tiempo?</b><p>Se declara walkover: el rival gana con 35 puntos y tu equipo queda con 0.</p></div>
+      <div class="q"><b>¿Qué se gana?</b><p>Placa al 1.º puesto, medallas al 2.º y certificados a los tres primeros. Los puntos suman para la Delegación Campeona del VI CONCEPMI.</p></div>
+    </div>
+  </div>
+  <div class="pie"><span><b>VI CONCEPMI 2026</b> · Concurso de Conocimientos</span><span>Guía de estudio · 8</span></div><div class="franja"></div>
+</section>
+
+<!-- ================= 8. RECURSOS ================= -->
+<section class="pagina">
+  <header class="cab"><div class="num">8</div><div><h2>Recursos para estudiar</h2><p>Empieza por los gratuitos</p></div><img src="concepmi-vi-logo.png" alt="" /></header>
+  <div class="cuerpo">
+    <div class="titulo-sec" style="margin-top:0">Gratuitos y rápidos</div>
+    <div class="recursos">
+      <div class="rec"><div class="ic">📘</div><div><b>Guía Scrum</b><p>Unas 14 páginas, en español. Roles, eventos y artefactos de Scrum. · scrumguides.org</p></div><span class="etq gratis">GRATIS</span></div>
+      <div class="rec"><div class="ic">⚡</div><div><b>Manifiesto Ágil</b><p>Los 4 valores y 12 principios, en español. · agilemanifesto.org</p></div><span class="etq gratis">GRATIS</span></div>
+      <div class="rec"><div class="ic">🎯</div><div><b>Esquema del examen CAPM®</b><p>Los 4 dominios oficiales del examen, en la página de la certificación CAPM. · pmi.org</p></div><span class="etq gratis">GRATIS</span></div>
+      <div class="rec"><div class="ic">⚖️</div><div><b>Código de Ética y Conducta Profesional del PMI</b><p>Los 4 valores: responsabilidad, respeto, equidad y honestidad. · pmi.org</p></div><span class="etq gratis">GRATIS</span></div>
+    </div>
+
+    <div class="titulo-sec">Bibliografía oficial de las bases</div>
+    <div class="recursos">
+      <div class="rec"><div class="ic">📗</div><div><b>Guía del PMBOK®, 7.ª edición</b><p>Principios, dominios de desempeño y adaptación. Base del Dominio I.</p></div><span class="etq oficial">PMI</span></div>
+      <div class="rec"><div class="ic">📙</div><div><b>Grupos de Procesos: Una Guía Práctica</b><p>Procesos, alcance, cronograma y costos. Base del Dominio II.</p></div><span class="etq oficial">PMI</span></div>
+      <div class="rec"><div class="ic">📒</div><div><b>Guía Práctica de Ágil</b><p>Enfoques adaptativos, Scrum, Kanban y XP. Base del Dominio III.</p></div><span class="etq oficial">PMI</span></div>
+      <div class="rec"><div class="ic">📕</div><div><b>Análisis del Negocio para Profesionales: Una Guía Práctica</b><p>Requisitos, elicitación y valor del producto. Base del Dominio IV.</p></div><span class="etq oficial">PMI</span></div>
+    </div>
+    <p style="font-size:3mm;color:var(--gris);margin-top:2.5mm">Con la membresía de estudiante del PMI se pueden descargar las guías del PMI en formato digital sin costo adicional.</p>
+
+    <div class="final">
+      <h3>¡Mucho éxito, futuros campeones!</h3>
+      <p>Suceden cosas buenas cuando te involucras con el PMI. Estudien en equipo, practiquen con cronómetro y disfruten el concurso.</p>
+      <img src="wolfito-concepmi.png" alt="" />
+    </div>
+  </div>
+  <div class="pie"><span><b>VI CONCEPMI 2026</b> · Concurso de Conocimientos</span><span>Guía de estudio · 9</span></div><div class="franja"></div>
+</section>
+
+</body>
+</html>
