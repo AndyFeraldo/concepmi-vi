@@ -1,0 +1,2702 @@
+[
+  {
+    "id": 1,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Conceptos básicos",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuál de las siguientes opciones describe mejor un proyecto?",
+    "opciones": {
+      "A": "Un esfuerzo temporal que se lleva a cabo para crear un producto, servicio o resultado único.",
+      "B": "Un grupo de programas gestionados para alcanzar objetivos estratégicos.",
+      "C": "Un conjunto de procesos permanentes que sostienen el negocio.",
+      "D": "Una operación continua que produce bienes de forma repetitiva."
+    },
+    "correcta": "A",
+    "explicacion": "Un proyecto es temporal (tiene inicio y fin) y su resultado es único."
+  },
+  {
+    "id": 2,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Conceptos básicos",
+    "dificultad": "Básica",
+    "enunciado": "Una fábrica produce 500 unidades diarias del mismo producto y además planea implementar un nuevo sistema ERP. ¿Cuál de estas actividades es un proyecto?",
+    "opciones": {
+      "A": "El mantenimiento rutinario de la maquinaria.",
+      "B": "La implementación del nuevo sistema ERP.",
+      "C": "La producción diaria de las 500 unidades.",
+      "D": "La atención continua del centro de llamadas."
+    },
+    "correcta": "B",
+    "explicacion": "La implementación del ERP es temporal y genera un resultado único; lo demás son operaciones continuas."
+  },
+  {
+    "id": 3,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Programas y portafolios",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué es un programa según el PMI?",
+    "opciones": {
+      "A": "El conjunto de operaciones permanentes de un área funcional.",
+      "B": "Un proyecto de gran tamaño con un presupuesto superior al promedio.",
+      "C": "Un conjunto de proyectos y operaciones agrupados para alcanzar los objetivos estratégicos de la organización.",
+      "D": "Proyectos, programas subsidiarios y actividades relacionados que se gestionan de forma coordinada para obtener beneficios que no se lograrían gestionándolos por separado."
+    },
+    "correcta": "D",
+    "explicacion": "El programa se centra en beneficios coordinados; el portafolio, en objetivos estratégicos."
+  },
+  {
+    "id": 4,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Programas y portafolios",
+    "dificultad": "Intermedia",
+    "enunciado": "Una empresa agrupa proyectos, programas y operaciones para priorizar inversiones según su estrategia corporativa. ¿Qué está gestionando?",
+    "opciones": {
+      "A": "Un programa.",
+      "B": "Un subproyecto.",
+      "C": "Un portafolio.",
+      "D": "Una fase del proyecto."
+    },
+    "correcta": "C",
+    "explicacion": "El portafolio agrupa componentes para alcanzar objetivos estratégicos, aunque no estén relacionados entre sí."
+  },
+  {
+    "id": 5,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "PMO",
+    "dificultad": "Intermedia",
+    "enunciado": "Una PMO asume el control de los proyectos y los dirige directamente con sus propios directores de proyecto. ¿Qué tipo de PMO es?",
+    "opciones": {
+      "A": "Consultiva.",
+      "B": "De apoyo.",
+      "C": "De control.",
+      "D": "Directiva."
+    },
+    "correcta": "D",
+    "explicacion": "La PMO directiva tiene el grado de control más alto: dirige los proyectos directamente."
+  },
+  {
+    "id": 6,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "PMO",
+    "dificultad": "Intermedia",
+    "enunciado": "Una PMO proporciona plantillas, mejores prácticas, capacitación y acceso a lecciones aprendidas, pero ejerce un grado de control bajo. ¿Qué tipo de PMO es?",
+    "opciones": {
+      "A": "De control.",
+      "B": "Directiva.",
+      "C": "De apoyo.",
+      "D": "Estratégica."
+    },
+    "correcta": "C",
+    "explicacion": "La PMO de apoyo cumple un rol consultivo con bajo grado de control."
+  },
+  {
+    "id": 7,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Acta de constitución",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué documento autoriza formalmente la existencia de un proyecto y otorga al director del proyecto la autoridad para usar recursos de la organización?",
+    "opciones": {
+      "A": "El registro de interesados.",
+      "B": "El plan para la dirección del proyecto.",
+      "C": "El acta de constitución del proyecto.",
+      "D": "El enunciado del alcance del proyecto."
+    },
+    "correcta": "C",
+    "explicacion": "El acta de constitución (project charter) autoriza el proyecto y nombra al director."
+  },
+  {
+    "id": 8,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Acta de constitución",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Quién suele emitir el acta de constitución del proyecto?",
+    "opciones": {
+      "A": "El comité de control de cambios.",
+      "B": "El equipo del proyecto.",
+      "C": "El director del proyecto.",
+      "D": "El patrocinador o el iniciador del proyecto."
+    },
+    "correcta": "D",
+    "explicacion": "El acta la emite alguien externo al proyecto con nivel suficiente para financiarlo, normalmente el patrocinador."
+  },
+  {
+    "id": 9,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Ciclos de vida",
+    "dificultad": "Básica",
+    "enunciado": "En un ciclo de vida donde el alcance, el tiempo y el costo se determinan en las fases tempranas, ¿qué enfoque se está usando?",
+    "opciones": {
+      "A": "Iterativo.",
+      "B": "Predictivo.",
+      "C": "Incremental.",
+      "D": "Adaptativo."
+    },
+    "correcta": "B",
+    "explicacion": "El enfoque predictivo planifica el alcance, tiempo y costo al inicio."
+  },
+  {
+    "id": 10,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Ciclos de vida",
+    "dificultad": "Intermedia",
+    "enunciado": "En un proyecto, el producto se refina mediante ciclos repetidos y las estimaciones de tiempo y costo se ajustan a medida que el equipo comprende mejor el producto. ¿Qué ciclo de vida describe?",
+    "opciones": {
+      "A": "Predictivo.",
+      "B": "Lineal.",
+      "C": "En cascada.",
+      "D": "Iterativo."
+    },
+    "correcta": "D",
+    "explicacion": "El ciclo iterativo desarrolla el producto mediante ciclos repetidos que lo van refinando."
+  },
+  {
+    "id": 11,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Ciclos de vida",
+    "dificultad": "Intermedia",
+    "enunciado": "Un equipo entrega el producto en partes funcionales sucesivas, añadiendo funcionalidad en cada entrega hasta completarlo. ¿Qué ciclo de vida es?",
+    "opciones": {
+      "A": "Incremental.",
+      "B": "En cascada.",
+      "C": "Por fases secuenciales.",
+      "D": "Predictivo."
+    },
+    "correcta": "A",
+    "explicacion": "El ciclo incremental añade funcionalidad de forma sucesiva en cada entrega."
+  },
+  {
+    "id": 12,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Ciclos de vida",
+    "dificultad": "Intermedia",
+    "enunciado": "La construcción de un hospital usa un enfoque predictivo para la obra civil y un enfoque ágil para el software de gestión de pacientes. ¿Qué enfoque tiene el proyecto?",
+    "opciones": {
+      "A": "Predictivo.",
+      "B": "Adaptativo puro.",
+      "C": "Híbrido.",
+      "D": "Incremental puro."
+    },
+    "correcta": "C",
+    "explicacion": "Combinar enfoques predictivos y adaptativos en un mismo proyecto es un enfoque híbrido."
+  },
+  {
+    "id": 13,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Ciclos de vida",
+    "dificultad": "Básica",
+    "enunciado": "¿Cómo se llama la revisión al final de una fase en la que se decide continuar, modificar o terminar el proyecto?",
+    "opciones": {
+      "A": "Retrospectiva.",
+      "B": "Punto de revisión de fase (phase gate).",
+      "C": "Reunión diaria.",
+      "D": "Revisión del sprint."
+    },
+    "correcta": "B",
+    "explicacion": "El phase gate es un punto de decisión entre fases."
+  },
+  {
+    "id": 14,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Grupos de procesos",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuáles son los cinco grupos de procesos de la dirección de proyectos?",
+    "opciones": {
+      "A": "Diseño, desarrollo, pruebas, implementación y soporte.",
+      "B": "Inicio, planificación, ejecución, monitoreo y control, y cierre.",
+      "C": "Planificación, compras, ejecución, calidad y cierre.",
+      "D": "Inicio, análisis, ejecución, entrega y cierre."
+    },
+    "correcta": "B",
+    "explicacion": "Son los cinco grupos de procesos definidos por el PMI."
+  },
+  {
+    "id": 15,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Grupos de procesos",
+    "dificultad": "Intermedia",
+    "enunciado": "¿En qué grupo de procesos se identifica por primera vez a los interesados del proyecto?",
+    "opciones": {
+      "A": "Monitoreo y control.",
+      "B": "Inicio.",
+      "C": "Ejecución.",
+      "D": "Planificación."
+    },
+    "correcta": "B",
+    "explicacion": "Identificar a los interesados es un proceso del grupo de inicio, aunque se repite durante el proyecto."
+  },
+  {
+    "id": 16,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Principios PMBOK 7",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál de las siguientes opciones es uno de los principios de la dirección de proyectos de la Guía del PMBOK (7.ª edición)?",
+    "opciones": {
+      "A": "Reducir al mínimo la interacción con los interesados.",
+      "B": "Cumplir siempre el triángulo de hierro sin excepciones.",
+      "C": "Ejecutar todos los procesos en el mismo orden en cada proyecto.",
+      "D": "Ser un administrador diligente, respetuoso y cuidadoso."
+    },
+    "correcta": "D",
+    "explicacion": "La administración (stewardship) es uno de los 12 principios del PMBOK 7."
+  },
+  {
+    "id": 17,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Dominios de desempeño",
+    "dificultad": "Avanzada",
+    "enunciado": "¿Cuál de las siguientes opciones NO es un dominio de desempeño del proyecto en la Guía del PMBOK (7.ª edición)?",
+    "opciones": {
+      "A": "Gestión de las adquisiciones.",
+      "B": "Medición.",
+      "C": "Entrega.",
+      "D": "Incertidumbre."
+    },
+    "correcta": "A",
+    "explicacion": "Adquisiciones es un área de conocimiento de ediciones anteriores, no un dominio de desempeño."
+  },
+  {
+    "id": 18,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Adaptación (tailoring)",
+    "dificultad": "Intermedia",
+    "enunciado": "Un director de proyecto ajusta deliberadamente el enfoque, la gobernanza y los procesos para que se adapten al contexto de su proyecto. ¿Qué está haciendo?",
+    "opciones": {
+      "A": "Adaptación (tailoring).",
+      "B": "Corrupción del alcance.",
+      "C": "Ejecución rápida.",
+      "D": "Gestión de la configuración."
+    },
+    "correcta": "A",
+    "explicacion": "La adaptación ajusta la forma de trabajo a las necesidades del proyecto y del entorno."
+  },
+  {
+    "id": 19,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "FAE y APO",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál de las siguientes opciones es un factor ambiental de la empresa (FAE)?",
+    "opciones": {
+      "A": "Las regulaciones gubernamentales del sector.",
+      "B": "La base de conocimientos de proyectos anteriores.",
+      "C": "Las plantillas de lecciones aprendidas.",
+      "D": "Los procedimientos de control de cambios de la organización."
+    },
+    "correcta": "A",
+    "explicacion": "Los FAE son condiciones fuera del control del equipo; las otras opciones son activos de los procesos."
+  },
+  {
+    "id": 20,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "FAE y APO",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál de las siguientes opciones es un activo de los procesos de la organización (APO)?",
+    "opciones": {
+      "A": "El clima político del país.",
+      "B": "El repositorio de lecciones aprendidas de proyectos anteriores.",
+      "C": "Las condiciones del mercado.",
+      "D": "La infraestructura pública disponible."
+    },
+    "correcta": "B",
+    "explicacion": "Las lecciones aprendidas son un APO; las otras opciones son factores ambientales."
+  },
+  {
+    "id": 21,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Estructuras organizacionales",
+    "dificultad": "Intermedia",
+    "enunciado": "En una organización, el director del proyecto tiene poca o ninguna autoridad y el gerente funcional controla el presupuesto. ¿Qué estructura es?",
+    "opciones": {
+      "A": "Orientada a proyectos.",
+      "B": "Matricial fuerte.",
+      "C": "Matricial equilibrada.",
+      "D": "Funcional."
+    },
+    "correcta": "D",
+    "explicacion": "En la estructura funcional el gerente funcional concentra la autoridad."
+  },
+  {
+    "id": 22,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Estructuras organizacionales",
+    "dificultad": "Intermedia",
+    "enunciado": "¿En qué estructura organizacional tiene el director del proyecto la mayor autoridad y el equipo trabaja a tiempo completo en el proyecto?",
+    "opciones": {
+      "A": "Matricial débil.",
+      "B": "Orientada a proyectos (proyectizada).",
+      "C": "Matricial equilibrada.",
+      "D": "Funcional."
+    },
+    "correcta": "B",
+    "explicacion": "En la estructura orientada a proyectos el director tiene autoridad alta o casi total."
+  },
+  {
+    "id": 23,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Roles",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuál es una responsabilidad principal del patrocinador del proyecto?",
+    "opciones": {
+      "A": "Realizar las pruebas técnicas de los entregables.",
+      "B": "Proporcionar recursos y apoyo, y defender el proyecto ante la organización.",
+      "C": "Asignar las tareas diarias del equipo.",
+      "D": "Actualizar el cronograma cada semana."
+    },
+    "correcta": "B",
+    "explicacion": "El patrocinador financia, apoya y promueve el proyecto."
+  },
+  {
+    "id": 24,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Roles",
+    "dificultad": "Básica",
+    "enunciado": "Según el PMI, ¿qué rol cumple el director del proyecto respecto a la integración?",
+    "opciones": {
+      "A": "Se ocupa solo de los aspectos técnicos del producto.",
+      "B": "Integra únicamente los costos al final del proyecto.",
+      "C": "Delega la integración en el patrocinador.",
+      "D": "Combina y coordina el trabajo de todas las áreas para lograr los objetivos del proyecto."
+    },
+    "correcta": "D",
+    "explicacion": "La integración es responsabilidad del director del proyecto."
+  },
+  {
+    "id": 25,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Interesados",
+    "dificultad": "Intermedia",
+    "enunciado": "En la matriz de poder/interés, un interesado tiene mucho poder pero poco interés en el proyecto. ¿Qué estrategia corresponde?",
+    "opciones": {
+      "A": "Solo monitorearlo.",
+      "B": "Gestionarlo de cerca.",
+      "C": "Mantenerlo satisfecho.",
+      "D": "Mantenerlo informado."
+    },
+    "correcta": "C",
+    "explicacion": "Alto poder y bajo interés: mantener satisfecho."
+  },
+  {
+    "id": 26,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Interesados",
+    "dificultad": "Intermedia",
+    "enunciado": "En la matriz de poder/interés, ¿qué estrategia corresponde a un interesado con poco poder y mucho interés?",
+    "opciones": {
+      "A": "Ignorarlo.",
+      "B": "Gestionarlo de cerca.",
+      "C": "Mantenerlo satisfecho.",
+      "D": "Mantenerlo informado."
+    },
+    "correcta": "D",
+    "explicacion": "Bajo poder y alto interés: mantener informado."
+  },
+  {
+    "id": 27,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Interesados",
+    "dificultad": "Avanzada",
+    "enunciado": "Un interesado conoce el proyecto y sus posibles impactos, pero se resiste al cambio. En la matriz de evaluación del compromiso, ¿cómo se clasifica?",
+    "opciones": {
+      "A": "Neutral.",
+      "B": "Líder.",
+      "C": "Reticente.",
+      "D": "Desconocedor."
+    },
+    "correcta": "C",
+    "explicacion": "Reticente: conoce el proyecto pero se resiste a él."
+  },
+  {
+    "id": 28,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Comunicaciones",
+    "dificultad": "Intermedia",
+    "enunciado": "Un equipo tiene 10 integrantes. ¿Cuántos canales de comunicación existen?",
+    "opciones": {
+      "A": "45.",
+      "B": "20.",
+      "C": "90.",
+      "D": "100."
+    },
+    "correcta": "A",
+    "explicacion": "Fórmula n(n−1)/2 = 10×9/2 = 45."
+  },
+  {
+    "id": 29,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Comunicaciones",
+    "dificultad": "Avanzada",
+    "enunciado": "Un equipo crece de 6 a 9 integrantes. ¿Cuántos canales de comunicación se añaden?",
+    "opciones": {
+      "A": "18.",
+      "B": "21.",
+      "C": "36.",
+      "D": "3."
+    },
+    "correcta": "B",
+    "explicacion": "6 personas: 15 canales; 9 personas: 36 canales; 36 − 15 = 21."
+  },
+  {
+    "id": 30,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Comunicaciones",
+    "dificultad": "Intermedia",
+    "enunciado": "En el modelo de comunicación emisor-receptor, ¿qué elemento confirma que el mensaje se comprendió correctamente?",
+    "opciones": {
+      "A": "La codificación.",
+      "B": "El medio.",
+      "C": "La retroalimentación.",
+      "D": "El ruido."
+    },
+    "correcta": "C",
+    "explicacion": "La retroalimentación confirma la comprensión del mensaje."
+  },
+  {
+    "id": 31,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Comunicaciones",
+    "dificultad": "Intermedia",
+    "enunciado": "El equipo publica los informes del proyecto en la intranet para que los interesados los consulten cuando quieran. ¿Qué método de comunicación usa?",
+    "opciones": {
+      "A": "Comunicación de extracción (pull).",
+      "B": "Comunicación de envío (push).",
+      "C": "Comunicación informal.",
+      "D": "Comunicación interactiva."
+    },
+    "correcta": "A",
+    "explicacion": "En la comunicación pull el receptor accede a la información cuando la necesita."
+  },
+  {
+    "id": 32,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Comunicaciones",
+    "dificultad": "Básica",
+    "enunciado": "Enviar por correo electrónico el informe de estado semanal a los interesados es un ejemplo de:",
+    "opciones": {
+      "A": "Escucha activa.",
+      "B": "Comunicación interactiva.",
+      "C": "Comunicación de extracción (pull).",
+      "D": "Comunicación de envío (push)."
+    },
+    "correcta": "D",
+    "explicacion": "Push: se envía a receptores específicos sin garantizar que lo lean."
+  },
+  {
+    "id": 33,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Riesgos",
+    "dificultad": "Básica",
+    "enunciado": "¿Cómo define el PMI un riesgo?",
+    "opciones": {
+      "A": "Una restricción impuesta por el patrocinador.",
+      "B": "Un evento o condición incierta que, si ocurre, tiene un efecto positivo o negativo en uno o más objetivos del proyecto.",
+      "C": "Un problema que ya ocurrió y afecta al proyecto.",
+      "D": "Cualquier evento con efecto exclusivamente negativo."
+    },
+    "correcta": "B",
+    "explicacion": "Un riesgo es incierto y puede ser una amenaza o una oportunidad."
+  },
+  {
+    "id": 34,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Riesgos",
+    "dificultad": "Básica",
+    "enunciado": "El equipo contrata un seguro para cubrir posibles daños a los equipos durante el transporte. ¿Qué estrategia de respuesta a la amenaza aplica?",
+    "opciones": {
+      "A": "Aceptar.",
+      "B": "Evitar.",
+      "C": "Transferir.",
+      "D": "Mitigar."
+    },
+    "correcta": "C",
+    "explicacion": "Transferir traslada el impacto de la amenaza a un tercero."
+  },
+  {
+    "id": 35,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Riesgos",
+    "dificultad": "Intermedia",
+    "enunciado": "El director cambia el plan del proyecto para eliminar por completo una amenaza identificada. ¿Qué estrategia usa?",
+    "opciones": {
+      "A": "Evitar.",
+      "B": "Mitigar.",
+      "C": "Escalar.",
+      "D": "Transferir."
+    },
+    "correcta": "A",
+    "explicacion": "Evitar elimina la amenaza o protege al proyecto de su impacto."
+  },
+  {
+    "id": 36,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Riesgos",
+    "dificultad": "Intermedia",
+    "enunciado": "El equipo asigna a sus mejores recursos para asegurarse de que una oportunidad se materialice. ¿Qué estrategia usa?",
+    "opciones": {
+      "A": "Explotar.",
+      "B": "Mejorar.",
+      "C": "Aceptar.",
+      "D": "Compartir."
+    },
+    "correcta": "A",
+    "explicacion": "Explotar busca que la oportunidad ocurra con certeza."
+  },
+  {
+    "id": 37,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Riesgos",
+    "dificultad": "Intermedia",
+    "enunciado": "Dos empresas forman una alianza (joint venture) para aprovechar juntas una oportunidad de mercado. ¿Qué estrategia aplican?",
+    "opciones": {
+      "A": "Explotar.",
+      "B": "Transferir.",
+      "C": "Compartir.",
+      "D": "Mejorar."
+    },
+    "correcta": "C",
+    "explicacion": "Compartir asigna la oportunidad a un tercero que puede aprovecharla mejor."
+  },
+  {
+    "id": 38,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Riesgos",
+    "dificultad": "Intermedia",
+    "enunciado": "Un proveedor ya incumplió una entrega y esto está afectando al proyecto. ¿Dónde debe registrarse?",
+    "opciones": {
+      "A": "En el acta de constitución.",
+      "B": "En el registro de supuestos.",
+      "C": "En el registro de riesgos.",
+      "D": "En el registro de incidentes."
+    },
+    "correcta": "D",
+    "explicacion": "Un evento que ya ocurrió es un incidente, no un riesgo."
+  },
+  {
+    "id": 39,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Riesgos",
+    "dificultad": "Avanzada",
+    "enunciado": "¿Qué reserva se destina a los riesgos no identificados (incógnitas desconocidas) y requiere aprobación de la dirección para usarse?",
+    "opciones": {
+      "A": "La reserva para contingencias.",
+      "B": "La reserva de gestión.",
+      "C": "La línea base de costos.",
+      "D": "El fondo de caja chica."
+    },
+    "correcta": "B",
+    "explicacion": "La reserva de gestión cubre lo desconocido y no forma parte de la línea base de costos."
+  },
+  {
+    "id": 40,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Riesgos",
+    "dificultad": "Avanzada",
+    "enunciado": "Un riesgo tiene una probabilidad del 30 % y un impacto negativo de $20 000. ¿Cuál es su valor monetario esperado (VME)?",
+    "opciones": {
+      "A": "−$600.",
+      "B": "−$20 000.",
+      "C": "−$14 000.",
+      "D": "−$6 000."
+    },
+    "correcta": "D",
+    "explicacion": "VME = 0,30 × (−20 000) = −6 000."
+  },
+  {
+    "id": 41,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Calidad",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál de los siguientes es un costo de no conformidad?",
+    "opciones": {
+      "A": "La capacitación del equipo en estándares de calidad.",
+      "B": "Las inspecciones durante la producción.",
+      "C": "Las auditorías de calidad del proceso.",
+      "D": "El reproceso por defectos que detectó el cliente."
+    },
+    "correcta": "D",
+    "explicacion": "Las fallas externas, como reprocesos y garantías, son costos de no conformidad."
+  },
+  {
+    "id": 42,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Calidad",
+    "dificultad": "Avanzada",
+    "enunciado": "Un software tiene pocas funcionalidades pero no presenta defectos. ¿Cómo se describe?",
+    "opciones": {
+      "A": "Alta calidad y bajo grado.",
+      "B": "Alta calidad y alto grado.",
+      "C": "Baja calidad y alto grado.",
+      "D": "Baja calidad y bajo grado."
+    },
+    "correcta": "A",
+    "explicacion": "La calidad es el cumplimiento de requisitos (sin defectos); el grado es la cantidad de características."
+  },
+  {
+    "id": 43,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Herramientas de resolución de problemas",
+    "dificultad": "Básica",
+    "enunciado": "El equipo quiere identificar las posibles causas de retrasos recurrentes y organizarlas por categorías. ¿Qué herramienta debe usar?",
+    "opciones": {
+      "A": "Un histograma.",
+      "B": "Un diagrama de Gantt.",
+      "C": "Un diagrama de Pareto.",
+      "D": "Un diagrama de causa y efecto (Ishikawa)."
+    },
+    "correcta": "D",
+    "explicacion": "El diagrama de Ishikawa, o de espina de pescado, organiza las causas posibles por categorías."
+  },
+  {
+    "id": 44,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Herramientas de resolución de problemas",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué herramienta ordena las causas de los defectos de mayor a menor frecuencia para concentrarse en las pocas que generan la mayoría de los problemas?",
+    "opciones": {
+      "A": "Un diagrama de Pareto.",
+      "B": "Un diagrama de flujo.",
+      "C": "Un gráfico de control.",
+      "D": "Un diagrama de dispersión."
+    },
+    "correcta": "A",
+    "explicacion": "Pareto aplica la regla 80/20 para priorizar causas."
+  },
+  {
+    "id": 45,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Herramientas de resolución de problemas",
+    "dificultad": "Básica",
+    "enunciado": "El equipo pregunta repetidamente \"¿por qué?\" hasta llegar al origen de un problema. ¿Qué técnica usa?",
+    "opciones": {
+      "A": "La lluvia de ideas.",
+      "B": "El análisis FODA.",
+      "C": "Los 5 porqués.",
+      "D": "La técnica Delphi."
+    },
+    "correcta": "C",
+    "explicacion": "Los 5 porqués buscan la causa raíz con preguntas sucesivas."
+  },
+  {
+    "id": 46,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Herramientas de resolución de problemas",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué herramienta muestra la relación entre dos variables, por ejemplo entre las horas de capacitación y la cantidad de errores?",
+    "opciones": {
+      "A": "Una hoja de verificación.",
+      "B": "Un histograma.",
+      "C": "Un diagrama de dispersión.",
+      "D": "Un diagrama de Pareto."
+    },
+    "correcta": "C",
+    "explicacion": "El diagrama de dispersión muestra la correlación entre dos variables."
+  },
+  {
+    "id": 47,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Herramientas de resolución de problemas",
+    "dificultad": "Avanzada",
+    "enunciado": "En un gráfico de control aparecen siete puntos consecutivos por encima de la media, todos dentro de los límites de control. ¿Qué indica?",
+    "opciones": {
+      "A": "Es un error de medición que puede ignorarse.",
+      "B": "El proceso está fuera de control y debe investigarse.",
+      "C": "Se deben ampliar los límites de control.",
+      "D": "El proceso está bajo control porque ningún punto supera los límites."
+    },
+    "correcta": "B",
+    "explicacion": "La regla de los siete puntos indica una causa especial aunque no se superen los límites."
+  },
+  {
+    "id": 48,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Control de cambios",
+    "dificultad": "Intermedia",
+    "enunciado": "Un interesado pide directamente a un miembro del equipo que añada una funcionalidad no planificada. ¿Qué debe hacer primero el director del proyecto?",
+    "opciones": {
+      "A": "Registrar la solicitud y evaluar su impacto según el proceso de control integrado de cambios.",
+      "B": "Pedir al equipo que trabaje horas extra para incluirla.",
+      "C": "Rechazar la solicitud porque no estaba en el plan.",
+      "D": "Implementar el cambio de inmediato para satisfacer al interesado."
+    },
+    "correcta": "A",
+    "explicacion": "Todo cambio debe documentarse, analizarse y aprobarse formalmente."
+  },
+  {
+    "id": 49,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Control de cambios",
+    "dificultad": "Básica",
+    "enunciado": "En un proyecto predictivo, ¿quién suele aprobar o rechazar las solicitudes de cambio?",
+    "opciones": {
+      "A": "El cliente final, sin consultar a nadie.",
+      "B": "El comité de control de cambios (CCB).",
+      "C": "El miembro del equipo que recibió la solicitud.",
+      "D": "El proveedor principal."
+    },
+    "correcta": "B",
+    "explicacion": "El CCB revisa y decide sobre los cambios según el plan de gestión de cambios."
+  },
+  {
+    "id": 50,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Lecciones aprendidas",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuándo deben registrarse las lecciones aprendidas?",
+    "opciones": {
+      "A": "A lo largo de todo el proyecto, consolidándolas al cierre.",
+      "B": "Solo al inicio del proyecto.",
+      "C": "Solo cuando el proyecto fracasa.",
+      "D": "Solo al final del proyecto."
+    },
+    "correcta": "A",
+    "explicacion": "Las lecciones aprendidas se recogen de forma continua para aprovecharlas pronto."
+  },
+  {
+    "id": 51,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Cierre",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál de las siguientes es una actividad típica del cierre del proyecto?",
+    "opciones": {
+      "A": "Identificar a los interesados por primera vez.",
+      "B": "Crear la estructura de desglose del trabajo.",
+      "C": "Desarrollar el acta de constitución.",
+      "D": "Obtener la aceptación formal de los entregables y archivar la documentación."
+    },
+    "correcta": "D",
+    "explicacion": "En el cierre se formaliza la aceptación, se transfiere el producto y se archiva la información."
+  },
+  {
+    "id": 52,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Equipo y conflictos",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué técnica de resolución de conflictos suele generar el resultado más duradero?",
+    "opciones": {
+      "A": "Colaborar o resolver el problema.",
+      "B": "Suavizar o acomodar.",
+      "C": "Forzar o dirigir.",
+      "D": "Retirarse o evitar."
+    },
+    "correcta": "A",
+    "explicacion": "Colaborar integra varios puntos de vista y genera consenso y compromiso."
+  },
+  {
+    "id": 53,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Equipo y conflictos",
+    "dificultad": "Intermedia",
+    "enunciado": "Un equipo recién formado discute sobre roles y formas de trabajo, y surgen conflictos. Según el modelo de Tuckman, ¿en qué etapa está?",
+    "opciones": {
+      "A": "Formación (forming).",
+      "B": "Turbulencia (storming).",
+      "C": "Normalización (norming).",
+      "D": "Desempeño (performing)."
+    },
+    "correcta": "B",
+    "explicacion": "En la turbulencia surgen los conflictos mientras el equipo se ajusta."
+  },
+  {
+    "id": 54,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Liderazgo",
+    "dificultad": "Intermedia",
+    "enunciado": "Un líder prioriza las necesidades de su equipo, elimina impedimentos y fomenta su crecimiento. ¿Qué estilo de liderazgo aplica?",
+    "opciones": {
+      "A": "Liderazgo laissez-faire.",
+      "B": "Liderazgo autocrático.",
+      "C": "Liderazgo transaccional.",
+      "D": "Liderazgo de servicio (servant leadership)."
+    },
+    "correcta": "D",
+    "explicacion": "El líder de servicio pone primero al equipo y lo facilita."
+  },
+  {
+    "id": 55,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Liderazgo",
+    "dificultad": "Intermedia",
+    "enunciado": "El equipo sigue las indicaciones del director porque reconoce su amplio conocimiento técnico. ¿Qué tipo de poder ejerce el director?",
+    "opciones": {
+      "A": "Poder de recompensa.",
+      "B": "Poder coercitivo.",
+      "C": "Poder experto.",
+      "D": "Poder legítimo."
+    },
+    "correcta": "C",
+    "explicacion": "El poder experto se basa en los conocimientos y habilidades."
+  },
+  {
+    "id": 56,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Motivación",
+    "dificultad": "Avanzada",
+    "enunciado": "Según la teoría de Herzberg, ¿cuál de los siguientes es un factor motivador y no un factor de higiene?",
+    "opciones": {
+      "A": "Las políticas de la empresa.",
+      "B": "Las condiciones de trabajo.",
+      "C": "El salario.",
+      "D": "El reconocimiento por los logros."
+    },
+    "correcta": "D",
+    "explicacion": "Los motivadores son el logro, el reconocimiento y el crecimiento; el salario y las condiciones son factores de higiene."
+  },
+  {
+    "id": 57,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Ética",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuál de los siguientes es uno de los cuatro valores del Código de Ética y Conducta Profesional del PMI?",
+    "opciones": {
+      "A": "Puntualidad.",
+      "B": "Competitividad.",
+      "C": "Rentabilidad.",
+      "D": "Equidad."
+    },
+    "correcta": "D",
+    "explicacion": "Los cuatro valores son responsabilidad, respeto, equidad y honestidad."
+  },
+  {
+    "id": 58,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Ética",
+    "dificultad": "Intermedia",
+    "enunciado": "Un director descubre que la empresa de un familiar participa en la licitación que él debe evaluar. ¿Qué debe hacer?",
+    "opciones": {
+      "A": "Descalificar a la empresa de su familiar sin informar a nadie.",
+      "B": "Revelar el conflicto de intereses y abstenerse de participar en la decisión.",
+      "C": "Evaluar la propuesta con normalidad si cree que será objetivo.",
+      "D": "Favorecer a la empresa si su oferta es la más barata."
+    },
+    "correcta": "B",
+    "explicacion": "El código de ética exige revelar los conflictos de intereses y actuar con equidad."
+  },
+  {
+    "id": 59,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Roles",
+    "dificultad": "Intermedia",
+    "enunciado": "En una matriz RACI, ¿cuántas personas deberían tener la letra \"A\" (quien rinde cuentas) en cada actividad?",
+    "opciones": {
+      "A": "Ninguna.",
+      "B": "Al menos dos.",
+      "C": "Todo el equipo.",
+      "D": "Solo una."
+    },
+    "correcta": "D",
+    "explicacion": "Debe haber un único responsable de rendir cuentas por actividad para evitar ambigüedades."
+  },
+  {
+    "id": 60,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Reuniones",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuál es el propósito principal de la reunión de lanzamiento (kick-off)?",
+    "opciones": {
+      "A": "Alinear al equipo y a los interesados sobre los objetivos, los roles y la forma de trabajo.",
+      "B": "Evaluar el desempeño individual del equipo.",
+      "C": "Aprobar el cierre del proyecto.",
+      "D": "Negociar los contratos con los proveedores."
+    },
+    "correcta": "A",
+    "explicacion": "El kick-off marca el comienzo del trabajo y alinea expectativas."
+  },
+  {
+    "id": 61,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Supuestos y restricciones",
+    "dificultad": "Básica",
+    "enunciado": "Un regulador establece una fecha límite que el proyecto no puede cambiar. ¿Qué es esa fecha?",
+    "opciones": {
+      "A": "Un supuesto.",
+      "B": "Una restricción.",
+      "C": "Un riesgo.",
+      "D": "Un hito opcional."
+    },
+    "correcta": "B",
+    "explicacion": "Una restricción es un factor que limita las opciones del proyecto."
+  },
+  {
+    "id": 62,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Supuestos y restricciones",
+    "dificultad": "Básica",
+    "enunciado": "La afirmación \"Se asume que el proveedor entregará los equipos a tiempo\" debe documentarse en:",
+    "opciones": {
+      "A": "El registro de supuestos.",
+      "B": "El calendario de recursos.",
+      "C": "El registro de incidentes.",
+      "D": "El registro de cambios."
+    },
+    "correcta": "A",
+    "explicacion": "Los supuestos se consideran ciertos sin pruebas y se documentan para validarlos."
+  },
+  {
+    "id": 63,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Resolución de problemas",
+    "dificultad": "Intermedia",
+    "enunciado": "Un miembro clave del equipo renuncia de forma inesperada. ¿Qué debe hacer primero el director del proyecto?",
+    "opciones": {
+      "A": "Contratar de inmediato a un reemplazo sin analizar el impacto.",
+      "B": "Evaluar el impacto en el plan y revisar si había una respuesta planificada en el registro de riesgos.",
+      "C": "Informar al cliente que el proyecto se cancelará.",
+      "D": "Retrasar todo el proyecto hasta encontrar a otra persona."
+    },
+    "correcta": "B",
+    "explicacion": "Primero se analiza el impacto y se usan las respuestas planificadas, y después se actúa."
+  },
+  {
+    "id": 64,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Interesados",
+    "dificultad": "Avanzada",
+    "enunciado": "Un interesado clave muestra poco compromiso y nadie había previsto esa situación en el plan. ¿Qué debe hacer el director del proyecto?",
+    "opciones": {
+      "A": "Analizar las causas y actualizar el plan de involucramiento de los interesados con nuevas acciones.",
+      "B": "Esperar a que cambie de actitud por sí mismo.",
+      "C": "Escalar el caso de inmediato al patrocinador para que lo reemplace.",
+      "D": "Retirarlo de la lista de interesados."
+    },
+    "correcta": "A",
+    "explicacion": "El involucramiento de los interesados se gestiona de forma activa y el plan se actualiza cuando hace falta."
+  },
+  {
+    "id": 65,
+    "dominio": "Fundamentos y conceptos básicos de la dirección de proyectos",
+    "tema": "Gestión del conocimiento",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál es la diferencia entre el conocimiento explícito y el conocimiento tácito?",
+    "opciones": {
+      "A": "El explícito se puede documentar fácilmente; el tácito es personal y difícil de expresar, como la experiencia.",
+      "B": "No hay diferencia: ambos términos significan lo mismo.",
+      "C": "El explícito es confidencial; el tácito es público.",
+      "D": "El tácito siempre está en manuales; el explícito, solo en la mente de las personas."
+    },
+    "correcta": "A",
+    "explicacion": "El conocimiento tácito se transmite sobre todo con interacción y networking."
+  },
+  {
+    "id": 66,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Alcance",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué es la estructura de desglose del trabajo (EDT/WBS)?",
+    "opciones": {
+      "A": "Un diagrama de las dependencias entre actividades.",
+      "B": "Un organigrama de los integrantes del equipo.",
+      "C": "Una lista de actividades ordenadas cronológicamente.",
+      "D": "Una descomposición jerárquica del alcance total del trabajo que realizará el equipo."
+    },
+    "correcta": "D",
+    "explicacion": "La EDT descompone el alcance en entregables y paquetes de trabajo."
+  },
+  {
+    "id": 67,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Alcance",
+    "dificultad": "Básica",
+    "enunciado": "¿Cómo se llama el nivel más bajo de la EDT, en el que se pueden estimar y gestionar el costo y la duración?",
+    "opciones": {
+      "A": "Cuenta de control.",
+      "B": "Actividad resumen.",
+      "C": "Paquete de trabajo.",
+      "D": "Hito."
+    },
+    "correcta": "C",
+    "explicacion": "El paquete de trabajo es el nivel más bajo de la EDT."
+  },
+  {
+    "id": 68,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Alcance",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué componentes forman la línea base del alcance?",
+    "opciones": {
+      "A": "El enunciado del alcance, el presupuesto y el registro de riesgos.",
+      "B": "La EDT, el cronograma y la línea base de costos.",
+      "C": "El acta de constitución, la EDT y el cronograma.",
+      "D": "El enunciado del alcance, la EDT y el diccionario de la EDT."
+    },
+    "correcta": "D",
+    "explicacion": "La línea base del alcance es la versión aprobada de esos tres documentos."
+  },
+  {
+    "id": 69,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Alcance",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué establece la regla del 100 % en la EDT?",
+    "opciones": {
+      "A": "La EDT debe incluir todo el trabajo del proyecto y nada más.",
+      "B": "El presupuesto debe asignarse por completo en la primera fase.",
+      "C": "Todos los interesados deben aprobar el 100 % de los entregables.",
+      "D": "Cada paquete de trabajo debe completarse al 100 % antes de iniciar otro."
+    },
+    "correcta": "A",
+    "explicacion": "La EDT incluye el 100 % del trabajo definido en el alcance."
+  },
+  {
+    "id": 70,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Alcance",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál es el propósito del proceso Validar el alcance?",
+    "opciones": {
+      "A": "Formalizar la aceptación de los entregables completados por parte del cliente o el patrocinador.",
+      "B": "Registrar los cambios de alcance aprobados.",
+      "C": "Crear la EDT del proyecto.",
+      "D": "Verificar que los entregables cumplan los requisitos de calidad internos."
+    },
+    "correcta": "A",
+    "explicacion": "Validar el alcance obtiene la aceptación formal; Controlar la calidad verifica que el entregable sea correcto."
+  },
+  {
+    "id": 71,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Alcance",
+    "dificultad": "Básica",
+    "enunciado": "El alcance de un proyecto crece poco a poco con cambios que no pasan por el control de cambios. ¿Cómo se llama esto?",
+    "opciones": {
+      "A": "Elaboración progresiva.",
+      "B": "Corrupción del alcance (scope creep).",
+      "C": "Ejecución rápida.",
+      "D": "Enchapado en oro (gold plating)."
+    },
+    "correcta": "B",
+    "explicacion": "El scope creep es la expansión no controlada del alcance."
+  },
+  {
+    "id": 72,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué es la ruta crítica?",
+    "opciones": {
+      "A": "La secuencia de actividades más larga, que determina la duración más corta posible del proyecto.",
+      "B": "La secuencia de actividades más corta del proyecto.",
+      "C": "Las actividades con mayor costo.",
+      "D": "Las actividades de mayor riesgo técnico."
+    },
+    "correcta": "A",
+    "explicacion": "La ruta crítica determina la duración mínima del proyecto."
+  },
+  {
+    "id": 73,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Avanzada",
+    "enunciado": "Un proyecto tiene dos rutas: A(3 días) → B(4 días) → D(2 días) y A(3 días) → C(6 días) → D(2 días). ¿Cuánto dura el proyecto?",
+    "opciones": {
+      "A": "9 días.",
+      "B": "11 días.",
+      "C": "6 días.",
+      "D": "15 días."
+    },
+    "correcta": "B",
+    "explicacion": "Ruta A-B-D: 9 días; ruta A-C-D: 11 días. La ruta más larga define la duración."
+  },
+  {
+    "id": 74,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Avanzada",
+    "enunciado": "Con las rutas A(3) → B(4) → D(2) y A(3) → C(6) → D(2), ¿cuál es la holgura total de la actividad B?",
+    "opciones": {
+      "A": "4 días.",
+      "B": "0 días.",
+      "C": "2 días.",
+      "D": "11 días."
+    },
+    "correcta": "C",
+    "explicacion": "La ruta crítica dura 11 días y la ruta de B dura 9, así que B tiene 2 días de holgura."
+  },
+  {
+    "id": 75,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuánta holgura total suelen tener las actividades de la ruta crítica?",
+    "opciones": {
+      "A": "Un día.",
+      "B": "Cero.",
+      "C": "Una holgura ilimitada.",
+      "D": "La misma que la actividad más larga."
+    },
+    "correcta": "B",
+    "explicacion": "Las actividades críticas no tienen holgura: cualquier retraso afecta la fecha final."
+  },
+  {
+    "id": 76,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuál es el tipo de dependencia más común en un diagrama de red?",
+    "opciones": {
+      "A": "Final a final (FF).",
+      "B": "Final a inicio (FS).",
+      "C": "Inicio a inicio (SS).",
+      "D": "Inicio a final (SF)."
+    },
+    "correcta": "B",
+    "explicacion": "En la relación FS, la sucesora empieza cuando termina la predecesora."
+  },
+  {
+    "id": 77,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Intermedia",
+    "enunciado": "La actividad sucesora empieza 3 días antes de que termine su predecesora. ¿Qué se aplica?",
+    "opciones": {
+      "A": "Un retraso (lag).",
+      "B": "Una holgura libre.",
+      "C": "Una restricción obligatoria.",
+      "D": "Un adelanto (lead)."
+    },
+    "correcta": "D",
+    "explicacion": "El adelanto permite que la sucesora empiece antes."
+  },
+  {
+    "id": 78,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Intermedia",
+    "enunciado": "Después de vaciar el concreto hay que esperar 3 días de secado antes de continuar. ¿Qué se aplica entre ambas actividades?",
+    "opciones": {
+      "A": "Una intensificación.",
+      "B": "Un adelanto (lead).",
+      "C": "Un retraso (lag).",
+      "D": "Una ejecución rápida."
+    },
+    "correcta": "C",
+    "explicacion": "El retraso es el tiempo de espera obligatorio entre dos actividades."
+  },
+  {
+    "id": 79,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Compresión del cronograma",
+    "dificultad": "Intermedia",
+    "enunciado": "Para acortar el cronograma, el director agrega recursos a las actividades de la ruta crítica. ¿Qué técnica usa y cuál es su efecto típico?",
+    "opciones": {
+      "A": "Intensificación (crashing), que suele aumentar el costo.",
+      "B": "Ejecución rápida (fast tracking), que suele aumentar el riesgo.",
+      "C": "Nivelación de recursos, que suele acortar la ruta crítica.",
+      "D": "Estabilización de recursos, que no tiene efecto en el costo."
+    },
+    "correcta": "A",
+    "explicacion": "La intensificación añade recursos y suele elevar el costo."
+  },
+  {
+    "id": 80,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Compresión del cronograma",
+    "dificultad": "Intermedia",
+    "enunciado": "El equipo realiza en paralelo actividades que normalmente serían secuenciales. ¿Qué técnica usa y cuál es su riesgo principal?",
+    "opciones": {
+      "A": "Intensificación (crashing), que aumenta el costo directo.",
+      "B": "Estimación análoga, que reduce la precisión.",
+      "C": "Ejecución rápida (fast tracking), que puede generar reprocesos y más riesgo.",
+      "D": "Nivelación de recursos, que alarga el proyecto."
+    },
+    "correcta": "C",
+    "explicacion": "La ejecución rápida solapa actividades y eso aumenta el riesgo."
+  },
+  {
+    "id": 81,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Estimación",
+    "dificultad": "Avanzada",
+    "enunciado": "Usando la estimación PERT de tres valores (beta), una actividad tiene: optimista = 4, más probable = 6 y pesimista = 14 días. ¿Cuál es la duración esperada?",
+    "opciones": {
+      "A": "8 días.",
+      "B": "24 días.",
+      "C": "7 días.",
+      "D": "6 días."
+    },
+    "correcta": "C",
+    "explicacion": "(O + 4M + P) / 6 = (4 + 24 + 14) / 6 = 7."
+  },
+  {
+    "id": 82,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Estimación",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué técnica estima usando datos reales de un proyecto anterior similar y es rápida pero poco precisa?",
+    "opciones": {
+      "A": "Estimación de tres valores.",
+      "B": "Estimación ascendente.",
+      "C": "Estimación paramétrica.",
+      "D": "Estimación análoga."
+    },
+    "correcta": "D",
+    "explicacion": "La estimación análoga, o top-down, se basa en proyectos similares."
+  },
+  {
+    "id": 83,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Estimación",
+    "dificultad": "Intermedia",
+    "enunciado": "El costo de una obra se calcula multiplicando 200 m² por $500 por m², lo que da $100 000. ¿Qué técnica se usó?",
+    "opciones": {
+      "A": "Estimación análoga.",
+      "B": "Estimación ascendente.",
+      "C": "Juicio de expertos.",
+      "D": "Estimación paramétrica."
+    },
+    "correcta": "D",
+    "explicacion": "La estimación paramétrica usa una relación estadística entre variables."
+  },
+  {
+    "id": 84,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Estimación",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué técnica estima cada paquete de trabajo por separado y suma los resultados, logrando en general la mayor precisión?",
+    "opciones": {
+      "A": "Estimación por consenso Delphi.",
+      "B": "Estimación paramétrica.",
+      "C": "Estimación análoga.",
+      "D": "Estimación ascendente (bottom-up)."
+    },
+    "correcta": "D",
+    "explicacion": "La estimación ascendente agrega estimaciones detalladas y es la más precisa."
+  },
+  {
+    "id": 85,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Valor ganado",
+    "dificultad": "Avanzada",
+    "enunciado": "Un proyecto tiene EV = $40 000, PV = $50 000 y AC = $45 000. ¿Cuál es su situación?",
+    "opciones": {
+      "A": "Va retrasado y por encima del presupuesto.",
+      "B": "Va adelantado y por debajo del presupuesto.",
+      "C": "Va retrasado y por debajo del presupuesto.",
+      "D": "Va adelantado y por encima del presupuesto."
+    },
+    "correcta": "A",
+    "explicacion": "SV = EV − PV = −10 000 (retraso); CV = EV − AC = −5 000 (sobrecosto)."
+  },
+  {
+    "id": 86,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Valor ganado",
+    "dificultad": "Avanzada",
+    "enunciado": "Un proyecto tiene EV = $60 000 y PV = $50 000. ¿Cuál es su índice de desempeño del cronograma (SPI) y qué indica?",
+    "opciones": {
+      "A": "SPI = 10 000: va adelantado respecto al cronograma.",
+      "B": "SPI = 1,2: va adelantado respecto al cronograma.",
+      "C": "SPI = 0,83: va retrasado respecto al cronograma.",
+      "D": "SPI = 1,2: va por encima del presupuesto."
+    },
+    "correcta": "B",
+    "explicacion": "SPI = EV / PV = 60 / 50 = 1,2; si es mayor que 1, va adelantado."
+  },
+  {
+    "id": 87,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Valor ganado",
+    "dificultad": "Avanzada",
+    "enunciado": "El presupuesto hasta la conclusión (BAC) es $100 000 y el CPI es 0,8. Si el desempeño de costos sigue igual, ¿cuál es la estimación a la conclusión (EAC)?",
+    "opciones": {
+      "A": "$80 000.",
+      "B": "$120 000.",
+      "C": "$125 000.",
+      "D": "$100 000."
+    },
+    "correcta": "C",
+    "explicacion": "EAC = BAC / CPI = 100 000 / 0,8 = 125 000."
+  },
+  {
+    "id": 88,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Valor ganado",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué indica una variación a la conclusión (VAC) negativa?",
+    "opciones": {
+      "A": "Que ya se gastó todo el presupuesto.",
+      "B": "Que se prevé terminar el proyecto por debajo del presupuesto.",
+      "C": "Que se prevé terminar el proyecto por encima del presupuesto.",
+      "D": "Que el proyecto va adelantado respecto al cronograma."
+    },
+    "correcta": "C",
+    "explicacion": "VAC = BAC − EAC; si es negativa, hay un sobrecosto previsto."
+  },
+  {
+    "id": 89,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Costos",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué incluye el presupuesto total del proyecto que NO incluye la línea base de costos?",
+    "opciones": {
+      "A": "La reserva para contingencias.",
+      "B": "Los costos de los paquetes de trabajo.",
+      "C": "La reserva de gestión.",
+      "D": "Los costos de las actividades."
+    },
+    "correcta": "C",
+    "explicacion": "Presupuesto = línea base de costos (con contingencias) + reserva de gestión."
+  },
+  {
+    "id": 90,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Básica",
+    "enunciado": "En el cronograma de un proyecto, ¿qué duración tiene un hito?",
+    "opciones": {
+      "A": "Cero.",
+      "B": "Una semana.",
+      "C": "La duración de la fase.",
+      "D": "Un día."
+    },
+    "correcta": "A",
+    "explicacion": "Un hito marca un punto o evento significativo y no tiene duración."
+  },
+  {
+    "id": 91,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Avanzada",
+    "enunciado": "Al ajustar las fechas por la disponibilidad limitada de un recurso clave, la ruta crítica cambia y el proyecto se alarga. ¿Qué técnica se aplicó?",
+    "opciones": {
+      "A": "Ejecución rápida.",
+      "B": "Estabilización de recursos.",
+      "C": "Intensificación.",
+      "D": "Nivelación de recursos."
+    },
+    "correcta": "D",
+    "explicacion": "La nivelación puede cambiar la ruta crítica; la estabilización solo usa la holgura disponible."
+  },
+  {
+    "id": 92,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Adquisiciones",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué tipo de contrato traslada el mayor riesgo al vendedor?",
+    "opciones": {
+      "A": "Costo más porcentaje del costo.",
+      "B": "Precio fijo cerrado.",
+      "C": "Tiempo y materiales.",
+      "D": "Costo más honorarios fijos."
+    },
+    "correcta": "B",
+    "explicacion": "En el precio fijo cerrado, el vendedor asume los sobrecostos."
+  },
+  {
+    "id": 93,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Adquisiciones",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué tipo de contrato traslada el mayor riesgo de costos al comprador?",
+    "opciones": {
+      "A": "Precio fijo con ajuste económico de precio.",
+      "B": "Precio fijo más honorarios de incentivo.",
+      "C": "Precio fijo cerrado.",
+      "D": "Costo reembolsable (por ejemplo, costo más porcentaje del costo)."
+    },
+    "correcta": "D",
+    "explicacion": "En los contratos de costo reembolsable, el comprador paga los costos reales."
+  },
+  {
+    "id": 94,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Adquisiciones",
+    "dificultad": "Intermedia",
+    "enunciado": "Se necesita contratar a un especialista con urgencia y el alcance aún no está claramente definido. ¿Qué tipo de contrato es más adecuado?",
+    "opciones": {
+      "A": "Contrato llave en mano.",
+      "B": "Precio fijo con incentivo.",
+      "C": "Tiempo y materiales.",
+      "D": "Precio fijo cerrado."
+    },
+    "correcta": "C",
+    "explicacion": "Tiempo y materiales sirve para contrataciones rápidas o con un alcance poco definido."
+  },
+  {
+    "id": 95,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Planificación",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué documento describe cómo se ejecutará, monitoreará, controlará y cerrará el proyecto, e integra los planes subsidiarios y las líneas base?",
+    "opciones": {
+      "A": "El plan para la dirección del proyecto.",
+      "B": "El acta de constitución del proyecto.",
+      "C": "El enunciado del trabajo (SOW).",
+      "D": "El registro de interesados."
+    },
+    "correcta": "A",
+    "explicacion": "El plan para la dirección del proyecto integra todos los planes y las líneas base."
+  },
+  {
+    "id": 96,
+    "dominio": "Metodologías predictivas basadas en planes",
+    "tema": "Cronograma",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué herramienta muestra las actividades del cronograma como barras horizontales a lo largo del tiempo?",
+    "opciones": {
+      "A": "El diagrama de Pareto.",
+      "B": "El histograma de recursos.",
+      "C": "El diagrama de Gantt.",
+      "D": "El diagrama de red."
+    },
+    "correcta": "C",
+    "explicacion": "El diagrama de Gantt representa la duración de las actividades con barras en una escala de tiempo."
+  },
+  {
+    "id": 97,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Manifiesto Ágil",
+    "dificultad": "Básica",
+    "enunciado": "Según el Manifiesto Ágil, ¿qué se valora más que los procesos y las herramientas?",
+    "opciones": {
+      "A": "Los individuos y las interacciones.",
+      "B": "La negociación contractual.",
+      "C": "La documentación extensiva.",
+      "D": "Seguir un plan."
+    },
+    "correcta": "A",
+    "explicacion": "\"Individuos e interacciones sobre procesos y herramientas\"."
+  },
+  {
+    "id": 98,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Manifiesto Ágil",
+    "dificultad": "Básica",
+    "enunciado": "Según el Manifiesto Ágil, ¿qué se valora más que la documentación extensiva?",
+    "opciones": {
+      "A": "El software funcionando.",
+      "B": "Los procesos y las herramientas.",
+      "C": "Seguir un plan.",
+      "D": "La negociación contractual."
+    },
+    "correcta": "A",
+    "explicacion": "\"Software funcionando sobre documentación extensiva\"."
+  },
+  {
+    "id": 99,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Manifiesto Ágil",
+    "dificultad": "Básica",
+    "enunciado": "Según el Manifiesto Ágil, ¿qué se valora más que seguir un plan?",
+    "opciones": {
+      "A": "La documentación extensiva.",
+      "B": "Responder ante el cambio.",
+      "C": "El control estricto del alcance.",
+      "D": "Los contratos detallados."
+    },
+    "correcta": "B",
+    "explicacion": "\"Responder ante el cambio sobre seguir un plan\"."
+  },
+  {
+    "id": 100,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Manifiesto Ágil",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuántos principios acompañan a los cuatro valores del Manifiesto Ágil?",
+    "opciones": {
+      "A": "15.",
+      "B": "12.",
+      "C": "10.",
+      "D": "4."
+    },
+    "correcta": "B",
+    "explicacion": "El Manifiesto Ágil tiene 4 valores y 12 principios."
+  },
+  {
+    "id": 101,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuáles son las responsabilidades (roles) definidas en Scrum?",
+    "opciones": {
+      "A": "Product Owner, director del proyecto y testers.",
+      "B": "Product Owner, Scrum Master y Developers.",
+      "C": "Director del proyecto, patrocinador y equipo.",
+      "D": "Scrum Master, analista de negocios y arquitecto."
+    },
+    "correcta": "B",
+    "explicacion": "La Guía Scrum define tres responsabilidades: Product Owner, Scrum Master y Developers."
+  },
+  {
+    "id": 102,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Básica",
+    "enunciado": "¿Quién es responsable de maximizar el valor del producto y de gestionar el Product Backlog?",
+    "opciones": {
+      "A": "Los Developers.",
+      "B": "El patrocinador.",
+      "C": "El Product Owner.",
+      "D": "El Scrum Master."
+    },
+    "correcta": "C",
+    "explicacion": "El Product Owner ordena y gestiona el Product Backlog para maximizar el valor."
+  },
+  {
+    "id": 103,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuál es una responsabilidad principal del Scrum Master?",
+    "opciones": {
+      "A": "Decidir qué funcionalidades entran en el producto.",
+      "B": "Asignar las tareas a cada desarrollador.",
+      "C": "Aprobar el presupuesto del proyecto.",
+      "D": "Facilitar el trabajo del equipo y ayudar a eliminar los impedimentos."
+    },
+    "correcta": "D",
+    "explicacion": "El Scrum Master es un líder de servicio que facilita el proceso y elimina impedimentos."
+  },
+  {
+    "id": 104,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Básica",
+    "enunciado": "Según la Guía Scrum, ¿cuál es la duración máxima de un sprint?",
+    "opciones": {
+      "A": "Un mes.",
+      "B": "Una semana.",
+      "C": "Dos meses.",
+      "D": "Tres meses."
+    },
+    "correcta": "A",
+    "explicacion": "Los sprints duran un mes o menos para mantener ciclos de retroalimentación cortos."
+  },
+  {
+    "id": 105,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál es el propósito del Daily Scrum?",
+    "opciones": {
+      "A": "Estimar todo el Product Backlog.",
+      "B": "Informar al director del proyecto sobre el desempeño individual.",
+      "C": "Inspeccionar el avance hacia el objetivo del sprint y adaptar el plan para las siguientes 24 horas.",
+      "D": "Presentar el incremento a los interesados."
+    },
+    "correcta": "C",
+    "explicacion": "El Daily Scrum es un evento de 15 minutos para que los Developers se sincronicen y adapten su plan."
+  },
+  {
+    "id": 106,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Intermedia",
+    "enunciado": "¿En qué evento de Scrum se presenta el incremento a los interesados para obtener su retroalimentación?",
+    "opciones": {
+      "A": "Daily Scrum.",
+      "B": "Sprint Planning.",
+      "C": "Sprint Retrospective.",
+      "D": "Sprint Review."
+    },
+    "correcta": "D",
+    "explicacion": "En la Sprint Review se inspecciona el resultado del sprint junto con los interesados."
+  },
+  {
+    "id": 107,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál es el propósito de la Sprint Retrospective?",
+    "opciones": {
+      "A": "Evaluar el desempeño individual de cada miembro.",
+      "B": "Repriorizar el Product Backlog.",
+      "C": "Demostrar el producto al cliente.",
+      "D": "Planificar formas de mejorar la calidad y la eficacia del trabajo del equipo."
+    },
+    "correcta": "D",
+    "explicacion": "La retrospectiva busca la mejora continua del equipo."
+  },
+  {
+    "id": 108,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué se define durante la Sprint Planning?",
+    "opciones": {
+      "A": "Solo el presupuesto del sprint.",
+      "B": "El cierre formal del proyecto.",
+      "C": "Las lecciones aprendidas del sprint anterior.",
+      "D": "Por qué es valioso el sprint, qué se puede hacer y cómo se hará el trabajo."
+    },
+    "correcta": "D",
+    "explicacion": "La Sprint Planning define el objetivo del sprint, los elementos seleccionados y el plan para entregarlos."
+  },
+  {
+    "id": 109,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué es la Definición de Terminado (Definition of Done)?",
+    "opciones": {
+      "A": "La fecha en que termina el proyecto.",
+      "B": "El documento de aceptación firmado por el patrocinador.",
+      "C": "La lista de tareas pendientes del sprint.",
+      "D": "Una descripción formal del estado que debe cumplir un incremento para satisfacer las medidas de calidad del producto."
+    },
+    "correcta": "D",
+    "explicacion": "La DoD crea transparencia sobre cuándo un trabajo está realmente terminado."
+  },
+  {
+    "id": 110,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Scrum",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué es un incremento en Scrum?",
+    "opciones": {
+      "A": "Un documento de requisitos.",
+      "B": "Un aumento del presupuesto aprobado.",
+      "C": "Un paso concreto hacia el objetivo del producto que cumple la Definición de Terminado y es utilizable.",
+      "D": "Una nueva persona que se suma al equipo."
+    },
+    "correcta": "C",
+    "explicacion": "Cada incremento se suma a los anteriores y debe ser utilizable."
+  },
+  {
+    "id": 111,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Métricas ágiles",
+    "dificultad": "Avanzada",
+    "enunciado": "Un equipo tiene una velocidad promedio de 20 puntos de historia por sprint y quedan 120 puntos en el backlog. ¿Cuántos sprints necesitará aproximadamente?",
+    "opciones": {
+      "A": "12 sprints.",
+      "B": "6 sprints.",
+      "C": "4 sprints.",
+      "D": "20 sprints."
+    },
+    "correcta": "B",
+    "explicacion": "120 / 20 = 6 sprints."
+  },
+  {
+    "id": 112,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Estimación ágil",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué miden los puntos de historia?",
+    "opciones": {
+      "A": "El costo en dinero de cada historia.",
+      "B": "La cantidad de personas necesarias.",
+      "C": "Las horas exactas que tomará una tarea.",
+      "D": "El esfuerzo, la complejidad y la incertidumbre relativos de una historia de usuario."
+    },
+    "correcta": "D",
+    "explicacion": "Los puntos de historia son una estimación relativa, no un tiempo absoluto."
+  },
+  {
+    "id": 113,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Estimación ágil",
+    "dificultad": "Intermedia",
+    "enunciado": "Los miembros del equipo muestran cartas numeradas al mismo tiempo para estimar una historia y conversan sobre las diferencias. ¿Qué técnica usan?",
+    "opciones": {
+      "A": "Planning Poker.",
+      "B": "Técnica Delphi escrita.",
+      "C": "Estimación paramétrica.",
+      "D": "Diagrama de afinidad."
+    },
+    "correcta": "A",
+    "explicacion": "El Planning Poker combina estimación relativa y consenso del equipo."
+  },
+  {
+    "id": 114,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Historias de usuario",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuál es el formato habitual de una historia de usuario?",
+    "opciones": {
+      "A": "Como <rol>, quiero <funcionalidad> para <beneficio>.",
+      "B": "El sistema deberá <requisito técnico>.",
+      "C": "Si <condición>, entonces <acción>.",
+      "D": "Tarea: <descripción> – Responsable: <nombre>."
+    },
+    "correcta": "A",
+    "explicacion": "Este formato pone el foco en el usuario y en el valor."
+  },
+  {
+    "id": 115,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Historias de usuario",
+    "dificultad": "Intermedia",
+    "enunciado": "En el acrónimo INVEST para historias de usuario, ¿qué significa la \"I\"?",
+    "opciones": {
+      "A": "Independiente.",
+      "B": "Integrada.",
+      "C": "Importante.",
+      "D": "Iterativa."
+    },
+    "correcta": "A",
+    "explicacion": "INVEST: Independiente, Negociable, Valiosa, Estimable, Pequeña (Small) y Testeable."
+  },
+  {
+    "id": 116,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Historias de usuario",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Para qué sirven los criterios de aceptación de una historia de usuario?",
+    "opciones": {
+      "A": "Para asignar la historia a un desarrollador.",
+      "B": "Para definir las condiciones que debe cumplir la historia para que el Product Owner la acepte.",
+      "C": "Para estimar el costo de la historia.",
+      "D": "Para definir la duración del sprint."
+    },
+    "correcta": "B",
+    "explicacion": "Los criterios de aceptación hacen que la historia sea verificable."
+  },
+  {
+    "id": 117,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Kanban",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuál es una práctica fundamental de Kanban?",
+    "opciones": {
+      "A": "Planificar todo el alcance al inicio.",
+      "B": "Trabajar siempre en sprints de dos semanas.",
+      "C": "Tener un Scrum Master asignado.",
+      "D": "Limitar el trabajo en curso (WIP)."
+    },
+    "correcta": "D",
+    "explicacion": "Limitar el WIP mejora el flujo y deja ver los cuellos de botella."
+  },
+  {
+    "id": 118,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Kanban",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál es una diferencia clave entre Kanban y Scrum?",
+    "opciones": {
+      "A": "Kanban no permite visualizar el trabajo.",
+      "B": "Kanban requiere un Product Owner y un Scrum Master.",
+      "C": "Kanban se basa en un flujo continuo sin iteraciones obligatorias de duración fija.",
+      "D": "Kanban exige sprints de un mes."
+    },
+    "correcta": "C",
+    "explicacion": "Kanban gestiona el flujo de forma continua y Scrum usa sprints de duración fija."
+  },
+  {
+    "id": 119,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Métricas ágiles",
+    "dificultad": "Avanzada",
+    "enunciado": "¿Qué mide el tiempo de ciclo (cycle time) en Kanban?",
+    "opciones": {
+      "A": "El tiempo desde que el cliente hace la solicitud hasta que la recibe.",
+      "B": "La duración de un sprint.",
+      "C": "El tiempo desde que se empieza a trabajar en un elemento hasta que se completa.",
+      "D": "El tiempo total del proyecto."
+    },
+    "correcta": "C",
+    "explicacion": "El lead time cuenta desde la solicitud; el cycle time, desde que comienza el trabajo."
+  },
+  {
+    "id": 120,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Métricas ágiles",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué muestra un gráfico de trabajo pendiente (burndown chart)?",
+    "opciones": {
+      "A": "El trabajo completado y el alcance total.",
+      "B": "La cantidad de defectos por categoría.",
+      "C": "El trabajo restante a lo largo del tiempo.",
+      "D": "El costo real frente al planificado."
+    },
+    "correcta": "C",
+    "explicacion": "El burndown muestra cómo disminuye el trabajo pendiente."
+  },
+  {
+    "id": 121,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Métricas ágiles",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué gráfico muestra tanto el trabajo completado como los cambios en el alcance total del proyecto?",
+    "opciones": {
+      "A": "El gráfico de trabajo realizado (burnup chart).",
+      "B": "El histograma de recursos.",
+      "C": "El diagrama de Pareto.",
+      "D": "El gráfico de trabajo pendiente (burndown chart)."
+    },
+    "correcta": "A",
+    "explicacion": "El burnup muestra por separado el trabajo completado y el alcance total."
+  },
+  {
+    "id": 122,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Métricas ágiles",
+    "dificultad": "Avanzada",
+    "enunciado": "¿Qué herramienta ágil ayuda a detectar cuellos de botella al mostrar cuántos elementos hay en cada estado del flujo a lo largo del tiempo?",
+    "opciones": {
+      "A": "El diagrama de flujo acumulado (CFD).",
+      "B": "El gráfico de control.",
+      "C": "El diagrama de Gantt.",
+      "D": "La matriz RACI."
+    },
+    "correcta": "A",
+    "explicacion": "En el CFD, una banda que se ensancha indica un cuello de botella."
+  },
+  {
+    "id": 123,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Producto",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué es un producto mínimo viable (MVP)?",
+    "opciones": {
+      "A": "La versión final del producto con todas sus funcionalidades.",
+      "B": "El producto con el menor costo posible, sin importar su utilidad.",
+      "C": "La versión más simple del producto que permite validar hipótesis con usuarios reales.",
+      "D": "Un documento con los requisitos mínimos."
+    },
+    "correcta": "C",
+    "explicacion": "El MVP busca aprender rápido con el menor esfuerzo."
+  },
+  {
+    "id": 124,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Prácticas ágiles",
+    "dificultad": "Intermedia",
+    "enunciado": "Antes de estimar una historia compleja, el equipo dedica un tiempo limitado a investigar una tecnología desconocida. ¿Cómo se llama esta actividad?",
+    "opciones": {
+      "A": "Refactorización.",
+      "B": "Swarming.",
+      "C": "Retrospectiva.",
+      "D": "Spike."
+    },
+    "correcta": "D",
+    "explicacion": "Un spike es una investigación acotada en el tiempo para reducir la incertidumbre."
+  },
+  {
+    "id": 125,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Prácticas ágiles",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué significa trabajar con timeboxing?",
+    "opciones": {
+      "A": "Ampliar el tiempo hasta terminar todo el alcance.",
+      "B": "Asignar un período de tiempo fijo y máximo a una actividad o evento.",
+      "C": "Registrar las horas trabajadas por cada persona.",
+      "D": "Medir el tiempo de respuesta del sistema."
+    },
+    "correcta": "B",
+    "explicacion": "El timebox fija la duración y obliga a priorizar."
+  },
+  {
+    "id": 126,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Prácticas ágiles",
+    "dificultad": "Intermedia",
+    "enunciado": "El equipo pega en la pared, a la vista de todos, su tablero de tareas y su burndown actualizado. ¿Cómo se llama esta práctica?",
+    "opciones": {
+      "A": "Repositorio de lecciones aprendidas.",
+      "B": "Registro de incidentes.",
+      "C": "Matriz de trazabilidad.",
+      "D": "Radiador de información."
+    },
+    "correcta": "D",
+    "explicacion": "El radiador de información hace visible el estado del trabajo para todos."
+  },
+  {
+    "id": 127,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Prácticas ágiles",
+    "dificultad": "Intermedia",
+    "enunciado": "En Extreme Programming (XP), dos desarrolladores trabajan juntos en una misma estación: uno escribe el código y el otro lo revisa. ¿Qué práctica es?",
+    "opciones": {
+      "A": "Desarrollo guiado por pruebas.",
+      "B": "Propiedad colectiva del código.",
+      "C": "Programación en parejas.",
+      "D": "Integración continua."
+    },
+    "correcta": "C",
+    "explicacion": "La programación en parejas mejora la calidad y el conocimiento compartido."
+  },
+  {
+    "id": 128,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Equipos ágiles",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué caracteriza a un equipo ágil multifuncional?",
+    "opciones": {
+      "A": "Cada miembro trabaja en un área funcional distinta y separada.",
+      "B": "Tiene todas las habilidades necesarias para entregar un incremento de valor sin depender de otros equipos.",
+      "C": "Depende de un gerente que asigna todas las tareas.",
+      "D": "Cambia de integrantes en cada sprint."
+    },
+    "correcta": "B",
+    "explicacion": "Los equipos multifuncionales reducen dependencias y traspasos."
+  },
+  {
+    "id": 129,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Gestión del cambio ágil",
+    "dificultad": "Intermedia",
+    "enunciado": "A mitad de un sprint, un interesado pide al equipo que añada una nueva funcionalidad urgente. ¿Qué es lo más adecuado?",
+    "opciones": {
+      "A": "Cancelar el sprint y empezar uno nuevo.",
+      "B": "Rechazarla porque los sprints no admiten cambios.",
+      "C": "Añadirla de inmediato al sprint actual.",
+      "D": "Derivar la solicitud al Product Owner para que la evalúe y la priorice en el Product Backlog."
+    },
+    "correcta": "D",
+    "explicacion": "El Product Owner gestiona las prioridades; el objetivo del sprint se protege."
+  },
+  {
+    "id": 130,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Impedimentos",
+    "dificultad": "Intermedia",
+    "enunciado": "El equipo no puede avanzar porque otro departamento no le da acceso a un servidor. ¿Quién debe ayudar principalmente a resolverlo?",
+    "opciones": {
+      "A": "El desarrollador más antiguo.",
+      "B": "El cliente.",
+      "C": "El Scrum Master.",
+      "D": "El Product Owner."
+    },
+    "correcta": "C",
+    "explicacion": "El Scrum Master ayuda a eliminar los impedimentos del equipo."
+  },
+  {
+    "id": 131,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Backlog",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué es el refinamiento del Product Backlog?",
+    "opciones": {
+      "A": "Eliminar todo el backlog al final del sprint.",
+      "B": "Congelar el backlog para que nadie lo modifique.",
+      "C": "Aprobar el presupuesto de cada historia.",
+      "D": "Dividir los elementos del backlog y añadirles detalle, como descripción, orden y tamaño."
+    },
+    "correcta": "D",
+    "explicacion": "El refinamiento es una actividad continua para preparar elementos listos para los sprints."
+  },
+  {
+    "id": 132,
+    "dominio": "Marcos y metodologías ágiles",
+    "tema": "Agilidad a escala",
+    "dificultad": "Avanzada",
+    "enunciado": "Varios equipos Scrum trabajan sobre un mismo producto y necesitan coordinar sus dependencias con frecuencia. ¿Qué práctica es adecuada?",
+    "opciones": {
+      "A": "Scrum de Scrums.",
+      "B": "Volver a un enfoque en cascada.",
+      "C": "Eliminar al Product Owner.",
+      "D": "Una única retrospectiva anual."
+    },
+    "correcta": "A",
+    "explicacion": "En el Scrum de Scrums, representantes de cada equipo coordinan las dependencias."
+  },
+  {
+    "id": 133,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Rol del analista de negocios",
+    "dificultad": "Básica",
+    "enunciado": "¿Cuál es el propósito principal del análisis de negocios?",
+    "opciones": {
+      "A": "Auditar los estados financieros de la empresa.",
+      "B": "Programar el software del producto.",
+      "C": "Identificar las necesidades del negocio y recomendar soluciones que aporten valor.",
+      "D": "Gestionar el cronograma y el presupuesto del proyecto."
+    },
+    "correcta": "C",
+    "explicacion": "El análisis de negocios conecta las necesidades con las soluciones de valor."
+  },
+  {
+    "id": 134,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Rol del analista de negocios",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál es una diferencia típica entre el analista de negocios y el director del proyecto?",
+    "opciones": {
+      "A": "El analista aprueba el presupuesto; el director, los requisitos.",
+      "B": "El analista se centra en el producto y sus requisitos; el director, en la entrega del proyecto.",
+      "C": "No hay diferencias: ambos roles hacen exactamente lo mismo.",
+      "D": "El analista dirige al equipo; el director documenta los requisitos."
+    },
+    "correcta": "B",
+    "explicacion": "Son roles complementarios: el producto (qué) y el proyecto (cómo se entrega)."
+  },
+  {
+    "id": 135,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Evaluación de necesidades",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué documento justifica una inversión analizando beneficios, costos, opciones y riesgos antes de iniciar el proyecto?",
+    "opciones": {
+      "A": "La matriz RACI.",
+      "B": "El diccionario de la EDT.",
+      "C": "El caso de negocio.",
+      "D": "El acta de constitución."
+    },
+    "correcta": "C",
+    "explicacion": "El caso de negocio justifica económicamente el proyecto."
+  },
+  {
+    "id": 136,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Evaluación de necesidades",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué describe el plan de gestión de beneficios?",
+    "opciones": {
+      "A": "Los proveedores y sus contratos.",
+      "B": "La secuencia de actividades del cronograma.",
+      "C": "Cómo y cuándo se entregarán los beneficios del proyecto y cómo se medirán.",
+      "D": "Los beneficios salariales del equipo."
+    },
+    "correcta": "C",
+    "explicacion": "Este plan asegura que el proyecto genere el valor esperado."
+  },
+  {
+    "id": 137,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Evaluación de necesidades",
+    "dificultad": "Intermedia",
+    "enunciado": "El analista compara la situación actual de la organización con la situación futura deseada para identificar qué falta. ¿Qué técnica usa?",
+    "opciones": {
+      "A": "Análisis de Pareto.",
+      "B": "Análisis del valor ganado.",
+      "C": "Análisis de sensibilidad.",
+      "D": "Análisis de brechas (gap analysis)."
+    },
+    "correcta": "D",
+    "explicacion": "El análisis de brechas identifica la diferencia entre el estado actual y el deseado."
+  },
+  {
+    "id": 138,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Tipos de requisitos",
+    "dificultad": "Intermedia",
+    "enunciado": "\"Aumentar las ventas en línea un 15 % en el próximo año\" es un ejemplo de:",
+    "opciones": {
+      "A": "Requisito de negocio.",
+      "B": "Requisito no funcional.",
+      "C": "Requisito funcional.",
+      "D": "Requisito de transición."
+    },
+    "correcta": "A",
+    "explicacion": "Los requisitos de negocio describen las necesidades de alto nivel de la organización."
+  },
+  {
+    "id": 139,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Tipos de requisitos",
+    "dificultad": "Intermedia",
+    "enunciado": "\"El sistema debe responder a cualquier consulta en menos de 2 segundos\" es un ejemplo de:",
+    "opciones": {
+      "A": "Requisito funcional.",
+      "B": "Requisito no funcional.",
+      "C": "Regla de negocio.",
+      "D": "Requisito de negocio."
+    },
+    "correcta": "B",
+    "explicacion": "Los requisitos no funcionales describen atributos de calidad como el rendimiento o la seguridad."
+  },
+  {
+    "id": 140,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Tipos de requisitos",
+    "dificultad": "Básica",
+    "enunciado": "\"El sistema debe permitir al usuario generar facturas electrónicas\" es un ejemplo de:",
+    "opciones": {
+      "A": "Requisito de transición.",
+      "B": "Requisito no funcional.",
+      "C": "Requisito funcional.",
+      "D": "Requisito de negocio."
+    },
+    "correcta": "C",
+    "explicacion": "Los requisitos funcionales describen comportamientos o funciones del producto."
+  },
+  {
+    "id": 141,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Tipos de requisitos",
+    "dificultad": "Intermedia",
+    "enunciado": "La migración de datos del sistema antiguo y la capacitación de los usuarios son ejemplos de requisitos:",
+    "opciones": {
+      "A": "De negocio.",
+      "B": "Funcionales.",
+      "C": "De transición.",
+      "D": "De calidad."
+    },
+    "correcta": "C",
+    "explicacion": "Los requisitos de transición son temporales y permiten pasar del estado actual al futuro."
+  },
+  {
+    "id": 142,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Tipos de requisitos",
+    "dificultad": "Intermedia",
+    "enunciado": "\"Los clientes con más de 5 años de antigüedad reciben un 10 % de descuento\" es un ejemplo de:",
+    "opciones": {
+      "A": "Requisito de transición.",
+      "B": "Regla de negocio.",
+      "C": "Supuesto.",
+      "D": "Requisito no funcional."
+    },
+    "correcta": "B",
+    "explicacion": "Las reglas de negocio son políticas o condiciones que guían el negocio."
+  },
+  {
+    "id": 143,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Trazabilidad",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué herramienta vincula cada requisito con su origen y con los entregables que lo satisfacen?",
+    "opciones": {
+      "A": "La matriz RACI.",
+      "B": "La matriz de poder/interés.",
+      "C": "La matriz de trazabilidad de requisitos.",
+      "D": "La matriz de probabilidad e impacto."
+    },
+    "correcta": "C",
+    "explicacion": "La trazabilidad sigue cada requisito a lo largo de su ciclo de vida."
+  },
+  {
+    "id": 144,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Trazabilidad",
+    "dificultad": "Avanzada",
+    "enunciado": "Un interesado propone un requisito nuevo que no se puede vincular con ningún objetivo de negocio. Según la trazabilidad, ¿qué debe hacer el analista?",
+    "opciones": {
+      "A": "Incluirlo de inmediato porque lo pidió un interesado.",
+      "B": "Añadirlo directamente en la línea base sin análisis.",
+      "C": "Cuestionar su valor y analizarlo con los interesados antes de incluirlo.",
+      "D": "Eliminar el objetivo de negocio para incluir el requisito."
+    },
+    "correcta": "C",
+    "explicacion": "Todo requisito debe estar vinculado a un objetivo de negocio que justifique su valor."
+  },
+  {
+    "id": 145,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Elicitación",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué técnica de elicitación obtiene información detallada mediante conversaciones directas, una a una, con los interesados?",
+    "opciones": {
+      "A": "Benchmarking.",
+      "B": "Encuestas.",
+      "C": "Análisis de documentos.",
+      "D": "Entrevistas."
+    },
+    "correcta": "D",
+    "explicacion": "Las entrevistas permiten profundizar con cada interesado."
+  },
+  {
+    "id": 146,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Elicitación",
+    "dificultad": "Intermedia",
+    "enunciado": "El analista reúne a un grupo de usuarios preseleccionados con un moderador para conocer sus expectativas sobre un producto. ¿Qué técnica usa?",
+    "opciones": {
+      "A": "Observación.",
+      "B": "Entrevista individual.",
+      "C": "Análisis de interfaces.",
+      "D": "Grupo focal (focus group)."
+    },
+    "correcta": "D",
+    "explicacion": "El grupo focal reúne a participantes preseleccionados guiados por un moderador."
+  },
+  {
+    "id": 147,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Elicitación",
+    "dificultad": "Intermedia",
+    "enunciado": "Varios interesados de distintas áreas se reúnen en una sesión estructurada y facilitada para definir requisitos y resolver diferencias. ¿Qué técnica es?",
+    "opciones": {
+      "A": "Taller facilitado (por ejemplo, JAD).",
+      "B": "Observación pasiva.",
+      "C": "Análisis de documentos.",
+      "D": "Encuesta."
+    },
+    "correcta": "A",
+    "explicacion": "Los talleres facilitados integran a las distintas áreas y ayudan a llegar a acuerdos rápidamente."
+  },
+  {
+    "id": 148,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Elicitación",
+    "dificultad": "Intermedia",
+    "enunciado": "A los usuarios les cuesta explicar cómo hacen su trabajo. ¿Qué técnica de elicitación es la más adecuada?",
+    "opciones": {
+      "A": "Observación (shadowing).",
+      "B": "Encuesta.",
+      "C": "Benchmarking.",
+      "D": "Análisis de documentos."
+    },
+    "correcta": "A",
+    "explicacion": "Observar el trabajo directamente revela procesos difíciles de explicar."
+  },
+  {
+    "id": 149,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Elicitación",
+    "dificultad": "Básica",
+    "enunciado": "Se necesita información de cientos de usuarios distribuidos en varias ciudades en poco tiempo. ¿Qué técnica es la más adecuada?",
+    "opciones": {
+      "A": "Talleres presenciales.",
+      "B": "Entrevistas individuales.",
+      "C": "Observación directa.",
+      "D": "Cuestionarios y encuestas."
+    },
+    "correcta": "D",
+    "explicacion": "Las encuestas permiten llegar a muchas personas rápidamente."
+  },
+  {
+    "id": 150,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Elicitación",
+    "dificultad": "Intermedia",
+    "enunciado": "El analista crea un modelo preliminar del producto para que los usuarios interactúen con él y den retroalimentación temprana. ¿Qué técnica usa?",
+    "opciones": {
+      "A": "Análisis FODA.",
+      "B": "Prototipos.",
+      "C": "Análisis de documentos.",
+      "D": "Encuestas."
+    },
+    "correcta": "B",
+    "explicacion": "Los prototipos hacen tangibles los requisitos antes de construir el producto."
+  },
+  {
+    "id": 151,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Elicitación",
+    "dificultad": "Básica",
+    "enunciado": "El analista revisa manuales, contratos y procedimientos existentes para identificar requisitos. ¿Qué técnica usa?",
+    "opciones": {
+      "A": "Análisis de documentos.",
+      "B": "Lluvia de ideas.",
+      "C": "Grupo focal.",
+      "D": "Prototipos."
+    },
+    "correcta": "A",
+    "explicacion": "El análisis de documentos aprovecha la información que ya existe."
+  },
+  {
+    "id": 152,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Elicitación",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué técnica grupal busca generar muchas ideas en poco tiempo sin criticarlas al principio?",
+    "opciones": {
+      "A": "Técnica de grupo nominal.",
+      "B": "Lluvia de ideas.",
+      "C": "Análisis de decisiones.",
+      "D": "Votación por mayoría."
+    },
+    "correcta": "B",
+    "explicacion": "En la lluvia de ideas primero se generan ideas y después se evalúan."
+  },
+  {
+    "id": 153,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Priorización",
+    "dificultad": "Básica",
+    "enunciado": "En la técnica de priorización MoSCoW, ¿qué significa la \"M\"?",
+    "opciones": {
+      "A": "Podría tenerse (Could have).",
+      "B": "Debe tenerse (Must have).",
+      "C": "No se tendrá esta vez (Won't have).",
+      "D": "Debería tenerse (Should have)."
+    },
+    "correcta": "B",
+    "explicacion": "Must, Should, Could y Won't."
+  },
+  {
+    "id": 154,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Priorización",
+    "dificultad": "Intermedia",
+    "enunciado": "En MoSCoW, un requisito importante pero no indispensable para la entrega actual se clasifica como:",
+    "opciones": {
+      "A": "Debería tenerse (Should have).",
+      "B": "Podría tenerse (Could have).",
+      "C": "Debe tenerse (Must have).",
+      "D": "No se tendrá (Won't have)."
+    },
+    "correcta": "A",
+    "explicacion": "Should: importante, pero la solución funciona sin él."
+  },
+  {
+    "id": 155,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Priorización",
+    "dificultad": "Avanzada",
+    "enunciado": "Según el modelo de Kano, ¿cómo se llaman las características que el cliente no espera pero que, si están, generan gran satisfacción?",
+    "opciones": {
+      "A": "Características de desempeño.",
+      "B": "Características básicas (obligatorias).",
+      "C": "Características de deleite (atractivas).",
+      "D": "Características indiferentes."
+    },
+    "correcta": "C",
+    "explicacion": "Las características de deleite sorprenden y generan satisfacción, y su ausencia no molesta."
+  },
+  {
+    "id": 156,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Priorización",
+    "dificultad": "Intermedia",
+    "enunciado": "Cada interesado reparte 100 puntos entre los requisitos según su importancia. ¿Qué técnica de priorización es?",
+    "opciones": {
+      "A": "Matriz RACI.",
+      "B": "Análisis de Pareto.",
+      "C": "Asignación de 100 puntos.",
+      "D": "MoSCoW."
+    },
+    "correcta": "C",
+    "explicacion": "La asignación de 100 puntos obliga a decidir cuánto pesa cada requisito."
+  },
+  {
+    "id": 157,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis situacional",
+    "dificultad": "Básica",
+    "enunciado": "En un análisis FODA, ¿qué representan las debilidades?",
+    "opciones": {
+      "A": "Factores externos positivos del mercado.",
+      "B": "Factores externos negativos del entorno.",
+      "C": "Factores internos que dan ventaja competitiva.",
+      "D": "Factores internos que limitan a la organización."
+    },
+    "correcta": "D",
+    "explicacion": "Fortalezas y debilidades son internas; oportunidades y amenazas son externas."
+  },
+  {
+    "id": 158,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis situacional",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué técnica analiza los factores políticos, económicos, sociales, tecnológicos, legales y ambientales del entorno?",
+    "opciones": {
+      "A": "Análisis de causa raíz.",
+      "B": "Análisis PESTLE.",
+      "C": "Análisis de interesados.",
+      "D": "Análisis FODA."
+    },
+    "correcta": "B",
+    "explicacion": "PESTLE estudia los factores del entorno externo."
+  },
+  {
+    "id": 159,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Modelado",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué modelo muestra el sistema como un todo, las entidades externas que interactúan con él y las interfaces entre ellos?",
+    "opciones": {
+      "A": "Diagrama de Ishikawa.",
+      "B": "Diagrama de contexto.",
+      "C": "Mapa de historias.",
+      "D": "Diagrama de Gantt."
+    },
+    "correcta": "B",
+    "explicacion": "El diagrama de contexto delimita el alcance del sistema y sus interfaces."
+  },
+  {
+    "id": 160,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Modelado",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué diagrama muestra cómo interactúan los actores con el sistema para lograr sus objetivos?",
+    "opciones": {
+      "A": "Diagrama de casos de uso.",
+      "B": "Organigrama.",
+      "C": "Diagrama de red del cronograma.",
+      "D": "Histograma."
+    },
+    "correcta": "A",
+    "explicacion": "Los casos de uso describen las interacciones entre los actores y el sistema."
+  },
+  {
+    "id": 161,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Modelado",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué modelo representa paso a paso las actividades, decisiones y responsables de un proceso de negocio?",
+    "opciones": {
+      "A": "Diagrama de flujo del proceso.",
+      "B": "Diagrama entidad-relación.",
+      "C": "Matriz de trazabilidad.",
+      "D": "Diagrama de dispersión."
+    },
+    "correcta": "A",
+    "explicacion": "Los flujos de proceso muestran la secuencia de actividades y decisiones."
+  },
+  {
+    "id": 162,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Modelado",
+    "dificultad": "Intermedia",
+    "enunciado": "El analista documenta cómo funciona hoy un proceso y luego diseña cómo debería funcionar después de la solución. ¿Cómo se llaman estos modelos?",
+    "opciones": {
+      "A": "Plan maestro y plan detallado.",
+      "B": "Modelo del estado actual (AS-IS) y modelo del estado futuro (TO-BE).",
+      "C": "Riesgo inherente y riesgo residual.",
+      "D": "Línea base y pronóstico."
+    },
+    "correcta": "B",
+    "explicacion": "AS-IS describe la situación actual y TO-BE la deseada."
+  },
+  {
+    "id": 163,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Modelado",
+    "dificultad": "Avanzada",
+    "enunciado": "Una regla de negocio depende de varias combinaciones de condiciones (tipo de cliente, monto y forma de pago). ¿Qué modelo es el más adecuado para representarla?",
+    "opciones": {
+      "A": "Una tabla de decisión.",
+      "B": "Un diagrama de contexto.",
+      "C": "Un diagrama de Gantt.",
+      "D": "Un organigrama."
+    },
+    "correcta": "A",
+    "explicacion": "Las tablas de decisión muestran de forma clara las combinaciones de condiciones y sus resultados."
+  },
+  {
+    "id": 164,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Modelado",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué modelo muestra las entidades de información y las relaciones entre ellas?",
+    "opciones": {
+      "A": "Diagrama de flujo acumulado.",
+      "B": "Diagrama entidad-relación (ER).",
+      "C": "Diagrama de Pareto.",
+      "D": "Diagrama de casos de uso."
+    },
+    "correcta": "B",
+    "explicacion": "El diagrama ER modela los datos y sus relaciones."
+  },
+  {
+    "id": 165,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Modelado",
+    "dificultad": "Básica",
+    "enunciado": "¿Qué representación visual de baja fidelidad muestra la estructura de una pantalla sin diseño gráfico detallado?",
+    "opciones": {
+      "A": "Un wireframe.",
+      "B": "Un diagrama de red.",
+      "C": "Un diagrama de Ishikawa.",
+      "D": "Un histograma."
+    },
+    "correcta": "A",
+    "explicacion": "El wireframe sirve para validar la estructura de la interfaz antes de diseñarla."
+  },
+  {
+    "id": 166,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis de decisiones",
+    "dificultad": "Avanzada",
+    "enunciado": "Construir cuesta $100 000 y genera $300 000 con demanda alta (70 %) o $120 000 con demanda baja (30 %). Comprar cuesta $50 000 y genera $200 000 (70 %) o $100 000 (30 %). Según el valor monetario esperado neto, ¿qué conviene?",
+    "opciones": {
+      "A": "Construir, con un VME neto de $210 000.",
+      "B": "Comprar, con un VME neto de $170 000.",
+      "C": "Construir, con un VME neto de $146 000.",
+      "D": "Comprar, con un VME neto de $120 000."
+    },
+    "correcta": "C",
+    "explicacion": "Construir: 0,7×300 + 0,3×120 − 100 = 146. Comprar: 0,7×200 + 0,3×100 − 50 = 120."
+  },
+  {
+    "id": 167,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis financiero",
+    "dificultad": "Intermedia",
+    "enunciado": "El proyecto A tiene un VAN de $120 000 en 5 años y el proyecto B tiene un VAN de $100 000 en 2 años. Si solo se puede elegir uno, ¿cuál conviene según el VAN?",
+    "opciones": {
+      "A": "El proyecto B, porque dura menos.",
+      "B": "El proyecto A, porque tiene el VAN más alto.",
+      "C": "Ninguno: el VAN no sirve para comparar proyectos.",
+      "D": "El proyecto B, porque el VAN debe dividirse entre los años."
+    },
+    "correcta": "B",
+    "explicacion": "El VAN ya considera el valor del dinero en el tiempo, así que se elige el mayor."
+  },
+  {
+    "id": 168,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis financiero",
+    "dificultad": "Intermedia",
+    "enunciado": "Una inversión de $60 000 genera un flujo neto de $15 000 por año. ¿Cuál es su período de recuperación?",
+    "opciones": {
+      "A": "4 años.",
+      "B": "3 años.",
+      "C": "5 años.",
+      "D": "6 años."
+    },
+    "correcta": "A",
+    "explicacion": "60 000 / 15 000 = 4 años."
+  },
+  {
+    "id": 169,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis financiero",
+    "dificultad": "Básica",
+    "enunciado": "Si se comparan proyectos solo por su tasa interna de retorno (TIR), ¿cuál se prefiere?",
+    "opciones": {
+      "A": "El que tenga la TIR igual a cero.",
+      "B": "El que tenga la TIR más baja.",
+      "C": "El que tenga la TIR más alta.",
+      "D": "La TIR no se usa para seleccionar proyectos."
+    },
+    "correcta": "C",
+    "explicacion": "Una TIR mayor indica una rentabilidad mayor."
+  },
+  {
+    "id": 170,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis financiero",
+    "dificultad": "Avanzada",
+    "enunciado": "Una empresa elige el proyecto A (VAN de $80 000) en lugar del proyecto B (VAN de $50 000). ¿Cuál es el costo de oportunidad?",
+    "opciones": {
+      "A": "$30 000.",
+      "B": "$130 000.",
+      "C": "$80 000.",
+      "D": "$50 000."
+    },
+    "correcta": "D",
+    "explicacion": "El costo de oportunidad es el valor de la mejor alternativa a la que se renuncia."
+  },
+  {
+    "id": 171,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Alcance del producto",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué es el alcance del producto?",
+    "opciones": {
+      "A": "La lista de miembros del equipo.",
+      "B": "El trabajo necesario para entregar el producto.",
+      "C": "Las características y funciones que describen al producto, servicio o resultado.",
+      "D": "El presupuesto asignado al producto."
+    },
+    "correcta": "C",
+    "explicacion": "El alcance del producto se mide contra los requisitos; el alcance del proyecto, contra el plan."
+  },
+  {
+    "id": 172,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Hoja de ruta",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Qué herramienta muestra a alto nivel cómo evolucionará el producto a lo largo del tiempo y en qué versiones se entregarán las capacidades?",
+    "opciones": {
+      "A": "El diccionario de la EDT.",
+      "B": "El registro de riesgos.",
+      "C": "El acta de constitución.",
+      "D": "La hoja de ruta del producto (product roadmap)."
+    },
+    "correcta": "D",
+    "explicacion": "La hoja de ruta comunica la visión y la secuencia de las entregas del producto."
+  },
+  {
+    "id": 173,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Evaluación de la solución",
+    "dificultad": "Intermedia",
+    "enunciado": "Seis meses después de implementar un sistema, el analista mide si se lograron los beneficios esperados. ¿Qué actividad realiza?",
+    "opciones": {
+      "A": "Elicitar los requisitos.",
+      "B": "Evaluar la solución.",
+      "C": "Definir el acta de constitución.",
+      "D": "Crear la EDT."
+    },
+    "correcta": "B",
+    "explicacion": "La evaluación de la solución verifica si se entregó el valor esperado."
+  },
+  {
+    "id": 174,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Gestión de requisitos",
+    "dificultad": "Intermedia",
+    "enunciado": "Después de aprobada la línea base de requisitos, un interesado pide modificar un requisito. ¿Qué debe hacer el analista?",
+    "opciones": {
+      "A": "Cambiar el requisito directamente en la documentación.",
+      "B": "Analizar el impacto y gestionar el cambio según el proceso de control de cambios.",
+      "C": "Rechazar cualquier cambio después de aprobada la línea base.",
+      "D": "Esperar al cierre del proyecto para evaluarlo."
+    },
+    "correcta": "B",
+    "explicacion": "Los cambios en requisitos aprobados se controlan formalmente."
+  },
+  {
+    "id": 175,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Gestión de requisitos",
+    "dificultad": "Avanzada",
+    "enunciado": "Un requisito dice \"El sistema debe ser rápido y fácil de usar\". ¿Cuál es la mejor acción del analista?",
+    "opciones": {
+      "A": "Eliminarlo porque es subjetivo.",
+      "B": "Dejar que los desarrolladores lo interpreten.",
+      "C": "Aclararlo con los interesados y convertirlo en criterios medibles y verificables.",
+      "D": "Aceptarlo tal como está."
+    },
+    "correcta": "C",
+    "explicacion": "Los requisitos deben ser claros, medibles y verificables."
+  },
+  {
+    "id": 176,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis de interesados",
+    "dificultad": "Intermedia",
+    "enunciado": "El analista crea un perfil ficticio que representa a un grupo de usuarios típicos, con sus objetivos y frustraciones. ¿Qué técnica usa?",
+    "opciones": {
+      "A": "Diagrama de contexto.",
+      "B": "Persona (user persona).",
+      "C": "Organigrama.",
+      "D": "Matriz RACI."
+    },
+    "correcta": "B",
+    "explicacion": "Las personas ayudan a diseñar pensando en usuarios representativos."
+  },
+  {
+    "id": 177,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Viabilidad",
+    "dificultad": "Intermedia",
+    "enunciado": "Antes de aprobar una iniciativa, se analiza si es técnica, económica y operativamente posible. ¿Qué estudio es?",
+    "opciones": {
+      "A": "Auditoría de calidad.",
+      "B": "Revisión del sprint.",
+      "C": "Retrospectiva.",
+      "D": "Estudio de viabilidad (factibilidad)."
+    },
+    "correcta": "D",
+    "explicacion": "El estudio de viabilidad evalúa si la solución es posible y conveniente."
+  },
+  {
+    "id": 178,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Métricas",
+    "dificultad": "Intermedia",
+    "enunciado": "¿Cuál de los siguientes es un indicador de éxito bien definido para una solución?",
+    "opciones": {
+      "A": "Reducir el tiempo promedio de atención de 10 a 6 minutos en 6 meses.",
+      "B": "Hacer que el sistema sea mejor.",
+      "C": "Mejorar la atención al cliente.",
+      "D": "Lograr que los usuarios estén contentos."
+    },
+    "correcta": "A",
+    "explicacion": "Un buen indicador es específico, medible y tiene un plazo (SMART)."
+  },
+  {
+    "id": 179,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis de negocios en entornos ágiles",
+    "dificultad": "Intermedia",
+    "enunciado": "En un entorno ágil, ¿cómo suele colaborar el analista de negocios?",
+    "opciones": {
+      "A": "Aprueba el presupuesto de cada sprint.",
+      "B": "Trabaja con el Product Owner para refinar el backlog y aclarar las historias de usuario.",
+      "C": "Escribe todos los requisitos al inicio y deja el proyecto.",
+      "D": "Reemplaza al Scrum Master en los eventos."
+    },
+    "correcta": "B",
+    "explicacion": "En ágil, el analista ayuda al Product Owner a mantener un backlog claro y valioso."
+  },
+  {
+    "id": 180,
+    "dominio": "Marcos de análisis de negocios",
+    "tema": "Análisis de causa raíz",
+    "dificultad": "Intermedia",
+    "enunciado": "Antes de proponer una solución, el analista quiere asegurarse de atacar el problema real y no sus síntomas. ¿Qué debe hacer?",
+    "opciones": {
+      "A": "Implementar la solución que pidió el interesado de mayor jerarquía.",
+      "B": "Redactar de inmediato los requisitos técnicos.",
+      "C": "Realizar un análisis de causa raíz del problema.",
+      "D": "Comprar el software más popular del mercado."
+    },
+    "correcta": "C",
+    "explicacion": "Entender la causa raíz evita invertir en soluciones que no resuelven la necesidad."
+  }
+]
