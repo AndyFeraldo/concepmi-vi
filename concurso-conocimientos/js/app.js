@@ -6,7 +6,7 @@ import {
 import { activarAudio } from "./sonido.js";
 
 const RUTAS = {
-  moderador: { nombre: "Moderador", modulo: "./moderador.js?v=202611031800" },
+  moderador: { nombre: "Moderador", modulo: "./moderador.js?v=202611061200" },
   "delegacion-a": { nombre: "Delegación A", modulo: "./delegacion.js", lado: "A" },
   "delegacion-b": { nombre: "Delegación B", modulo: "./delegacion.js", lado: "B" },
   proyector: { nombre: "Proyector", modulo: "./proyector.js" },
