@@ -41,15 +41,15 @@ export function montar(raiz) {
           <form class="nombres" data-form-nombres autocomplete="off">
             <div class="campo">
               <label class="a" for="nom-a">Delegación A (izquierda · azul)</label>
-              <input class="entrada a" id="nom-a" list="lista-delegaciones" maxlength="40" placeholder="Ej. UNI" />
+              <select class="entrada a" id="nom-a"><option value="">Cargando delegaciones…</option></select>
               <div class="cupo" data-cupo="a"></div>
             </div>
             <div class="campo">
               <label class="b" for="nom-b">Delegación B (derecha · verde)</label>
-              <input class="entrada b" id="nom-b" list="lista-delegaciones" maxlength="40" placeholder="Ej. CATÓLICA" />
+              <select class="entrada b" id="nom-b"><option value="">Cargando delegaciones…</option></select>
               <div class="cupo" data-cupo="b"></div>
             </div>
-            <datalist id="lista-delegaciones"></datalist>
+            <p class="texto-tenue" data-aviso-lista style="margin:0;font-size:.8rem">Las delegaciones vienen del Panel Maestro (Admin → Delegaciones). Así los resultados pasan solos a la Copa CONCEPMI.</p>
             <button class="btn" type="submit" data-guardar>Guardar nombres</button>
           </form>
         </section>
@@ -198,9 +198,29 @@ export function montar(raiz) {
     $("[data-guardar]").innerHTML = guardados ? `${ICONOS.check} Nombres guardados` : "Guardar nombres";
     $("[data-guardar]").classList.toggle("btn--primario", !guardados && !!(inA.value || inB.value));
   }
+  // Desplegables con las delegaciones del Panel Maestro (jur_delegaciones). Se guarda la sigla, p. ej. «UNMSM».
+  let DELEGACIONES = null;
+  async function cargarDelegaciones() {
+    try { DELEGACIONES = await backend.rpc("jur_delegaciones_lista"); }
+    catch { DELEGACIONES = []; $("[data-aviso-lista]").innerHTML = `${ICONOS.alerta} No se pudo cargar la lista de delegaciones. Revisa tu internet y recarga la página.`; }
+    pintarDatalist();
+  }
   function pintarDatalist() {
-    const tabla = calcularTabla(enfs);
-    $("#lista-delegaciones").innerHTML = tabla.map((f) => `<option value="${esc(f.nombre)}">${f.partidos.length}/2 enfrentamientos</option>`).join("");
+    if (!DELEGACIONES) return;
+    for (const sel of [inA, inB]) {
+      const actual = sel.value || (sel === inA ? e?.nombre_a : e?.nombre_b) || "";
+      const lista = [...DELEGACIONES];
+      // Si ya había un nombre guardado que no está en la lista, se conserva para no perderlo
+      if (actual && !lista.some((d) => normalizar(d.siglas) === normalizar(actual))) lista.unshift({ siglas: actual, nombre: "(no está en el Panel Maestro)" });
+      sel.innerHTML = `<option value="">Elige la delegación…</option>` + lista.map((d) => {
+        const n = jugadosPor(enfs, d.siglas);
+        return `<option value="${esc(d.siglas)}" ${n >= 2 ? "disabled" : ""}>${esc(d.siglas)}${d.nombre && d.nombre !== d.siglas ? ` · ${esc(d.nombre)}` : ""} — ${n}/2 enfrentamientos</option>`;
+      }).join("");
+      sel.value = actual;
+      // Si la que estaba elegida ya jugó 2/2, igual se muestra elegida (el aviso de cupo lo bloquea)
+      if (actual && sel.value !== actual) { const o = [...sel.options].find((x) => normalizar(x.value) === normalizar(actual)); if (o) { o.disabled = false; sel.value = o.value; } }
+    }
+    pintarCupos();
   }
 
   /* ---------- Acciones del enfrentamiento ---------- */
@@ -305,7 +325,7 @@ export function montar(raiz) {
     const bloqueados = fase !== "espera";
     inA.disabled = inB.disabled = bloqueados;
     $("[data-guardar]").disabled = bloqueados;
-    if (!editando || bloqueados) { inA.value = e.nombre_a || ""; inB.value = e.nombre_b || ""; editando = false; }
+    if (!editando || bloqueados) { inA.value = e.nombre_a || ""; inB.value = e.nombre_b || ""; editando = false; if ((e.nombre_a && inA.value !== e.nombre_a) || (e.nombre_b && inB.value !== e.nombre_b)) pintarDatalist(); }
     pintarCupos();
 
     // Botones
@@ -389,6 +409,17 @@ export function montar(raiz) {
     cont.querySelectorAll("[data-def]").forEach((b) => b.addEventListener("click", (ev) => accion(ev.currentTarget, () => llamar("mod_definir_ganador", { p_pin: pin(), p_lado: b.dataset.def }))));
   }
 
+  // Marca visual: qué enfrentamientos ya se exportaron a la Copa CONCEPMI desde el Panel Maestro
+  let EXPORTADOS = new Map();
+  async function cargarExportados() {
+    try { const l = await backend.rpc("jur_conoc_exportados"); EXPORTADOS = new Map((l || []).map((x) => [x.id, x.exportado])); pintarTablas(); } catch { /* sin marca, no pasa nada */ }
+  }
+  const marcaExport = (id) => {
+    const t = EXPORTADOS.get(id);
+    return t ? `<br><span class="export export--ok" title="Exportado el ${new Date(t).toLocaleString("es-PE")}">${ICONOS.check} Exportado al Panel Maestro</span>`
+      : `<br><span class="export">Pendiente de exportar</span>`;
+  };
+
   function pintarTablas() {
     const tabla = calcularTabla(enfs);
     const medallas = ["🥇", "🥈", "🥉"];
@@ -410,7 +441,7 @@ export function montar(raiz) {
         <td class="num">${x.rondas_a} – ${x.rondas_b}</td>
         <td class="num">${x.correctas_a} – ${x.correctas_b}</td>
         <td class="num" style="color:var(--oro)">${x.puntaje_a} – ${x.puntaje_b}</td>
-        <td>🏆 <b>${esc(x.ganador === "A" ? x.nombre_a : x.nombre_b)}</b></td>
+        <td>🏆 <b>${esc(x.ganador === "A" ? x.nombre_a : x.nombre_b)}</b>${marcaExport(x.id)}</td>
         <td><button class="btn btn--sm btn--fantasma" title="Borrar este enfrentamiento" data-borrar-uno="${x.id}">${ICONOS.basura}</button></td>
       </tr>`).join("") : `<tr><td colspan="8" class="tabla-vacia">Sin enfrentamientos registrados.</td></tr>`;
     raiz.querySelectorAll("[data-borrar-uno]").forEach((b) => b.addEventListener("click", async () => {
@@ -444,8 +475,11 @@ export function montar(raiz) {
     pintar();
   });
   const dejarEnf = alEnfrentamientos((lista) => { enfs = lista; pintarDatalist(); pintarTablas(); pintar(); });
+  cargarDelegaciones();
+  cargarExportados();
+  const relojExport = setInterval(cargarExportados, 20000);
   pintarPantallas();
   cargarBanco();
 
-  return () => { clearInterval(reloj); dejarEstado(); dejarEnf(); dejarConexion(); };
+  return () => { clearInterval(reloj); clearInterval(relojExport); dejarEstado(); dejarEnf(); dejarConexion(); };
 }
