@@ -649,3 +649,6 @@ select.entrada option:disabled{ color:#8a84a3; }
 .export{ display:inline-block; margin-top:4px; font-size:.7rem; font-weight:700; padding:.15em .6em; border-radius:99px; border:1px solid rgba(250,178,25,.5); color:#FFD98A; }
 .export--ok{ border-color:rgba(59,224,143,.55); color:#8FF2C0; background:rgba(59,224,143,.1); }
 .export svg{ width:1em; height:1em; vertical-align:-2px; }
+/* Interruptor «escribir nombres a mano» (modo prueba) */
+.manual{ display:flex; align-items:center; gap:.5em; font-size:.82rem; font-weight:600; color:var(--niebla); cursor:pointer; }
+.manual input{ width:1.05em; height:1.05em; accent-color:var(--lila); cursor:pointer; }

@@ -7,7 +7,8 @@ msg="${1:-Actualizar página}"
 wt="$(mktemp -d)"
 git fetch -q origin gh-pages
 git worktree add -q --detach "$wt" origin/gh-pages
-git archive HEAD:concepmi-vi | tar -x -C "$wt"
+# concurso-conocimientos/ se gestiona aparte (directo en gh-pages): nunca se sobrescribe desde aquí
+git archive HEAD:concepmi-vi | tar -x -C "$wt" --exclude="concurso-conocimientos"
 cd "$wt"
 git add -A
 if git diff --cached --quiet; then echo "Nada nuevo que publicar"; else

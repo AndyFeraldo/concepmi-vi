@@ -42,14 +42,18 @@ export function montar(raiz) {
             <div class="campo">
               <label class="a" for="nom-a">Delegación A (izquierda · azul)</label>
               <select class="entrada a" id="nom-a"><option value="">Cargando delegaciones…</option></select>
+              <input class="entrada a" id="libre-a" maxlength="40" placeholder="Escribe el nombre del equipo A" hidden />
               <div class="cupo" data-cupo="a"></div>
             </div>
             <div class="campo">
               <label class="b" for="nom-b">Delegación B (derecha · verde)</label>
               <select class="entrada b" id="nom-b"><option value="">Cargando delegaciones…</option></select>
+              <input class="entrada b" id="libre-b" maxlength="40" placeholder="Escribe el nombre del equipo B" hidden />
               <div class="cupo" data-cupo="b"></div>
             </div>
             <p class="texto-tenue" data-aviso-lista style="margin:0;font-size:.8rem">Las delegaciones vienen del Panel Maestro (Admin → Delegaciones). Así los resultados pasan solos a la Copa CONCEPMI.</p>
+            <label class="manual"><input type="checkbox" data-manual /> Escribir los nombres a mano (para pruebas)</label>
+            <p class="cupo cupo--ultimo" data-aviso-manual hidden style="margin:0">${ICONOS.alerta} Modo prueba: estos nombres no están en el Panel Maestro. Al terminar, borra esos enfrentamientos con «Borrar resultados» para que no se mezclen con los reales.</p>
             <button class="btn" type="submit" data-guardar>Guardar nombres</button>
           </form>
         </section>
@@ -170,13 +174,28 @@ export function montar(raiz) {
 
   /* ---------- Nombres ---------- */
   const inA = $("#nom-a"), inB = $("#nom-b");
+  const libreA = $("#libre-a"), libreB = $("#libre-b");
   let editando = false;
-  [inA, inB].forEach((i) => i.addEventListener("input", () => { editando = true; pintarCupos(); }));
-  $("[data-limpiar]").addEventListener("click", () => { inA.value = ""; inB.value = ""; editando = true; pintarCupos(); inA.focus(); });
+  // Modo prueba: los nombres se escriben a mano en vez de elegirse del Panel Maestro
+  let manual = false;
+  const valA = () => (manual ? libreA.value.trim() : inA.value);
+  const valB = () => (manual ? libreB.value.trim() : inB.value);
+  [inA, inB, libreA, libreB].forEach((i) => i.addEventListener("input", () => { editando = true; pintarCupos(); }));
+  $("[data-limpiar]").addEventListener("click", () => { inA.value = ""; inB.value = ""; libreA.value = ""; libreB.value = ""; editando = true; pintarCupos(); (manual ? libreA : inA).focus(); });
+  $("[data-manual]").addEventListener("change", (ev) => {
+    manual = ev.target.checked;
+    if (manual) { libreA.value = inA.value; libreB.value = inB.value; }
+    inA.hidden = inB.hidden = manual;
+    libreA.hidden = libreB.hidden = !manual;
+    $("[data-aviso-manual]").hidden = !manual;
+    editando = true;
+    pintarCupos();
+    if (manual) libreA.focus();
+  });
   $("[data-form-nombres]").addEventListener("submit", (ev) => {
     ev.preventDefault();
     accion($("[data-guardar]"), async () => {
-      await llamar("mod_guardar_nombres", { p_pin: pin(), p_a: inA.value, p_b: inB.value });
+      await llamar("mod_guardar_nombres", { p_pin: pin(), p_a: valA(), p_b: valB() });
       editando = false;
     }, "Nombres guardados: ya aparecen en todas las pantallas");
   });
@@ -189,14 +208,15 @@ export function montar(raiz) {
     return `<span class="cupo cupo--nuevo">${ICONOS.info} Nueva delegación · enfrentamiento 1/2</span>`;
   }
   function pintarCupos() {
-    for (const [l, inp] of [["a", inA], ["b", inB]]) {
-      let h = cupoHtml(inp.value);
-      if (inA.value && inB.value && normalizar(inA.value) === normalizar(inB.value) && l === "b") h = `<span class="cupo cupo--bloq">${ICONOS.alerta} A y B no pueden ser la misma delegación</span>`;
+    const a = valA(), b = valB();
+    for (const [l, v] of [["a", a], ["b", b]]) {
+      let h = cupoHtml(v);
+      if (a && b && normalizar(a) === normalizar(b) && l === "b") h = `<span class="cupo cupo--bloq">${ICONOS.alerta} A y B no pueden ser la misma delegación</span>`;
       $(`[data-cupo="${l}"]`).innerHTML = h;
     }
-    const guardados = e && normalizar(inA.value) === normalizar(e.nombre_a) && normalizar(inB.value) === normalizar(e.nombre_b) && e.nombre_a;
+    const guardados = e && normalizar(a) === normalizar(e.nombre_a) && normalizar(b) === normalizar(e.nombre_b) && e.nombre_a;
     $("[data-guardar]").innerHTML = guardados ? `${ICONOS.check} Nombres guardados` : "Guardar nombres";
-    $("[data-guardar]").classList.toggle("btn--primario", !guardados && !!(inA.value || inB.value));
+    $("[data-guardar]").classList.toggle("btn--primario", !guardados && !!(a || b));
   }
   // Desplegables con las delegaciones del Panel Maestro (jur_delegaciones). Se guarda la sigla, p. ej. «UNMSM».
   let DELEGACIONES = null;
@@ -252,7 +272,7 @@ export function montar(raiz) {
         "Todas las pantallas vuelven al inicio y los nombres se limpian. Los resultados guardados en la tabla general no se borran.",
       si: "Volver al inicio", peligro: enCurso,
     });
-    if (ok) { inA.value = ""; inB.value = ""; editando = false; accion(ev.currentTarget, () => llamar("mod_pantalla_inicial", { p_pin: pin() }), "Pantallas en estado inicial"); }
+    if (ok) { inA.value = ""; inB.value = ""; libreA.value = ""; libreB.value = ""; editando = false; accion(ev.currentTarget, () => llamar("mod_pantalla_inicial", { p_pin: pin() }), "Pantallas en estado inicial"); }
   });
   $("[data-borrar]").addEventListener("click", async () => {
     if (!enfs.length) return aviso("No hay resultados registrados para borrar");
@@ -323,9 +343,10 @@ export function montar(raiz) {
 
     // Nombres (no pisar lo que el moderador está escribiendo)
     const bloqueados = fase !== "espera";
-    inA.disabled = inB.disabled = bloqueados;
+    inA.disabled = inB.disabled = libreA.disabled = libreB.disabled = bloqueados;
+    $("[data-manual]").disabled = bloqueados;
     $("[data-guardar]").disabled = bloqueados;
-    if (!editando || bloqueados) { inA.value = e.nombre_a || ""; inB.value = e.nombre_b || ""; editando = false; if ((e.nombre_a && inA.value !== e.nombre_a) || (e.nombre_b && inB.value !== e.nombre_b)) pintarDatalist(); }
+    if (!editando || bloqueados) { libreA.value = e.nombre_a || ""; libreB.value = e.nombre_b || ""; inA.value = e.nombre_a || ""; inB.value = e.nombre_b || ""; editando = false; if ((e.nombre_a && inA.value !== e.nombre_a) || (e.nombre_b && inB.value !== e.nombre_b)) pintarDatalist(); }
     pintarCupos();
 
     // Botones
@@ -404,7 +425,7 @@ export function montar(raiz) {
       await llamar("mod_registrar", { p_pin: pin() });
       await recargarEnfrentamientos();
       await cargarBanco();
-      inA.value = ""; inB.value = ""; editando = false;
+      inA.value = ""; inB.value = ""; libreA.value = ""; libreB.value = ""; editando = false;
     }, "Enfrentamiento registrado en la tabla general"));
     cont.querySelectorAll("[data-def]").forEach((b) => b.addEventListener("click", (ev) => accion(ev.currentTarget, () => llamar("mod_definir_ganador", { p_pin: pin(), p_lado: b.dataset.def }))));
   }
